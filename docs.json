@@ -1,0 +1,180 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "aspen",
+  "name": "SHOTAI // OPERATIONAL ARCHIVE",
+  "colors": {
+    "primary": "#7fa88c",
+    "light": "#b8d4bb",
+    "dark": "#0a0d0a"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "pages": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      }
+    ],
+    "tabs": [
+      {
+        "tab": "Naruto World",
+        "pages": [
+          "Welcome",
+          "Changelog",
+          "index-of-lists",
+          "Credits"
+        ]
+      },
+      {
+        "tab": "BRIEFING",
+        "groups": [
+          {
+            "group": "CREATION",
+            "pages": [
+              "Creation/untitled-page",
+              "Creation/character-creation",
+              "Creation/untitled-page-2",
+              "Creation/untitled-page-3",
+              "Creation/abilities-contents-chakra-equipment-physical-sensory-subtlety-other-what-abilities-are-abilities-represent-the-fruits-of-your-characters-training-and-the-ways-in-which-they-ve-developed-as-a-shino"
+            ]
+          },
+          {
+            "group": "UNIQUES",
+            "pages": [
+              "Uniques/creation-uniques",
+              "Uniques/untitled-page",
+              "Uniques/untitled-page-2",
+              "Uniques/3-up"
+            ]
+          },
+          {
+            "group": "PROVINCES",
+            "pages": [
+              "Province/southern-province",
+              "Akimichi_talent",
+              "Province/western-province",
+              "Province/untitled-page",
+              "Mounts"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "COMBAT",
+        "pages": [
+          "untitled-page",
+          "Combat/untitled-page",
+          "Honourable",
+          "weather"
+        ]
+      },
+      {
+        "tab": "JUTSU",
+        "groups": [
+          {
+            "group": "JUTSU",
+            "pages": [
+              "Jutsu/rules",
+              "Jutsu/katon-ninjutsu",
+              "Jutsu/untitled-page",
+              "Jutsu/doton-ninjutsu",
+              "Jutsu/raiton-ninjutsu",
+              "Jutsu/suiton-ninjutsu",
+              "Jutsu/general-ninjutsu",
+              "Jutsu/genjutsu",
+              "Jutsu/medical-ninjutsu",
+              "Jutsu/untitled-page-2",
+              "Jutsu/weapon-taijutsu",
+              "Jutsu/sealing-ninjutsu"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "FIELD EQUIPMENT",
+        "groups": [
+          {
+            "group": "Field Equipment",
+            "pages": [
+              "Field Equipment/untitled-page",
+              "Field Equipment/untitled-page-2",
+              "Field Equipment/field-equipment-the-difference-between-requisition-and-savings-in-practice-comes-down-to-paperwork-requisitioned-equipment-carries-a-village-stamp-a-serial-number-and-the-implied-understanding-tha",
+              "Field Equipment/untitled-page-4",
+              "Field Equipment/rank-gear",
+              "Field Equipment/untitled-page-3",
+              "Field Equipment/dwellings"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "ADVANCEMENT",
+        "groups": [
+          {
+            "group": "Advancement",
+            "pages": [
+              "Advancement/untitled-page",
+              "Advancement/rank-benefits-ninja-rank-benefits-are-specialized-abilities-acquired-when-one-ranks-up-each-rank-will-have-several-for-you-to-choose-from-you-automatically-acquire-any-two-of-your-choice-for-free",
+              "Advancement/untitled-page-2",
+              "Advancement/the-nature-of-advancement-in-the-shinobi-world-the-path-of-a-shinobi-is-not-a-straightforward-ascent-measured-in-years-of-service-or-even-in-the-mastery-of-dangerous-techniques-rather-it-is-a-comp",
+              "Advancement/the-nature-of-certification-the-certification-system-emerged-from-the-chaos-of-the-pre-confederacy-era-when-villages-had-no-standardized-way-to-assess-the-capabilities-of-shinobi-from-other-region",
+              "Advancement/untitled-page-3"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "TALENTS",
+        "pages": [
+          "Talents/untitled-page",
+          "Talents/untitled-page-2",
+          "Talents/untitled-page-3",
+          "untitled-page-2",
+          "untitled-page-12",
+          "Talents/maestro",
+          "untitled-page-3",
+          "untitled-page-4",
+          "hare-contract-the-gentle-pact-hares-including-rabbits-but-really-what-ninja-knows-the-difference-are-the-least-adept-in-battle-of-all-the-major-species-of-summoned-animals-much-like-their-wild-cou",
+          "untitled-page-5",
+          "untitled-page-6",
+          "untitled-page-11",
+          "untitled-page-7",
+          "untitled-page-8",
+          "untitled-page-9",
+          "untitled-page-10"
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": []
+  },
+  "footer": {
+    "socials": {
+    }
+  },
+  "background": {
+    "color": {
+      "light": "#e8ede6",
+      "dark": "#0a0d0a"
+    },
+    "decoration": "grid"
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Chakra Petch",
+      "weight": 700
+    },
+    "body": {
+      "family": "Chakra Petch",
+      "weight": 400
+    }
+  },
+  "description": "The Guide for the Shinobi"
+}

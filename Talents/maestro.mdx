@@ -1,0 +1,295 @@
+---
+title: "Maestro"
+---
+
+export const Slot = () => (
+  <span style={{ display: 'inline-block', padding: '1px 8px', borderRadius: '3px', fontSize: '11px', fontWeight: 700, fontFamily: 'monospace', background: '#162316', color: '#6dbf6d', border: '1px solid #3a5a3a', marginLeft: '6px', verticalAlign: 'middle', letterSpacing: '0.05em' }}>SLOT</span>
+);
+
+export const Deploy = () => (
+  <span style={{ display: 'inline-block', padding: '1px 8px', borderRadius: '3px', fontSize: '11px', fontWeight: 700, fontFamily: 'monospace', background: '#131623', color: '#6d9dbf', border: '1px solid #3a3a5a', marginLeft: '6px', verticalAlign: 'middle', letterSpacing: '0.05em' }}>DEPLOY</span>
+);
+
+The Kairaishi's secrets have been made into a discipline, one that typically consumes most of an academy student's free years and demands a master willing to take only one student at a time. What it produces is a fighter who is never alone in the conventional sense, whose reach extends past their body, and whose greatest asset is the ability to make two places dangerous simultaneously.
+
+---
+
+## Puppet Fundamentals
+
+These rules apply to all puppets at all ranks. Refer here rather than restating them per technique.
+
+Puppets use your attributes and uniques for all rolls. When a puppet attacks, defends, or makes a skill check, it uses your stats and your bonuses as though it were you. Uniques that modify your Accuracy, defensive rolls, damage bonuses, or skill rolls apply to your puppet's actions. The puppet is a conduit for your skill, not an independent combatant.
+
+A puppet's own RES and AGI are used only for two things: Durability and movement speed. A puppet's total Durability equals its RES × 6. A puppet's movement speed is its AGI/40. A puppet's RES cannot exceed your DEX; its AGI cannot exceed your CHA. Puppets cannot make Medicine, Resistance, Research, or Chakra Control rolls.
+
+A puppet's damage bonus is always your Ninjutsu Damage Bonus (NDB) regardless of the type of attack, reflecting the chakra threads driving the motion. When a puppet attacks with a weapon, it uses your Weapon Accuracy and your Weapon Parry -2 for defense. When it attacks with CQC, it uses your CQC Accuracy and your CQC Parry -2. When it performs a Ninjutsu action, it uses your Ninjutsu Accuracy and cannot use Ninjutsu Parry. The puppet is incapable of forming handseals; any jutsu it performs must come from a source that removes Seal Speed entirely.
+
+Puppets cannot be healed in combat. Outside combat, with proper tools, restore 10% max Durability per hour of work. A puppet at 0 Durability is broken until repaired at a village. For sealing purposes, puppets weigh roughly twenty-five pounds.
+
+Puppets are immune to Genjutsu, Medical Jutsu, Poison, being Disarmed, and all status effects except Immobilization, Ignite, Corrosion, and Frostbite. Your own Wound, Fatigue, and status penalties apply to puppet actions as normal. A puppet suffering Immobilization −8 or greater cannot act or be directed.
+
+By default, any puppet may equip one Small weapon at half normal cost. This modification makes the weapon non-transferable and grants +3 to resist Disarm attempts. Puppets also have a basic Slam attack: Speed 8, 3d6 Blunt damage, using your PDB or WDB as its damage bonus.
+
+When your puppet is attacked, you may advance your IC to direct it to defend paying an AP cost equal to the defensive interrupt's Speed , let it take the hit and suffer!
+
+---
+
+### –( Kugutsu no Jutsu — Puppet Technique )–
+
+**Type:** Ninjutsu, Rank D
+
+| Stat    | 1 Puppet       | 2 Puppets      | 3 Puppets      |
+| ------- | -------------- | -------------- | -------------- |
+| Chakra  | 10             | 14             | 18             |
+| Upkeep  | 3              | 4              | 5              |
+| Speed   | 6              | 8              | 10             |
+| Range   | 15 + CHA/10    | 15 + CHA/10    | 15 + CHA/10    |
+
+While maintaining this technique's Upkeep, you cannot make handseals, use weapons, or otherwise use your hands. You may use puppets while Hidden; attacking through a puppet does not reveal you, but lowers your Stealth TN by 5 per attack. Anyone who can see chakra sees your threads and gains a Search bonus equal to this technique's current Upkeep.
+
+Available puppet actions while Upkeep is maintained:
+
+- **Attack** _(Speed Varies):_ Direct one puppet to attack using any CQC, Weapon, or Ninjutsu action you know that it is equipped for. The action's Speed equals the technique's normal Speed. Pay the Stamina/Chakra cost /2 as AP, rounded up.
+- **Move** _(Speed Varies):_ Move one or more puppets. Each puppet's speed is its AGI/40. For every puppet beyond the first moved simultaneously, increase the divisor by 5 for all puppets in that movement. Alternatively, spend 1 AP per IC to move a puppet without changing the divisor.
+
+---
+
+## The Ranks
+
+### —=[ Rank 1 — First Thread ]=—
+
+You learn Kugutsu no Jutsu and gain one puppet. You control it with both hands; no free hand is available while doing so.
+
+Your puppet begins with one **SLOT** upgrade from the Upgrade List below.
+
+---
+
+### —=[ Rank 2 — Two Threads ]=—
+
+You may control up to two puppets. See the stat table above for adjusted costs.
+
+- **One-Handed Control:** While controlling two or fewer puppets, you retain the use of one hand for handseals, weapons, or other purposes.
+- **Puppet Improvement:** Both puppets gain +10 RES and +10 AGI (still capped by your attributes).
+
+Each puppet gains one **DEPLOY** upgrade from the Upgrade List. A second puppet, if you have one, begins with one **SLOT** upgrade of your choice. If you do not yet own a second puppet, you may acquire one through normal means.
+
+---
+
+### —=[ Rank 3 — Full Marionette ]=—
+
+You may control up to three puppets. See the stat table above.
+
+- **Puppet Improvement:** All puppets gain a further +10 RES and +10 AGI (still capped). Each puppet may now equip two weapons, but they do not have the benefits of Ambidextrous.
+- **Defend** _(Speed 3, 1 AP):_ Your puppet intercepts an attack targeting you or an ally within your control range. This functions as Take the Hit. You may spend AP to move the puppet into range before interception.
+- **Puppet Show** _(Speed 0 Interrupt):_ Every 25 IC after activating Kugutsu no Jutsu, any puppet that has not been used for Attack or Defend during that window may make a basic attack against any target within reach. All Puppet Show attacks are Held Back. You cannot spend AP to modify them and cannot activate DEPLOY upgrades as part of them. Targets defend at the attack's normal Speed. Multiple puppets in the same Show: targets may use one declared defense against all, rolling separately, advancing IC by only the highest Speed defense, and paying costs per instance.
+
+Each puppet gains one additional upgrade of any type (SLOT or DEPLOY, your choice).
+
+**Marionette's Crescendo** _(once per battle):_ When a Puppet Show window opens, you may declare Marionette's Crescendo instead of a standard Puppet Show. Every puppet under your control attacks simultaneously regardless of whether they were used for Attack or Defend during the window; the 25 IC restriction does not apply for this activation. These attacks are not Held Back. You may not spend AP to modify them and may not activate DEPLOY upgrades as part of them. Puppet Show's normal multi-target defense rules apply. This resets the 25 IC interval from the IC it was used.
+
+---
+
+## Upgrade List
+
+Each upgrade is tagged **SLOT** or **DEPLOY**.
+
+**SLOT** upgrades are always active. They require no action to use and function continuously once installed.
+
+**DEPLOY** upgrades require the puppet to perform an action to activate. They are noted with their Speed cost. DEPLOY upgrades cannot be used as part of Puppet Show or Marionette's Crescendo unless the upgrade specifically states otherwise.
+
+One upgrade may only be installed once per puppet. The same upgrade may be installed on different puppets.
+
+---
+
+### —=[ Flamethrower ]—=  <Deploy />
+
+|  |  |
+| --- | --- |
+| **Type** | Ninjutsu, Rank C |
+| **Chakra** | 20 (paid by controller) |
+| **Damage** | (NDB)d12 |
+| **Speed** | 12 |
+| **Range** | 15 |
+| **Special** | Burns 5 |
+| **Tags** | Area of Effect, Projectile |
+
+Hits everyone in a 5-yard-wide line out to maximum range.
+
+---
+
+### —=[ Hidden Weapon ]—=  <Slot />
+
+The puppet's equipped weapon is concealed until the moment of first use. The first time it attacks with that weapon in any battle, the attack is an automatic Surprise Attack. If the weapon is a sheathed Sword, the puppet may apply Iaijutsu to that attack. Each benefit triggers once per battle.
+
+---
+
+### —=[ Hollow Body ]—=  <Slot />
+
+The puppet's torso has been hollowed into a concealed compartment. As a Speed 8 action, one person may enter or exit and lock it from inside. Up to three people fit, uncomfortably. While inside: the occupant cannot make handseals, attack, be attacked, or control other puppets. This upgrade is required before Trap Body may be installed on the same puppet.
+
+---
+
+### —=[ Trap Body ]—=  <Deploy />
+
+|  |  |
+| --- | --- |
+| **Type** | Ninjutsu, Rank D |
+| **Chakra** | 12 |
+| **Range** | 5 |
+| **Speed** | 12 |
+| **Special** | Interrupt, Contact |
+| **Requires** | Hollow Body |
+
+When this puppet is attacked in melee, declare Trap Body as a defensive interrupt. The puppet automatically blocks the attack and, if not destroyed, fires wires toward the attacker. Make a CQC Accuracy roll defended as a Speed 8 melee attack. On failure, the attacker is Grappled and locked inside the Hollow Body. While trapped: the target cannot move, cannot use CQC or Weapon Taijutsu against the puppet, attacks from inside ignore the puppet's DR, and the target can only target the puppet until freed. The controller may free them as a Speed 6 action. Only one target may be held at a time.
+
+---
+
+### —=[ Joint Plating ]—=  <Slot />
+
+The puppet gains DR 20. This is not Armor; effects that pierce armor do not bypass it. May only be installed once per puppet.
+
+---
+
+### —=[ Recon Suite ]—=  <Slot />
+
+Chakra-receptive sensors in the puppet's head. Toggle on or off as a Speed 0 action. While active: your Visibility Penalties and Awareness rolls use the puppet's location and senses rather than your own. You may speak from the puppet's location in your own voice or a deliberately distorted unrecognizable version. The puppet gains +3 to Espionage and Stealth rolls.
+
+---
+
+### —=[ Medic Frame ]—=  <Slot />
+
+**Requires:** Rank 2
+
+The puppet is fitted with chakra-neutral medical tools and supply compartments, allowing it to act as your hands for basic field care. When using the Support action to perform first aid or apply bandages through this puppet, the Speed of the action is reduced by 4 (minimum Speed 4). Additionally, once per battle this puppet may administer one dose of any consumable medical item it is carrying to an adjacent ally as a Speed 6 action using Support, without requiring your IC to advance if you spend 2 AP. Cannot be combined with Flamethrower or Elemental Cannon on the same puppet.
+
+---
+
+### —=[ Additional Limbs ]—=  <Slot />
+
+Add one extra pair of arms or legs. Extra arms grant +1 to NDB-based damage on melee attacks. Extra legs grant +10% to this puppet's movement speed. Can be applied up to RES/20 times (minimum 1).
+
+---
+
+### —=[ Storage Cavity ]—=  <Slot />
+
+A small internal compartment is built into the puppet's torso, capable of holding up to 3 ninja tools securely. Items stored inside cannot be targeted or removed except by the puppet's controller. Accessing them requires a Support action. Can only be applied once per puppet.
+
+---
+
+### —=[ Toxin Delivery System ]—=  <Deploy />
+
+**Requires:** Rank 2
+
+Reservoirs in the frame apply poison to weapons on command.
+
+- **Weapon Coating** _(Speed +10):_ Applies (Toxicology ranks / 10) doses of any poison you own to the puppet's equipped weapons. Adds to an attack action's Speed rather than being its own action.
+- **Aerosol** _(Speed 6):_ Converts a poison into an inhalation poison with Area 15 radius around the puppet at the cost of −1 to its Poison Potency. Persists 30 IC and applies −4 Visibility Penalty within the area. Requires one dose of poison per use.
+
+Poison costs and access must be handled normally. The Aerosol does not require Smoke Bomb; it does require the poison dose.
+
+---
+
+### —=[ Glider ]—=  <Deploy />
+
+Foldable wings installed in the puppet's arms and legs. As a Speed 4 action, the puppet takes flight. While airborne, the puppet cannot carry passengers and is immune to Ground-based Immobilization effects. It cannot be targeted by melee-range techniques unless it has made a melee-range attack in the past 25 IC.
+
+---
+
+### —=[ Cannon ]—=  <Deploy />
+
+|  |  |
+| --- | --- |
+| **Type** | Ninjutsu, Rank C |
+| **Chakra** | 5 + Jutsu Cost |
+| **Speed** | 10 |
+| **Range** | Jutsu Range |
+
+Select one element for which you have Aptitude at the time of installation. The puppet's arms are hollowed out and fitted with a chakra-projection cannon.
+
+As a Speed 10 action, the puppet fires a ninjutsu of that element that you know. The jutsu must be at least one rank below the highest-rank ninjutsu you are currently able to learn, and cannot be lower than D-Rank. The jutsu cannot be a clan ninjutsu or an Environmental jutsu. The jutsu must be one you can reduce to Seal Speed 0, and it cannot have an Upkeep. The puppet uses your Ninjutsu Accuracy and your NDB for damage.
+
+The cannon begins with 1 charge. Each firing consumes one charge. You may purchase additional charges through the Expanded Magazine upgrade below. You may change which jutsu is loaded into each charge when you refresh your requisition.
+
+---
+
+### —=[ Expanded Magazine ]—=  <Slot />
+
+**Requires:** Elemental Cannon
+
+The puppet's cannon is fitted with an additional reload chamber. It gains +1 charge of Elemental Cannon. This upgrade can be taken multiple times. Each time you take it, increase the PP cost by 2.
+
+---
+
+### —=[ Detonation Frame ]—=  <Deploy />
+
+The puppet's chassis is fitted with explosive charges. When this puppet is reduced to 0 Durability, it detonates. All entities within 10 yards take damage equal to (Chakra Control / 2)d6 as Blunt damage. This may be used as a standard attack by deliberately detonating the puppet as a Speed 10 action. The puppet is destroyed in either case.
+
+---
+
+## Weapon Archetype Upgrades
+
+Puppets outfitted for weapons. These puppets use your Weapon Accuracy and Weapon Parry -2, and rely on equipped weapons or launchers to deal damage. They are best at mid-to-long range and precise, punishing strikes.
+
+---
+
+### —=[ Hidden Weapon ]—=  <Slot />
+
+The puppet's equipped weapon is concealed until the moment of first use. The first time it attacks with that weapon in any battle, the attack is an automatic Surprise Attack. If the weapon is a sheathed Sword, the puppet may apply Iaijutsu to that attack. Each benefit triggers once per battle.
+
+---
+
+### —=[ Blade Array ]—=  <Slot />
+
+Select a Melee slashing weapon from the Equipment chapter at the time of installation. The puppet gains that weapon built into one of its arms at no additional cost. The weapon cannot be disarmed. You may take this upgrade multiple times, each time selecting a different weapon or a second copy.
+
+---
+
+### —=[ Ranged Launcher ]—=  <Slot />
+
+Select Kunai, Shuriken, or Senbon at the time of installation. The puppet has a launcher capable of firing that weapon type. You may perform basic ranged attacks or multi-throws with the selected weapon. The puppet comes with 10 of that weapon for free. You may take this upgrade multiple times, each time adding a launcher for a different weapon type or increasing ammo capacity by 10.
+
+---
+
+### —=[ Explosive Ammunition ]—=  <Slot />
+
+**Requires:** Ranged Launcher
+
+The puppet's launcher is modified to accept explosive tags attached to its ammunition. As a Speed (10 + 5×X) action, you may attach and prime X tags to ammunition stored in the launcher. These follow the normal rules for Explosive Tag Connection.
+
+---
+
+### —=[ Momentum Drive ]—=  <Slot />
+
+The puppet's frame is weighted for heavier strikes. Attacks made with Large weapons deal +15% damage, and the puppet ignores the Large weapon's inherent Parry penalty on its own attacks.
+
+---
+
+### —=[ Iaijutsu Chamber ]—=  <Deploy />
+
+**Requires:** Blade Array
+
+The puppet's sheathe is fitted with a chakra-assisted draw mechanism. When it uses its first Blade Array weapon in a battle, the attack's Speed is halved. For damage calculations, the attack still uses its original Speed. Usable once per battle.
+
+---
+
+## CQC Archetype Upgrades
+
+Puppets outfitted for close-quarters combat. These puppets use your CQC Accuracy and CQC Parry -2, and rely on fists, grapples, and combo techniques to overwhelm opponents. They are best at pressure, control, and staying in an enemy's face.
+
+---
+
+### —=[ Advanced Articulation ]—=  <Slot />
+
+The puppet's joints and hydraulics have been reinforced for unarmed combat. The puppet can perform Basic Unarmed Attacks, CQC Taijutsu, and Combo Taijutsu.
+
+---
+
+### —=[ Combat Frame ]—=  <Slot />
+
+The puppet's chassis is reinforced at the joints. While using CQC actions, the puppet gains DR equal to its RES/6 (minimum 5). This does not stack with Joint Plating.
+
+---
+
+### —=[ Retractable Weapon ]—=  <Slot />
+
+One of the puppet's limbs has a concealed weapon that can be extended or retracted mid-grapple. While maintaining a grapple, the puppet may attack with this weapon as a Speed 8 action without releasing the grapple. Select a Small Piercing or Slashing weapon from the Equipment chapter at the time of installation.

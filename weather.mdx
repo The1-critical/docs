@@ -1,0 +1,525 @@
+---
+title: "Weather"
+sidebarTitle: "Weather"
+hidden: true
+---
+
+<Note>
+  **When to use this page** — Inside your Hidden Village, weather is optional. On any **mission or event above D rank**, and during every **Honourable spar**, weather is **mandatory**.
+</Note>
+
+The shinobi world is shaped by more than human hands and the flow of chakra, because nature has its own say, and in a land of northern blizzards and western sandstorms, a warrior who masters only their own techniques will lose to the terrain.
+
+export const WeatherRoulette = () => {
+  const WEATHERS = {
+    Southern: [
+      { r: [1, 8],   name: "Clear Skies",       hash: "#clear-skies",       tag: "Basic" },
+      { r: [9, 11],  name: "Heavy Rain",        hash: "#heavy-rain",        tag: "Basic" },
+      { r: [12, 13], name: "Fog",               hash: "#fog",               tag: "Basic" },
+      { r: [14, 15], name: "Hail Storm",        hash: "#hail-storm",        tag: "Basic" },
+      { r: [16, 17], name: "High Winds",        hash: "#high-winds",        tag: "Basic" },
+      { r: [18, 19], name: "High Air Pressure", hash: "#high-air-pressure", tag: "Basic" },
+      { r: [20, 20], name: "Storm",             hash: "#storm",             tag: "Extreme" },
+    ],
+    Eastern: [
+      { r: [1, 6],   name: "Clear Skies",       hash: "#clear-skies",       tag: "Basic" },
+      { r: [7, 10],  name: "High Winds",        hash: "#high-winds",        tag: "Basic" },
+      { r: [11, 12], name: "High Air Pressure", hash: "#high-air-pressure", tag: "Basic" },
+      { r: [13, 14], name: "Low Air Pressure",  hash: "#low-air-pressure",  tag: "Basic" },
+      { r: [15, 16], name: "Snow",              hash: "#snow",              tag: "Basic" },
+      { r: [17, 18], name: "Heavy Cold",        hash: "#heavy-cold",        tag: "Basic" },
+      { r: [19, 20], name: "Storm",             hash: "#storm",             tag: "Extreme" },
+    ],
+    Western: [
+      { r: [1, 10],  name: "Heavy Heat",  hash: "#heavy-heat",  tag: "Basic" },
+      { r: [11, 14], name: "Clear Skies", hash: "#clear-skies", tag: "Basic" },
+      { r: [15, 18], name: "High Winds",  hash: "#high-winds",  tag: "Basic" },
+      { r: [19, 20], name: "Sandstorm",   hash: "#sandstorm",   tag: "Extreme" },
+    ],
+    Northern: [
+      { r: [1, 6],   name: "Heavy Rain",       hash: "#heavy-rain",       tag: "Basic" },
+      { r: [7, 10],  name: "Fog",              hash: "#fog",              tag: "Basic" },
+      { r: [11, 14], name: "Snow",             hash: "#snow",             tag: "Basic" },
+      { r: [15, 15], name: "Hail Storm",       hash: "#hail-storm",       tag: "Basic" },
+      { r: [16, 16], name: "Heavy Cold",       hash: "#heavy-cold",       tag: "Basic" },
+      { r: [17, 17], name: "Low Air Pressure", hash: "#low-air-pressure", tag: "Basic" },
+      { r: [18, 18], name: "Clear Skies",      hash: "#clear-skies",      tag: "Basic" },
+      { r: [19, 20], name: "Blizzard",         hash: "#blizzard",         tag: "Extreme" },
+    ],
+  };
+  const DAY = [
+    { r: [1, 4], name: "Daytime",          note: "No effect." },
+    { r: [5, 5], name: "Dusk / Dawn",      note: "Opponents need only −5 Visibility for you to Hide." },
+    { r: [6, 6], name: "Glaring Sunlight", note: "Opponents need −7 Visibility for you to Hide. −3 Stealth and Espionage. +3 Survival." },
+  ];
+  const NIGHT = [
+    { r: [1, 4], name: "Night-time",             note: "−6 Visibility Penalty. Any other Visibility penalties increased by 1." },
+    { r: [5, 5], name: "Intense Moonlight",      note: "−2 Visibility Penalty. +5 Survival." },
+    { r: [6, 6], name: "New Moon / Cloud Cover", note: "−10 Visibility Penalty. No Called Shots. Ignite's Stealth Penalty doubled." },
+  ];
+  const d = (n) => 1 + Math.floor(Math.random() * n);
+  const pick = (table, roll) => table.find((row) => roll >= row.r[0] && roll <= row.r[1]);
+  const [region, setRegion] = React.useState("Southern");
+  const [safe, setSafe] = React.useState(false);
+  const [result, setResult] = React.useState(null);
+  const roll = () => {
+    let r, hit;
+    for (let i = 0; i < 25; i++) {
+      r = d(20);
+      hit = pick(WEATHERS[region], r);
+      if (!safe || hit.tag !== "Extreme") break;
+    }
+    const dayRoll = d(2);
+    const phaseRoll = d(6);
+    const phase = pick(dayRoll === 1 ? DAY : NIGHT, phaseRoll);
+    setResult({ region, roll: r, hit, dayLabel: dayRoll === 1 ? "Day" : "Night", phase });
+  };
+  return (
+    <div className="not-prose my-6 rounded-2xl border border-primary/40 bg-primary/5 p-6 dark:border-primary-light/30 dark:bg-primary-dark/40">
+      <div className="mb-4 flex flex-wrap items-center gap-3">
+        <label className="text-sm font-medium text-gray-700 dark:text-zinc-200">Region</label>
+        <select
+          value={region}
+          onChange={(e) => setRegion(e.target.value)}
+          className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+        >
+          <option>Southern</option>
+          <option>Eastern</option>
+          <option>Western</option>
+          <option>Northern</option>
+        </select>
+        <label className="ml-2 inline-flex items-center gap-2 text-sm text-gray-700 dark:text-zinc-300">
+          <input type="checkbox" checked={safe} onChange={(e) => setSafe(e.target.checked)} className="h-4 w-4" />
+          Village spar (no Extreme)
+        </label>
+        <button
+          onClick={roll}
+          className="ml-auto rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110 active:scale-95 dark:bg-primary-light dark:text-black"
+        >
+          🎲 Roll the Weather
+        </button>
+      </div>
+      {result ? (
+        <div className="rounded-xl bg-white/70 p-5 text-center dark:bg-black/40">
+          <div className="text-xs uppercase tracking-widest text-gray-500 dark:text-zinc-400">
+            {result.region} Province · rolled {result.roll} on 1d20
+          </div>
+          <a
+            href={result.hit.hash}
+            className="mt-2 block text-3xl font-bold text-primary hover:underline dark:text-primary-light"
+          >
+            {result.hit.name}
+          </a>
+          <div
+            className={
+              "mt-1 inline-block rounded-full px-3 py-0.5 text-xs font-semibold " +
+              (result.hit.tag === "Extreme"
+                ? "bg-red-500/15 text-red-600 dark:text-red-400"
+                : "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400")
+            }
+          >
+            {result.hit.tag} Weather
+          </div>
+          <div className="mt-3 text-sm text-gray-700 dark:text-zinc-300">
+            <strong>{result.dayLabel}</strong> · {result.phase.name}
+            <div className="mt-1 text-xs text-gray-500 dark:text-zinc-400">{result.phase.note}</div>
+          </div>
+        </div>
+      ) : (
+        <div className="rounded-xl bg-white/50 p-5 text-center text-sm text-gray-500 dark:bg-black/30 dark:text-zinc-400">
+          Choose a region and hit <strong>Roll the Weather</strong>. The page decides. No questions asked.
+        </div>
+      )}
+    </div>
+  );
+};
+
+<WeatherRoulette />
+
+## The Weather Roulette
+
+Every condition is one card away. Click any card to open its full breakdown.
+
+### Basic Weather
+
+<CardGroup cols={3}>
+  <Card title="Clear Skies" icon="sun" href="#clear-skies">
+    Perfect weather. Nothing works against you.
+  </Card>
+
+  <Card title="Fog" icon="cloud-fog" href="#fog">
+    Grey world. Sound lies. Vision fails.
+  </Card>
+
+  <Card title="Heavy Rain" icon="cloud-showers-heavy" href="#heavy-rain">
+    Sheets of water. Mud swallows footsteps.
+  </Card>
+
+  <Card title="Snow" icon="snowflake" href="#snow">
+    Soft, silent, and freezing your reserves.
+  </Card>
+
+  <Card title="Hail Storm" icon="cloud-meatball" href="#hail-storm">
+    Ice hammers from the sky.
+  </Card>
+
+  <Card title="Heavy Cold" icon="temperature-arrow-down" href="#heavy-cold">
+    Fingers numb. Chakra crawls.
+  </Card>
+
+  <Card title="Heavy Heat" icon="temperature-arrow-up" href="#heavy-heat">
+    Every drop of water is precious.
+  </Card>
+
+  <Card title="High Winds" icon="wind" href="#high-winds">
+    The wind claws. Words vanish.
+  </Card>
+
+  <Card title="High Air Pressure" icon="gauge-high" href="#high-air-pressure">
+    Air like wet cloth in your lungs.
+  </Card>
+
+  <Card title="Low Air Pressure" icon="gauge-simple-low" href="#low-air-pressure">
+    Thin air. Pounding head.
+  </Card>
+</CardGroup>
+
+### Extreme Weather
+
+<Warning>
+  Extreme weather is off the table for friendly spars inside a Hidden Village. Anywhere else, it is fair game.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="Smog" icon="smog" href="#smog">
+    Fog and pressure. Every breath is a risk.
+  </Card>
+
+  <Card title="Storm" icon="cloud-bolt" href="#storm">
+    Rain, wind, lightning. War on the earth.
+  </Card>
+
+  <Card title="Sandstorm" icon="sun-dust" href="#sandstorm">
+    The desert rises and sandblasts you raw.
+  </Card>
+
+  <Card title="Blizzard" icon="snowflakes" href="#blizzard">
+    White absence. Depth perception dies.
+  </Card>
+</CardGroup>
+
+## Basic Weather Reference
+
+<Tabs>
+  <Tab title="Clear Skies">
+    <Info>
+      Perfect weather. The kind of day where nothing is harder than it should be.
+    </Info>
+
+    **Effects**
+
+    - **+1 to Stamina rolls.** Your body works well.
+
+    **Nothing happens!**  Enjoy it while it lasts.
+  </Tab>
+  <Tab title="Fog">
+    <Info>
+      The world dissolves into grey. Shapes become suggestions. Sound becomes unreliable.
+    </Info>
+
+    A muffling, wraparound duvet of quiet descends. The air itself seems to thicken as it dampens every footfall and swallow every distant call, distorting familiar sounds until they become menacing and autonomous. Neurologists describe the effect as fog-induced perceptual compression: narrowed forward vision and dampened peripheral awareness.
+
+    **Effects**
+
+    - **−4 Visibility Penalty.** Beyond 30 yards, this penalty is **doubled**.
+    - **Partial Defense reduces damage by 30% per point failed** — the attacker cannot properly tag the target.
+    - **AP Generation is reduced by −2 per 20 IC.** You are slightly behind the action economy.
+  </Tab>
+  <Tab title="Heavy Rain">
+    <Info>
+      The sky opens. Water falls in sheets. The ground becomes a sucking maw.
+    </Info>
+
+    Big, fat, sloppy drops drum and thrum in sheets and waves, splattering and exploding on every surface in a low haze above the ground. The hiss of the rain, the shower diagonal against the trees, the damp in the nostrils. Sodden mud swallows footsteps whole.
+
+    **Effects**
+
+    - **−1 Visibility Penalty.**
+    - **Immobilization 3.**
+    - **−5 penalty to Survival when tracking.**
+    - **Suiton techniques gain +3 free gallons per technique.**
+    - **Katon techniques cost +2 Chakra.**
+    - **Firearms cannot be used** — the gunpowder gets wet.
+  </Tab>
+  <Tab title="Snow">
+    <Info>
+      Soft. Quiet. Deadly. The world becomes a white blanket that hides everything.
+    </Info>
+
+    A muffled silence produced by snow silently landing around you, all surfaces covered by puffy snowflakes. Empty but not void, silent but somehow not noiseless. Snow absorbs sound so effectively that after fresh snowfall people can sneak up behind you without warning.
+
+    **Effects**
+
+    - **Paralysis 1** unless you have Waterwalking or Pool of Water.
+    - **+5 to Survival checks for tracking.**
+    - **Water freezes at 10 gallons per 10 IC**; frozen Water Gallons become Ice Gallons. Suiton users lose resources.
+    - **Stealth TN is increased by +2.** Snow muffles sound.
+  </Tab>
+  <Tab title="Hail Storm">
+    <Info>
+      Ice falls from the sky. Not enough to kill you, but enough to make you regret being outside.
+    </Info>
+
+    High-velocity balls of snow and ice rain down, from tiny BB pellets to baseball-sized objects that dent metal and punch through glass. Caught in the open, the sound mimics hard rain as pellets connect with every surface. Whole towns get left sheeted in ice as if it had been snowing.
+
+    **Effects**
+
+    - **−4 Visibility Penalty.**
+    - **1 Frostbite every 10 IC** spent outside the storm.
+    - **Ranged attacks take −2 Accuracy** — hail deflects projectiles.
+    - **Fuuton techniques deal −20% wounding**; the air is disturbed by falling ice.
+  </Tab>
+  <Tab title="Heavy Cold">
+    <Info>
+      The air hurts. Your fingers go numb. Chakra moves like molasses.
+    </Info>
+
+    Hypothermia sets in when the body loses heat faster than it can produce it. Shivering, exhaustion, confusion, fumbling hands. Below 95 degrees, muscular and brain function degrade: clumsy movement, slurred speech, memory loss. Exposed skin feels numb and tingling, as if the body is slowly forgetting it has extremities at all.
+
+    **Effects**
+
+    - **Water freezes at 5 gallons per 20 IC**; frozen Water Gallons become Ice Gallons.
+    - **−3 to all Skills.**
+    - **Chakra penalties increase by +1 extra.**
+    - **Paralysis 3** unless you have Waterwalking or Pool of Water.
+  </Tab>
+  <Tab title="Heavy Heat">
+    <Info>
+      The air is a furnace. Every drop of water is precious. Every step costs more than it should.
+    </Info>
+
+    Weeks of temperatures well above average. Heat exhaustion: extreme fatigue, heavy sweating, dizziness, nausea, cramps, clammy skin. Sweat outpaces intake, dehydration hits, kidneys strain, the heart labors to move blood to the skin to shed heat. Without fluids the losses cascade into reduced cardiac output.
+
+    **Effects**
+
+    - **Suiton techniques require double water.**
+    - **Stamina penalties increase by +1 extra.**
+    - **AP Cap is reduced by 25%** — the heat exhausts you.
+    - **Ignite statuses are increased by +1.**
+  </Tab>
+  <Tab title="High Winds">
+    <Info>
+      The wind turns your outfit ready for a rave, you can barely move forward.
+    </Info>
+
+    **Effects**
+
+    - **Immobilization 2.**
+    - **Fuuton techniques gain +3 Speed** for damage purposes.
+    - **Ranged Weapon Taijutsu requires a 1d4 roll**; on a 1, the attack misses.
+    - Every 20 IC, the effects of the E-rank Fuuton **Cleansing Wind** activate automatically.
+    - **Verbal communication beyond 5 yards requires an Awareness check against TN 30** — the wind eats words.
+  </Tab>
+  <Tab title="High Air Pressure">
+    <Info>
+      The air is heavy. Dense. Every breath feels like breathing through wet cloth.
+    </Info>
+
+    Increased gas density raises airway resistance in both directions. The body starts to look like an obstructive-lung patient: dynamic airway compression, capped aerobic capacity, persistent coughing, exercise that just will not sustain. Severe dyspnea and pre-syncope can hit at moderate exertion even when oxygen transport is technically fine.
+
+    **Effects**
+
+    - **Fuuton techniques take −3 Speed** for damage purposes.
+    - **Stamina check every 20 IC** (TN 5 + 5 × Fatigue level). On failure: **−2 to all rolls for 10 IC.**
+    - **Bleed severity is increased by +4** — blood does not clot as easily in dense air.
+
+    **Counterplay:** A **Field Respirator** helps.
+  </Tab>
+  <Tab title="Low Air Pressure">
+    <Info>
+      The air is thin as glass. Your head pounds.
+    </Info>
+
+    Above about 2000 meters, thinning air and dropping oxygen cause decreased physical efficiency, headaches, dizziness. Acute altitude illness: headache, tiredness, nausea, appetite loss, irritability. Escalates to shortness of breath, confusion, and coma. Palpitations, dim vision, partial deafness, impaired coordination. The headaches can turn into cerebral edema.
+
+    **Effects**
+
+    - **Fuuton techniques deal −20% wounding.**
+    - **Resistance check every 20 IC** (TN 10, increasing by +5 per success, maximum 50). On failure: **Major Blunt Head wound for 20 IC.**
+    - **Partial Success deals 25% per point failed** — thin air disorients.
+    - **Chakra costs are increased by +2** — your body works harder to mold chakra.
+
+    **Counterplay:** A **Field Respirator** negates the Resistance check. The **Rest** action reduces the TN. Fight defensively.
+  </Tab>
+</Tabs>
+
+## Extreme Weather Reference
+
+<Tabs>
+  <Tab title="Smog">
+    <Info>
+      Fog and pressure combined. The air is thick, wet, and hungry. Every breath is a risk.
+    </Info>
+
+    London's killer smog was a deadly mixture of smoke and fog, a natural fog contaminated by industrial pollutants. Gases and particles turned to acid on contact with water and air, burning skin, eyes, lungs, and ironwork alike. With no wind, the city choked for five straight days. Massive inflammations, the dead suffocated in their own bodies.
+
+    **Effects**
+
+    - Combines the effects of [**Fog**](#fog) and **[Low Air Pressure](#low-air-pressure).**
+    - **Suffocation 1 every 20 IC** (caps at 5).
+    - **Katon damage is increased by +10%** — fire feeds on the smog.
+    - **Chakra costs are increased by +3.**
+
+    **Counterplay:** **Field Respirator** negates Suffocation. **Fuuton jutsu** disperses smog. Katon users thrive.
+  </Tab>
+  <Tab title="Storm">
+    <Info>
+      The sky breaks open. Rain, wind, and lightning wage war on the earth.
+    </Info>
+
+    Thunderclaps hit the ears, the head, the chest, the whole body. Every strike has its own attack, sustain, decay and release. The smell of ozone. That fresh earthy scent as rain hits dry ground. Chill in the air. White or bluish-white streaks tearing across the sky. Cracks right overhead, guttural growls that echo for miles.
+
+    **Effects**
+
+    - Combines the effects of [**Heavy Rain**](#heavy-rain) and **[High Winds](#high-winds).**
+    - You lose all bonuses from **Enhanced Hearing** and **Blind Fighting**.
+    - **Genjutsu Offense take −2.**
+    - **Wielding a metallic weapon:** roll 1d100 every 10 IC. On **1–5**, you are struck by lightning — defend against an **Accuracy 80 Tenchu with an NDB of 30.**
+  </Tab>
+  <Tab title="Sandstorm">
+    <Info>
+      The desert rises. Sand becomes a blade, heat becomes a hammer, and the world becomes an abattoir.
+    </Info>
+
+    Like an industrial sandblaster held to your skin. The leading edge is the worst. Breathing goes laboured with the dirty air. Wind-driven dust sandblasts bare skin. Hands rise to protect faces, fabric presses against the mouth and nose. Mouth dries into sandpaper. Sand invades ears, eyes, nostrils, scalp. Open your mouth and you get a mouthful. Dirty, gritty taste; you breathe all that sand in.
+
+    **Effects**
+
+    - Combines the effects of [**High Winds**](#high-winds) and **[Heavy Heat](#heavy-heat).**
+    - **−8 Visibility Penalty.**
+    - **Suffocation 1 every 5 IC** (caps at 5).
+    - **Immobilization penalty increases by +1 for every 10 IC stationary.** Moving 3 yards reduces this additional penalty by 1.
+    - Every 20 IC in combat, you suffer a **Minor Slashing wound.**
+
+    **Counterplay:** **Field Respirator.**
+  </Tab>
+  <Tab title="Blizzard">
+    <Info>
+      The world becomes white. Not the white of light, but the white of absence.
+    </Info>
+
+    Uniform cloud above, snow below. All points of visual reference vanish and sensory illusions creep in. A uniform white glow with no shadows, no horizon, no clouds. Depth perception dies. A step forward may pitch you into a drop that was invisible a moment ago. Even the horizon becomes a rumour.
+
+    **Effects**
+
+    - Combines the effects of [**High Winds**](#high-winds) and **[Heavy Cold](#heavy-cold).**
+    - **−6 Visibility Penalty.**
+    - **Paralysis 2**, or **Paralysis 1** if you have **Waterwalking.**
+  </Tab>
+</Tabs>
+
+## Day and Night
+
+Rolled after weather. Optional for friendly RP or sparring.
+
+<Steps>
+  <Step title="Roll a 1d2 — Day or Night" icon="dice-two">
+    - **1** → Day
+    - **2** → Night
+  </Step>
+  <Step title="Roll a 1d6 for the phase" icon="dice-six">
+    Cross-reference on the table below.
+  </Step>
+</Steps>
+
+| Phase | Roll (1d6) | Condition | Effect |
+| :-- | :-: | :-- | :-- |
+| Day | 1–4 | Daytime | No effect. |
+| Day | 5 | Dusk / Dawn | Opponents need only −5 Visibility for you to Hide. |
+| Day | 6 | Glaring Sunlight | Opponents need −7 Visibility for you to Hide. −3 Stealth and Espionage. +3 Survival. |
+| Night | 1–4 | Night-time | −6 Visibility Penalty. Any other Visibility penalties increased by 1. |
+| Night | 5 | Intense Moonlight | −2 Visibility Penalty. +5 Survival. |
+| Night | 6 | New Moon / Cloud Cover | −10 Visibility Penalty. No Called Shots. Ignite's Stealth Penalty doubled. |
+
+## Country Weather
+
+Determining the weather where you live is simple. **Roll [1d20]** and consult the province table.
+
+<Warning>
+  Sparring inside a **Hidden Village**? Ignore any Extreme Weather result and re-roll. **Honourable spars** always keep the rolled weather as a constant.
+</Warning>
+
+<Tabs>
+  <Tab title="Southern Province">
+    | Roll | Weather |
+    | :-: | :-- |
+    | 1–8 | [Clear Skies](#clear-skies) |
+    | 9–11 | [Heavy Rain](#heavy-rain) |
+    | 12–13 | [Fog](#fog) |
+    | 14–15 | [Hail Storm](#hail-storm) |
+    | 16–17 | [High Winds](#high-winds) |
+    | 18–19 | [High Air Pressure](#high-air-pressure) |
+    | 20 | [Storm](#storm) |
+  </Tab>
+  <Tab title="Eastern Province">
+    | Roll | Weather |
+    | :-: | :-- |
+    | 1–6 | [Clear Skies](#clear-skies) |
+    | 7–10 | [High Winds](#high-winds) |
+    | 11–12 | [High Air Pressure](#high-air-pressure) |
+    | 13–14 | [Low Air Pressure](#low-air-pressure) |
+    | 15–16 | [Snow](#snow) |
+    | 17–18 | [Heavy Cold](#heavy-cold) |
+    | 19–20 | [Storm](#storm) |
+  </Tab>
+  <Tab title="Western Province">
+    | Roll | Weather |
+    | :-: | :-- |
+    | 1–10 | [Heavy Heat](#heavy-heat) |
+    | 11–14 | [Clear Skies](#clear-skies) |
+    | 15–18 | [High Winds](#high-winds) |
+    | 19–20 | [Sandstorm](#sandstorm) |
+  </Tab>
+  <Tab title="Northern Province">
+    | Roll | Weather |
+    | :-: | :-- |
+    | 1–6 | [Heavy Rain](#heavy-rain) |
+    | 7–10 | [Fog](#fog) |
+    | 11–14 | [Snow](#snow) |
+    | 15 | [Hail Storm](#hail-storm) |
+    | 16 | [Heavy Cold](#heavy-cold) |
+    | 17 | [Low Air Pressure](#low-air-pressure) |
+    | 18 | [Clear Skies](#clear-skies) |
+    | 19–20 | [Blizzard](#blizzard) |
+  </Tab>
+  <Tab title="Minor Countries">
+    Any border country that isn't listed uses one of the two adjacent province tables. Roll **[1d2]** and pick a province, then roll your **[1d20]**.
+
+    <Tip>
+      Example: **Taki** and **Grass** use either **Western** or **Southern** Province.
+    </Tip>
+
+    **Rain** is a special exception: still use **Eastern** or **Southern** Province, but replace their **Clear Skies** with [**Heavy Rain**](#heavy-rain) and their **Storm** with **[Smog](#smog).**
+  </Tab>
+</Tabs>
+
+## Quick Reference
+
+<Accordion title="Cheat Sheet — all weathers at a glance" icon="table-list">
+  | Weather | Signature Effect | Hard Counter |
+  | :-- | :-- | :-- |
+  | [Clear Skies](#clear-skies) | +1 Stamina rolls | — |
+  | [Fog](#fog) | −4 Visibility (×2 past 30 yd) | Blind Fighting |
+  | [Heavy Rain](#heavy-rain) | Immobilization 3, no firearms | Suiton, waterwalking |
+  | [Snow](#snow) | Paralysis 1, water freezes | Waterwalking, Pool of Water |
+  | [Hail Storm](#hail-storm) | Frostbite, −2 ranged Accuracy | Cover |
+  | [Heavy Cold](#heavy-cold) | −3 all Skills, Paralysis 3 | Waterwalking, Pool of Water |
+  | [Heavy Heat](#heavy-heat) | AP Cap −25%, Ignite +1 | Extra water, shade |
+  | [High Winds](#high-winds) | 1d4 miss on ranged, no shouting | Fuuton, close range |
+  | [High Air Pressure](#high-air-pressure) | Bleed +4, Fuuton −3 Speed | Field Respirator |
+  | [Low Air Pressure](#low-air-pressure) | Chakra +2, Head wound risk | Field Respirator, Rest |
+  | [Smog](#smog) | Fog + Low Pressure + Suffocation | Field Respirator, Fuuton |
+  | [Storm](#storm) | Rain + Wind + lightning strikes | Drop metal weapons |
+  | [Sandstorm](#sandstorm) | Wind + Heat + Slashing wound / 20 IC | Field Respirator, keep moving |
+  | [Blizzard](#blizzard) | Wind + Cold + −6 Visibility | Watershoes / Waterwalking |
+</Accordion>
