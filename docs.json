@@ -38,15 +38,15 @@
               "Creation/character-creation",
               "Creation/untitled-page-2",
               "Creation/untitled-page-3",
-              "Creation/abilities-contents-chakra-equipment-physical-sensory-subtlety-other-what-abilities-are-abilities-represent-the-fruits-of-your-characters-training-and-the-ways-in-which-they-ve-developed-as-a-shino"
+              "Creation/abilities"
             ]
           },
           {
             "group": "UNIQUES",
             "pages": [
               "Uniques/creation-uniques",
-              "Uniques/untitled-page",
-              "Uniques/untitled-page-2",
+              "Uniques/1-up",
+              "Uniques/2-up",
               "Uniques/3-up"
             ]
           },
@@ -54,10 +54,8 @@
             "group": "PROVINCES",
             "pages": [
               "Province/southern-province",
-              "Akimichi_talent",
               "Province/western-province",
-              "Province/untitled-page",
-              "Mounts"
+              "Province/eastern-province"
             ]
           }
         ]
@@ -65,8 +63,8 @@
       {
         "tab": "COMBAT",
         "pages": [
-          "untitled-page",
-          "Combat/untitled-page",
+          "Combat/combat",
+          "Combat/wounds",
           "Honourable",
           "weather"
         ]
@@ -79,14 +77,14 @@
             "pages": [
               "Jutsu/rules",
               "Jutsu/katon-ninjutsu",
-              "Jutsu/untitled-page",
+              "Jutsu/fuuton-ninjutsu",
               "Jutsu/doton-ninjutsu",
               "Jutsu/raiton-ninjutsu",
               "Jutsu/suiton-ninjutsu",
               "Jutsu/general-ninjutsu",
               "Jutsu/genjutsu",
               "Jutsu/medical-ninjutsu",
-              "Jutsu/untitled-page-2",
+              "Jutsu/cqc-taijutsu",
               "Jutsu/weapon-taijutsu",
               "Jutsu/sealing-ninjutsu"
             ]
@@ -100,12 +98,13 @@
             "group": "Field Equipment",
             "pages": [
               "Field Equipment/untitled-page",
-              "Field Equipment/untitled-page-2",
-              "Field Equipment/field-equipment-the-difference-between-requisition-and-savings-in-practice-comes-down-to-paperwork-requisitioned-equipment-carries-a-village-stamp-a-serial-number-and-the-implied-understanding-tha",
+              "Field Equipment/ranged-weapons",
+              "Field Equipment/field-equipment",
               "Field Equipment/untitled-page-4",
               "Field Equipment/rank-gear",
-              "Field Equipment/untitled-page-3",
-              "Field Equipment/dwellings"
+              "Field Equipment/vehicles",
+              "Field Equipment/dwellings",
+              "Mounts"
             ]
           }
         ]
@@ -116,7 +115,7 @@
           {
             "group": "Advancement",
             "pages": [
-              "Advancement/untitled-page",
+              "Advancement/slice-of-life",
               "Advancement/rank-benefits-ninja-rank-benefits-are-specialized-abilities-acquired-when-one-ranks-up-each-rank-will-have-several-for-you-to-choose-from-you-automatically-acquire-any-two-of-your-choice-for-free",
               "Advancement/untitled-page-2",
               "Advancement/the-nature-of-advancement-in-the-shinobi-world-the-path-of-a-shinobi-is-not-a-straightforward-ascent-measured-in-years-of-service-or-even-in-the-mastery-of-dangerous-techniques-rather-it-is-a-comp",
@@ -132,7 +131,7 @@
           "Talents/untitled-page",
           "Talents/untitled-page-2",
           "Talents/untitled-page-3",
-          "untitled-page-2",
+          "summoning-contracts",
           "untitled-page-12",
           "Talents/maestro",
           "untitled-page-3",
@@ -153,8 +152,7 @@
     "links": []
   },
   "footer": {
-    "socials": {
-    }
+    "socials": {}
   },
   "background": {
     "color": {
@@ -176,5 +174,79 @@
       "weight": 400
     }
   },
-  "description": "The Guide for the Shinobi"
+  "description": "The Guide for the Shinobi",
+  "redirects": [
+    {
+      "source": "/untitled-page",
+      "destination": "/Combat/combat"
+    },
+    {
+      "source": "/Jutsu/untitled-page",
+      "destination": "/Jutsu/fuuton-ninjutsu"
+    },
+    {
+      "source": "/Province/untitled-page",
+      "destination": "/Province/eastern-province"
+    },
+    {
+      "source": "/Uniques/untitled-page",
+      "destination": "/Uniques/1-up"
+    },
+    {
+      "source": "/Uniques/untitled-page-2",
+      "destination": "/Uniques/2-up"
+    },
+    {
+      "source": "/untitled-page-2",
+      "destination": "/summoning-contracts"
+    },
+    {
+      "source": "/Creation/abilities-contents-chakra-equipment-physical-sensory-subtlety-other-what-abilities-are-abilities-represent-the-fruits-of-your-characters-training-and-the-ways-in-which-they-ve-developed-as-a-shino",
+      "destination": "/Creation/abilities"
+    },
+    {
+      "source": "/Field Equipment/untitled-page-3",
+      "destination": "/Field%20Equipment/vehicles"
+    },
+    {
+      "source": "/Field%20Equipment/untitled-page-3",
+      "destination": "/Field%20Equipment/vehicles"
+    },
+    {
+      "source": "/Akimichi_talent",
+      "destination": "/Province/southern-province#major-akimichi"
+    },
+    {
+      "source": "/untitled-page-13",
+      "destination": "/Honourable"
+    },
+    {
+      "source": "/Jutsu/untitled-page-2",
+      "destination": "/Jutsu/cqc-taijutsu"
+    },
+    {
+      "source": "/Field Equipment/untitled-page-2",
+      "destination": "/Field%20Equipment/ranged-weapons"
+    },
+    {
+      "source": "/Field%20Equipment/untitled-page-2",
+      "destination": "/Field%20Equipment/ranged-weapons"
+    },
+    {
+      "source": "/Field Equipment/field-equipment-the-difference-between-requisition-and-savings-in-practice-comes-down-to-paperwork-requisitioned-equipment-carries-a-village-stamp-a-serial-number-and-the-implied-understanding-tha",
+      "destination": "/Field%20Equipment/field-equipment"
+    },
+    {
+      "source": "/Field%20Equipment/field-equipment-the-difference-between-requisition-and-savings-in-practice-comes-down-to-paperwork-requisitioned-equipment-carries-a-village-stamp-a-serial-number-and-the-implied-understanding-tha",
+      "destination": "/Field%20Equipment/field-equipment"
+    },
+    {
+      "source": "/Combat/untitled-page",
+      "destination": "/Combat/wounds"
+    },
+    {
+      "source": "/Advancement/untitled-page",
+      "destination": "/Advancement/slice-of-life"
+    }
+  ]
 }

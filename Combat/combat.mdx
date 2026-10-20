@@ -1,3 +1,7 @@
+---
+title: "Combat"
+---
+
 ## Initiative
 
 Combat begins with all participants making an Initiative roll: 1d20 + (AGI)/10. From there, everyone is assigned a number depending upon how well they did compared to one another.
@@ -34,25 +38,11 @@ Variable Speed Actions (such as Block, Observe, or Guard) are partial exceptions
 
 ### Action Points
 
-One of the things that makes battles dramatic is sudden, unpredicted surprises – and among shinobi that's par for the course. Mechanically, this is represented by Action Points; thematically, this can be a burst of adrenaline or the result of carefully luring your opponent into position for a counter‑attack.
+One of the things that makes battles dramatic is sudden, unpredicted surprises – and among shinobi that’s par for the course. Mechanically, this is represented by Action Points; thematically, this can be a burst of adrenaline or the result of carefully luring your opponent into position for a counter‑attack.
 
-You gain 5 AP every time the Initiative Count reaches a multiple of 20. You start battle with zero AP, and your maximum AP is AGI/2.
+You gain 5 AP every time the Initiative Count reaches a multiple of 20. You start battle with zero AP, and your maximum AP is DEX/2.
 
-You can spend AP whenever you take an action. Each AP spent reduces the action's Speed by 1.
-
-#### AP Cost for Speed Reduction
-
-Pushing an action to move faster puts additional strain on your body. For every 2 AP you spend to reduce an action's Speed (rounded down), the action's Chakra and/or Stamina cost increases by 1. This increase cannot exceed half the action's base cost (rounded down). Defensive actions (Dodge, Parry, Block, and any action with the Interrupt tag used for defense) are exempt from this cost increase.
-
-| AP Spent | Cost Increase |
-| :-- | :-- |
-| 1 | +0 |
-| 2–3 | +1 |
-| 4–5 | +2 |
-| 6–7 | +3 |
-| 8–9 | +4 |
-
-_Example: A technique with Chakra 16 (base) can have its cost increased up to +8 (cap 24). A technique with Chakra 10 caps at +5 (cap 15). A technique with Stamina 5 caps at +2 (cap 7)._
+You can spend AP whenever you take an action. Each AP spent reduces the action’s Speed by 1. 
 
 ---
 
@@ -66,13 +56,15 @@ _Example: Choji rushes toward Shikamaru and swings a heavy fist toward his face!
 
 ### Accuracy
 
-Accuracy is a target number (TN) your opponent must match or beat on their defense roll. Your attack's Accuracy depends on the type of attack:
+Accuracy is a target number (TN) your opponent must match or beat on their defense roll. Your attack’s Accuracy depends on the type of attack:
 
 - **Close Quarters Combat** (unarmed Taijutsu, grapple, touch-range attacks (yes even ninjutsu)): 10 + (STR)/10 plus any bonuses from abilities, uniques, or the technique.
-- **Weapon and Ranged Taijutsu:** 10 + (DEX)/10 plus bonuses.
-- **Ninjutsu:** 10 + (CHA)/10 plus bonuses.
+- **Weapon and Ranged Taijutsu**: 10 + (DEX)/10 plus bonuses.
+- **Ninjutsu**: 10 + (CHA)/10 plus bonuses.
 
-**Accuracy Rolls:** Sometimes you must make an Accuracy Roll – replace the base 10 with a 1d20 roll. The formula is 1d20 + (appropriate stat)/10 + other Accuracy modifiers. When something penalizes both Accuracy and d20 rolls, apply only the penalties to Accuracy; if it penalizes only d20 rolls, those penalties apply.
+Accuracy Rolls: Sometimes you must make an Accuracy Roll – replace the base 10 with a 1d20 roll. The formula is 1d20 + (appropriate stat)/10 + other modifiers to that Accuracy type. When something penalizes both that Accuracy type and d20 rolls, apply only the penalties to Accuracy; if it penalizes only d20 rolls, those penalties apply.
+
+<br />
 
 ### Damage
 
@@ -80,15 +72,17 @@ Every attack has a Base Damage – a number of dice of a certain size. For examp
 
 **(Base Damage) + (Damage Bonus) × (Speed) + (any other bonuses)**
 
-Your Damage Bonus is determined by STR for Taijutsu or CHA for Ninjutsu, divided by 15 and rounded to one decimal place. This bonus is multiplied by the attack's final Speed – slower, more solid attacks benefit more from raw power. Unless noted otherwise, any alteration to an action's Speed also affects the Speed used for the damage bonus multiplication.
+Your Damage Bonus is determined by STR for CQC, CHA for Ninjutsu, and DEX for Weapons divided by 15 and rounded to one decimal place. This bonus is multiplied by the attack’s final Speed – slower, more solid attacks benefit more from raw power. Unless noted otherwise, any alteration to an action’s Speed also affects the Speed used for the damage bonus multiplication. 
 
-**Additive Bonuses:** All bonuses to Damage Bonus are additive, not multiplicative. For example, using a two‑handed weapon (+33%), Chakra Flow: Fire (+25%), and Weapon Focus (+1 flat) on a Burning Spear that already uses NDB instead of PDB gives: (CHA/15) × (1 + 0.33 + 0.25) + 1, not (CHA/15 × 1.33 × 1.25) + 1. Flat bonuses (like Weapon Focus ranks) are added after multiplication.
+All bonuses to Damage Bonus are additive, not multiplicative. For example, using a two‑handed weapon (+33%), Chakra Flow: Fire (+25%), and Weapon Focus (+1 flat) on a Burning Spear that already uses NDB instead of WDB gives: (CHA/15) × (1 + 0.33 + 0.25) + 1, not (CHA/15 × 1.33 × 1.25) + 1. Flat bonuses (like Weapon Focus ranks) are added after multiplication.
 
-Damage is applied to an opponent's Vitality until it reaches 0. Any overflow, and all future damage, goes directly to their Hit Points.
+Damage is applied to an opponent’s Vitality until it reaches 0. Any overflow, and all future damage, goes directly to their Hit Points.
+
+<br />
 
 ### Handseals
 
-Most Ninjutsu and Genjutsu have a Seal Speed entry. Those with Seal Speed 0 can be used at will. For others, you must first take a Perform Handseals action (see Basic Actions). The jutsu must be used on your next action; its effects resolve then, and your next action is determined by the jutsu's Speed.
+Most Ninjutsu and Genjutsu have a Seal Speed entry. A Seal Speed of 0 means that while handseals are required, you can perform them so fast that the time required is negligible For others, you must first take a Perform Handseals action (see Basic Actions). The jutsu must be used on your next action; its effects resolve then, and your next action is determined by the jutsu’s Speed.
 
 ### Genjutsu
 
@@ -123,9 +117,9 @@ The interrupt's full Speed is added to your current IC to determine when you nex
 
 **Defensive interrupt Speed floor:** Unlike normal actions, defensive interrupts are not bound by the standard minimum Speed of 3. A Dodge (Speed 2) can be reduced to as low as Speed 1. The absolute floor for any defensive interrupt is Speed 1.
 
-Speed increases from Wounds (such as Bruised Ribs) or status effects (such as Shock) that apply to your defensive interrupt can be fully cancelled out by AP spending, and do not raise the minimum Speed — a Dodge with +3 from Shock can still be reduced to Speed 1 with sufficient AP. This allowance does not apply to Links added to a defensive interrupt: a Dodge + Kawarimi chain has its minimum Speed set by the chain as a whole, not the Dodge alone.
+Speed increases from Wounds (such as Bruised Ribs) or status effects (such as Paralysis) that apply to your defensive interrupt can be fully cancelled out by AP spending, and do not raise the minimum Speed, a Dodge with +3 from Paralysis can still be reduced to Speed 1 with sufficient AP. This allowance does not apply to Links added to a defensive interrupt: a Dodge + Kawarimi chain has its minimum Speed set by the chain as a whole, not the Dodge alone.
 
-In the rare case that a defensive interrupt itself becomes an attack — such as when a parry technique converts on success — the standard minimum Speed of 3 applies to that resulting attack.
+In the rare case that a defensive interrupt itself becomes an attack, such as when a parry technique converts on success, the standard minimum Speed of 3 applies to that resulting attack.
 
 ### Partial Success
 
@@ -143,15 +137,15 @@ Effects that reduce or bypass DR combine additively. If one effect bypasses half
 
 ### Mitigation Order
 
-As it's inevitable that you will have multiple ways to reduce damage when hit, you apply effects in the following order:
+As it’s inevitable that you will have multiple ways to reduce damage when hit, you apply effects in the following order:
 
-1. Attacker's modifications to damage (additive).
+1. Attacker’s modifications to damage (additive).
 2. Partial Success (if applicable).
 3. Damage Reduction.
 4. Blocking.
 5. Any other percent‑based reductions (additive).
 
-"Additive" means percentage bonuses are added together into a single multiplier. Example: +25% and +33% gives DB × (1 + 0.25 + 0.33) = DB × 1.58. A Taijutsu Specialist using Sudden Attack 2 (‑20%) gives (base dice + DB × Speed) × (1 + 0.1 – 0.2) = ×0.9.
+“Additive” means percentage bonuses are added together into a single multiplier. Example: +25% and +33% gives DB × (1 + 0.25 + 0.33) = DB × 1.58. A CQC Specialist using Sudden Attack, CQC 2 (‑20%) gives (base dice + DB × Speed) × (1 + 0.1 – 0.2) = ×0.9. <br />
 
 ### Action Qualities
 
@@ -184,7 +178,7 @@ You may abort an action on any IC before your next action, allowing you to act o
 
 ### Variable Speed Actions
 
-Actions like Block, Guard, and Total Defense have no set Speed, you declare a duration in IC. They have the Abort property by default. Any Stun amount forcibly aborts any Variable Speed Action you are performing. Effects that modify Speed (AP, Celerity, Wounds, Shock) do not apply to Variable Speed Actions.
+Actions like Block, Guard, and Total Defense have no set Speed, you declare a duration in IC. They have the Abort property by default. Any Stun amount forcibly aborts any Variable Speed Action you are performing. Effects that modify Speed (AP, Celerity, Wounds, Paralysis) do not apply to Variable Speed Actions.
 
 ### Willpower
 
@@ -194,14 +188,14 @@ You may spend Willpower after making an attack or a d20 roll, after determining 
 
 ### d20 Rolls
 
-Bonuses to "d20 rolls" apply to:
+Bonuses to “d20 rolls” apply to:
 
 - Defensive Rolls
 - Skill Rolls
 - Genjutsu Rolls
 - Grapple Rolls
 
-They do not apply to Accuracy (rolled or TN), Fatigue rolls, or damage rolls.
+They do not apply to CQC Accuracy, Ninjutsu Accuracy, Weapon Accuracy (rolled or TN), Fatigue rolls, or damage rolls.<br />
 
 ### Basic Actions
 
@@ -209,15 +203,15 @@ These are actions anyone can perform in combat.
 
 #### Basic Unarmed (Speed 8, Stamina 5)
 
-A catch‑all for punches, kicks, and other body‑based attacks. Deals 2d4 base damage.
+A catch‑all for punches, kicks, and other body‑based attacks. Deals 2d4 base damage. This uses your CQC Accuracy, and your Physical Damage Bonus.
 
 #### Basic (Weapon) (Speed Varies, Stamina Varies)
 
-An ordinary attack with a weapon. The base damage, Speed, and Stamina cost are listed in the weapon's Equipment entry.
+An ordinary attack with a weapon. The base damage, Speed, and Stamina cost are listed in the weapon’s Equipment entry. This uses your Weapon Accuracy, and your Weapon Damage Bonus.
 
 #### Block (Variable Speed Action)
 
-Declare that you are blocking and state a duration in IC. Until your next action, you may use the Block defense against any incoming attack – even those that normally do not allow a defense (e.g., Environmental tag, Explosive Tags). Block negates the Surprise Attack quality on attacks you block. Blocking reduces unarmed and ninjutsu damage by 50%, but weapon damage by only 25%. While blocking you are immune to the sixth sense degrade from surprise or sneak attacks.
+Declare that you are blocking and state a duration in IC. Until your next action, you may use the Block defense against any incoming attack, even those that normally do not allow a defense (e.g., Environmental tag, Explosive Tags). Block negates the Surprise Attack quality on attacks you block. Blocking reduces CQC and ninjutsu damage by 50%, but Weapon damage by only 25%. While blocking you are immune to the sixth sense degrade from surprise or sneak attacks. 
 
 #### Dodge (Speed 2, Interrupt)
 
@@ -236,36 +230,22 @@ Throw multiple weapons of the same type; shuriken or kunai, in a single action.
 - Stamina = 5, +1 per 2 weapons total (6 for 2–3, 7 for 4–5, and so on).
 - Minimum total Speed is 5 — this applies to both the base Speed and the final Speed after AP spending.
 - Base damage = total of all weapon dice. Six shuriken = 6d6.
-- Damage bonus increases by +0.5 per thrown weapon.
+- Weapon Damage bonus increases by +0.5 per thrown weapon.
 - Multi‑throws reduce the severity of all wounds they cause by one category, to a minimum of Minor.
-- If multi-throwing shuriken, their inherent +2 Accuracy bonus applies only once regardless of how many are thrown.
+- If multi-throwing shuriken, their inherent +2 Weapon Accuracy bonus applies only once regardless of how many are thrown.
 - You must throw only one weapon type per action, shuriken or kunai, not a mix.
 
-#### Parry (Speed 3, Interrupt)
+#### CQC Parry (Speed 3, Interrupt)
 
-Deflect an attack with a weapon or bare hands. Weapon attacks may only be parried with a weapon (using a single weapon); unarmed attacks may be parried with at least one free hand. Parry uses an Accuracy Roll with the appropriate stat:
+Deflect an attack with bare hands. You need at least one hand free to perform a CQC parry, and CQC parries can only be used on CQC attacks. CQC Parry uses a CQC Accuracy Roll.
 
-- **Physical parry (weapon or unarmed):** 1d20 + STR/10 plus Accuracy modifiers.
-- **Ninjutsu‑based parry (e.g., Wind Turtle Shell):** 1d20 + CHA/10 plus modifiers.
-- **DEX option:** The Warder unique allows you to use DEX/10 for parry rolls instead.
+When Fatigue penalizes both Accuracy and defensive rolls, CQC Parry suffers only the defensive roll penalty. If something penalizes only Accuracy, CQC Parry suffers that penalty.
 
-When Fatigue penalizes both Accuracy and defensive rolls, Parry suffers only the defensive roll penalty. If something penalizes only Accuracy, Parry suffers that penalty.
+#### Weapon Parry (Speed 3, Interrupt)
 
-#### Escape Grapple (Speed 6 + X, Delay X, Special, Interrupt)
+Deflect an attack with a weapon. You need to be actually holding a weapon in order to perform a Weapon Parry. Weapon Parry uses a Weapon Accuracy Roll.
 
-Escape Grapple may only be used by the defender in a grapple. When you attempt to escape, you make a grapple check against everyone you are currently grappled with. The "X" in the technique's Speed and Delay is the amount you fail your grapple check by, or the highest amount you fail by, if you are in multiple grapples. The minimum speed of the escape grapple is speed 4.
-
-- If you roll a 12 against your opponent's 16, you fail by 4. Escape Grapple has Speed 8 and Delay 8 (4 + 4).
-- If you roll a 24 against your opponent's 16, you succeed by 8. Escape Grapple has Speed 4 and Delay 4.
-- If you roll a 30 against your opponent's 16, you succeed by 14. Escape Grapple costs Speed 4 and Delay 4 (minimum).
-
-A successful Escape Grapple ends all grapples you are currently in. The technique has a Delay equal to its final Speed, and cannot be Aborted despite its Delay.
-
-**Important Interactions:**
-
-- This action does not require free hands and can be performed even when your hands are restrained or occupied.
-- If you are in multiple grapples, you must roll against each grappler's grapple check. The highest amount you fail by determines X.
-- Escape Grapple can be attempted even if you have already taken an action this IC, as it is a defensive response to being grappled.
+When Fatigue penalizes both Accuracy and defensive rolls, Weapon Parry suffers only the defensive roll penalty. If something penalizes only Accuracy, Weapon Parry suffers that penalty. 
 
 #### Perform Handseals (Speed Variable, Abort)
 
@@ -273,9 +253,7 @@ For jutsu with a Seal Speed greater than 0, you must perform handseals. The modi
 
 If you take damage while forming handseals, make a Chakra Control skill roll against TN 10 + (damage dealt / 10). Failure aborts the action. Unlike other Variable Speed Actions, Stuns do not end your Perform Handseals action.
 
-**Grappling interruption:** If you are grappled while performing handseals, your Perform Handseals action is automatically aborted. You must start over if you break free.
-
-**Called shots to hands:** A successful Called Shot targeting the arms or hands while you are performing handseals increases the Chakra Control check TN by an additional 10.
+A successful Called Shot targeting the arms or hands while you are performing handseals increases the Chakra Control check TN by an additional 10.
 
 While performing handseals, your hands are not free for other actions (parrying, grabbing, drawing weapons, or a separate Perform Handseals action for a defensive interrupt) unless you have the Single‑Handed Seals unique.
 
@@ -285,7 +263,7 @@ Reduce your Stamina penalty by 1 (minimum 0). Rest's base Speed cannot be reduce
 
 #### Take the Hit (Speed 6, Interrupt)
 
-Protect an ally. Make a Dodge roll with +5 bonus. Success: you leap in the way. Failure: your ally takes 20% damage per point you failed by (you take the remainder). If you were Blocking as a Variable Speed Action when you use this, you may block if you succeeded by 1 or more. You may use other interrupts to defend yourself, up to a maximum Speed equal to the margin of success. Cannot ordinarily be used against AoE attacks, see Defensive Formation ability.
+Protect an ally. Make a Dodge roll with +5 bonus. Success: you leap in the way. Failure: your ally takes 20% damage per point you failed by (you take the remainder). If you were Blocking as a Variable Speed Action when you use this, you may block if you succeeded by 1 or more. You may use other interrupts to defend yourself (except dodge or any dodge related interrupts), up to a maximum Speed equal to the margin of success. Cannot ordinarily be used against AoE attacks, see Defensive Formation ability.
 
 ### Stealth
 
@@ -350,9 +328,9 @@ This action may not be used if you are at 0 HP or if the weapon you are using ca
 
 ## Conditions and Status Effects
 
-### Wounded
+### [Wounded](/Combat/wounds)
 
-See the Wounds section. Effects and healing times are listed per wound.
+See the Wounds section. Effects are listed per wound, and healing times are under Wound Recovery.
 
 ### Fatigued
 
@@ -372,29 +350,57 @@ Two ways: reduced to -100% HP, or a coup de grace (Speed 10, Delay 5 melee actio
 
 ### Status Effects
 
+#### Airborne
+
+Airborne represents being lifted into the air, violently or otherwise. An Airborne ninja ignores all Ground-tagged effects and ground-based environmental hazards, but similarly cannot benefit from effects that require contact with the ground, and cannot be knocked Prone. They may still defend themselves, but their move speed is reduced to 0, potentially impacting their ability to escape areas of effect. The status ends on the Airborne target's next non-interrupt action, unless stated otherwise.
+
 #### Bleed
 
 Lose Vitality or HP equal to double severity every 5 IC. Stamina penalty equal to half severity (rounded down). Reduce severity by RES/20 every 20 IC (minimum 1). Bleeds from the same source do not stack; different sources stack damage but only the highest severity applies the Stamina penalty.
 
 #### Burns
 
-Stamina penalty equal to severity. Multiple burns – only the strongest applies. Clearing Stamina penalties (e.g., on Fatigue advance) clears all burns.
+Generally resulting from exposure to fire or intense heat, such as some katon jutsu, being burnt makes it harder to fight effectively. Your Stamina penalty is equal to severity. If you get multiple burns: only the strongest applies. Effects that reduce Stamina penalties reduce all burn severities by the same amount; advancing a Fatigue category clears all burns.
+
+### Buried
+
+If you dig a hole to give you the buried status and are not seen this gives you a chance to hide similar to a visibly penalty would.
+
+Buried is a status caused by the usage of doton jutsu. You can be buried up to a rating of ten. At buried one through five you can attack and be targeted. Higher than this you can not attack or be targetted. Unless you used a jutsu that says otherwise (or have oxygen tank!), you are at suffocation 1 when buried more than five.
+
+Buried Status applieds a immobilization penalty equal to twice its rating. You can dig yourself out of being buried equal to the immobilization penalty you are suffering in speed. Which means buried 4 would require a speed 8 action to dig yourself out.
+
+#### Grounded
+
+Grounded represents being submerged at least partially in the ground. A Grounded character's move speed is reduced to 0, and any penalties inflicted on them by the Prone condition are doubled, until they remove themselves from the ground as a Speed 10, Delay 5 action. Buried characters cannot be knocked Airborne, and applying the Buried condition removes the Airborne condition.
 
 #### Ignite
 
-Stealth penalty equal to severity. Every 5 IC, take (severity × 2) + (severity% of current Vitality) damage. This can wound (Energy wounds). Subtract RES/30 (min 1) from severity each time damage is dealt. If no Vitality remains, deal severity% of max HP damage (no flat addition). More severe Ignite overwrites less severe.
+You are on fire. Literally, you are burning. This is probably one of the most excruciatingly painful experiences of your life. 
+
+Ignite's effects are somewhat complicated. Like most statuses, it has a severity. You suffer a -severity/2 penalty to your Stealth checks, and every 5 IC you take damage equal to its severity, plus its severity in percent of your current Vitality. Thus, an Ignite 10 would give you -5 to your Stealth and would deal 10 damage, plus 10% of your current Vitality. Each time it does damage, you subtract (RES/20) from its severity.
+
+If you have no Vitality remaining, it instead does damage equal to its severity in percent of your maximum HP. The above Ignite 10 effect would deal 10% of your maximum HP in damage.
+
+If someone ignites you again while you are already on fire (seriously, what kind of people are you fighting?), the more severe effect replaces the less severe one.
 
 #### Immobility
 
-Penalty to defensive rolls equal to severity, half (rounded down) to Accuracy, and reduces AGI for movement by 10% per point. Maximum effective penalty -10. Multiple immobilizations do not stack. Area‑based immobilizations end when you leave the area; grapple‑based locks end when the grapple ends. Otherwise, fade at 1 per 10 IC.
+Penalty to defensive rolls equal to severity, half (rounded down) to CQC, Ninjutsu, and Weapon Accuracy, and reduces AGI for movement by 10% per point. Maximum effective penalty -10. Multiple immobilizations do not stack. Area‑based immobilizations end when you leave the area; grapple‑based locks end when the grapple ends. Otherwise, fade at 1 per 10 IC. 
 
 #### Paralysis
 
-Damage from your attacks is treated as if the Speed were (actual Speed – severity), minimum half final Speed. Does not combine – higher severity overwrites.
+Paralysis is an internal effect which impedes your ability to properly use your own muscles, temporarily causing spasms and twitches that prevent you from going full force, which many ninja like to do, as it turns out.
+
+When paralyzed, you treat the damage from your attacks as if they were (Paralysis severity) lower, to a minimum of half their final, modified Speed.
+
+For example, at Paralysis 3 your Speed 8 Basic Attack would deal damage as if it were a Speed 5 attack; if you spent AP to reduce its Speed to 4, it would then be treated as a Speed 2 attack for its damage (because it can’t reduce it by more than half, and its Speed is 4).
+
+Paralysis effects do not combine. If you are afflicted with two paralysis effects at once, the more potent one overwrites the less severe one. If they both have the same severity, the one with the longer duration overwrites the other.
 
 #### Prone
 
--3 Accuracy, -2 defensive rolls, half movement speed. Stand up as Speed 5 action. Being knocked prone while airborne causes immediate fall to ground.
+-3 CQC, Ninjutsu, and Weapon Accuracy, -2 defensive rolls, half movement speed. Stand up as Speed 5 action. Being knocked prone while airborne causes immediate fall to ground
 
 #### Poison
 
@@ -402,7 +408,13 @@ Make Resistance roll against the poison's Toxicology roll. Failure: take Severit
 
 #### Shock
 
-Increases effective Speed of non‑Variable Speed Actions by severity. Damage uses original Speed. For interrupts, shock applies at half severity (rounded down). No action's Speed can be more than doubled. Higher severity overwrites.
+Similar to Paralysis but more of a general impediment to one’s ability to move and act, Shock effects slow down ordinarily fast-moving, fast-acting shinobi, making it easier to outmaneuver an enemy before they can recover.
+
+Shock increases the effective Speed of all non-Variable Speed Actions by its Severity; a Shock 3 would increase a Basic Unarmed Attack from Speed 8 to Speed 11, but would deal damage based off of its original Speed (in this case, 8). If it then had its Speed reduced (such as with AP), it could then be reduced to a minimum of Speed (11/2 = 5.5) 6 with AP, and deal damage as a Speed 6 attack; in essence, AP spent counteracts this status effect until you begin to lower its Speed below that of its unshocked amount.
+
+Shock does apply to Interrupt actions, but at only half its severity, rounded down. Performing a Dodge (normally Speed 2) with a Shock 4 would increase its Speed to 4 (meaning that some extremely quick, previously-avoidable attacks might become undodgeable).
+
+Shock effects do not combine, and no action can have its speed more than doubled regardless of your Shock severity. If you are afflicted with two Shock effects at once, the more potent one overwrites the less severe one. If they both have the same severity, the one with the longer duration overwrites the other.
 
 #### Sleep
 
@@ -424,13 +436,15 @@ Penalty to Accuracy and Awareness equal to severity, half (rounded down) to defe
 
 #### Area of Effect (AoE)
 
-Attacks that affect everyone within an area. To dodge, determine how far you could move in the attack's Speed. If that distance exceeds the radius, dodge normally. If not, you suffer a -2 Dodge penalty per yard you are short.
-
-Taijutsu AoE attacks can be parried, but a successful parry only protects the parrier, others in the area are still affected. Ninjutsu AoE cannot be parried with Taijutsu, but can be countered with ninjutsu defenses.
+Attacks that affect everyone within an area. To dodge, determine how far you could move in the attack’s Speed. If that distance exceeds the radius, dodge normally. If not, you suffer a -2 Dodge penalty per yard you are short. CQC and Weapon AoE attacks can be parried, but a successful parry only protects the parrier, others in the area are still affected.
 
 #### Knockback
 
 Measured in yards. When an effect knocks you back, partial success reduces the knockback distance by the same percentage it reduces damage, though this does not apply to AoE knockbacks centered on an individual, such as Kaiten or Eye of the Storm. Being knocked back through a ground-based environmental effect does not apply that effect to you mid-travel, only where you land matters. Being knocked back into or through a solid barrier (such as a wall created by Earth Shore Return) does deal its damage and effects normally, as you are physically contacting the barrier.
+
+#### [Weather](/weather)
+
+The world of the shinobi is not only shaped by the hands of man and the flow of Chakra as the untamed forces of nature itself has a thing to say. The elemental nations are defined by extremes, from the bone-chilling blizzards of the North to the scorching sandstorms of the West and a true warrior must master not only their own techniques but the very environment they fight in. Check the weather section and learn more horrors this world has to offer. 
 
 ### Clones and Conditions
 
@@ -471,7 +485,7 @@ If an action requires both Stamina and CE rolls, roll Stamina first. For multipl
 _Example: Failing a Stamina 45 roll with a result of 12 means you failed by 33. The first failure advances one category; 33/15 = 2.2, so two additional categories, three total._
 
 | Fatigue | Accuracy/Offensive/Skill | Defense | Stamina/CE Bonus |
-| :-- | :-- | :-- | :-- |
+| --- | --- | --- | --- |
 | 0 | 0 | 0 | 0 |
 | 1 | -1 | -2 | +5 |
 | 2 | -2 | -4 | +10 |
@@ -488,7 +502,7 @@ Fatigue only goes to 5. If you fail a roll at Fatigue 5, you complete your actio
 When a single source of damage deals more than a certain percent of your maximum Vitality (or HP), you suffer a wound of the corresponding severity.
 
 | Severity | % of Max Vitality | % of Max HP |
-| :-- | :-- | :-- |
+| --- | --- | --- |
 | Minor | 10% | 25% |
 | Major | 25% | 50% |
 | Severe | 50% | 75% |
@@ -502,9 +516,9 @@ If damage carries over from Vitality to HP, combine both portions to determine w
 
 After determining the severity of a wound, the next (fairly simple!) step is determining what type of wound it is. Being cut by a sword and being hit by a magical ninja fireball, even if they do the same amount of damage, have significantly different effects on the human body. For the most part this is self-explanatory, with only four damage types recognized: Blunt, Slashing, Piercing, and Energy.
 
-Unarmed attacks are always blunt damage, nice and simple. Weapons have their damage type, or types, listed in their descriptions. If a weapon can do multiple types of damage, the attacker declares which type of wound they'll be inflicting after the severity is confirmed, but before the location is determined. Some weapon jutsu require a weapon of a specific damage type to be used; in this case, damage from that jutsu is considered to be of that type.
+CQC attacks are always blunt damage, nice and simple. Weapons have their damage type, or types, listed in their descriptions. If a weapon can do multiple types of damage, the attacker declares which type of wound they’ll be inflicting after the severity is confirmed, but before the location is determined. Some weapon jutsu require a weapon of a specific damage type to be used; in this case, damage from that jutsu is considered to be of that type.
 
-Ninjutsu are simpler than weapons! Katon and Raiton jutsu inflict energy damage. Doton and Suiton inflict blunt damage. Fuuton inflicts slashing damage. An exception! Some jutsu augment a weapon strike, or actually create a weapon. In these cases, use the damage type of that weapon, not the element it was made from.
+Ninjutsu are simpler than weapons! Katon and Raiton jutsu inflict energy damage. Doton and Suiton inflict blunt damage. Fuuton inflicts slashing damage. An exception! Some jutsu augment a weapon strike, or actually create a weapon. In these cases, use the damage type of that weapon, not the element it was made from. 
 
 ### Location
 
@@ -518,11 +532,13 @@ In the cases of attacks which inflict multiple wounds at once, you roll for loca
 
 ### Called Shots
 
-A called shot is an attack specifically targeting a certain location. After checking your attack's damage type, choose any of the locations which can be Wounded by damage of that type. You declare that when you make your attack, for example, "Hinotama, Called Shot: Arm".
+A called shot is an attack specifically targeting a certain location. After checking your attack’s damage type, choose any of the locations which can be Wounded by damage of that type. You declare that when you make your attack, for example, “Hinotama, Called Shot: Arm”.
 
-The attack has a -4 Accuracy penalty. However, if it hits, any wounds it inflicts will automatically be dealt to that location. You can not use Called Shot with Area of Effect attacks, except for Targeted Area of Effect attacks, where you can make the attack a Called Shot against your chosen target, but anyone else within range to be hit by it will not consider it a Called Shot (though the penalty to its Accuracy applies regardless, as it is penalizing the attack itself).
+ The attack has a -4 penalty to its CQC, Ninjutsu, or Weapon Accuracy. However, if it hits, any wounds it inflicts will automatically be dealt to that location. You can not use Called Shot with Area of Effect attacks, except for Targeted Area of Effect attacks, where you can make the attack a Called Shot against your chosen target, but anyone else within range to be hit by it will not consider it a Called Shot (though the penalty to its CQC, Ninjutsu, or Weapon Accuracy applies regardless, as it is penalizing the attack itself). 
 
 ---
+
+### **Equipment**
 
 Every piece of equipment has a cost in Ryo, the world's most commonly-used currency. You can get Ryo in two primary ways, the Money: Requisition and Money: Savings abilities.
 
@@ -574,66 +590,10 @@ You use a weapon you're holding to knock an enemy's out of their grasp, usually 
 
 ---
 
-## Recovery
+# **Downtime**
 
-### Hit Points and Vitality
+Every half hour your character spends inside of a RP scene they generate one (1) downtime (1 per full hour in sparring scenes), which you log on your sheet in the Downtime tab. You can hold up to 10 Downtime at once, any more than that is simply lost.
 
-Lost Vitality recovers fairly quickly; ninja don't get too far through their training without being able to get back on their feet. You recover 10% of your maximum Vitality every 10 minutes OOC.
+## **Recovery**
 
-Lost Hit Points are harder to deal with. By the time you're taking HP damage, your body's already reached its limit as far as soaking damage goes. You recovery 10% of your max HP every 1 hour OOC.
-
-### Fatigue
-
-Fatigue is more than just being a little winded; it's exhaustion and bone-deep weariness. Ninja are just much better able to deal with such things than normal people. Every hour that passes OOC, your Fatigue is lowered by one level. Uniques and effects which recover penalties over time (such as Endless energy, or Regenerative Chakra) do not noticeably impact how quickly you recover fatigue, or fatigue penalties, outside of battle.
-
-### Willpower
-
-You begin every (OOC) day with your full amount of Willpower. With the exception of some rare effects, you can't get Willpower back any faster than that.
-
-### Wounds
-
-Wounds are particularly grievous injuries, ones powerful enough to have effects beyond just beating you that much closer to unconsciousness. The rules for what causes Wounds are discussed in the appropriate section of the combat chapter.
-
-And, so are their recovery times! How long a given wound takes to heal will be listed in that wound's own description. Many can be reduced by medical attention (as described below).
-
-Minor wounds all heal at the same rate, and go away at the end of the combat in which they were acquired unless the wound itself states otherwise. Most other wounds will heal even if you're not getting rest, with details listed for each individual wound; if it says nothing on the matter, rest or lack thereof won't change its recovery time.
-
-### Medical Attention
-
-Many of the listed recovery times assume you're waiting to get better on your own; ninja have a remarkable ability to recover from injuries, full as they are of vim and vigor. Naturally, you heal faster when you're actually getting rest and have trained medical professionals looking after you. In fact, you regain everything except Willpower twice as fast when receiving medical attention.
-
-…Which brings us to what 'medical attention' means. It means you are in a hospital, or getting an equivalent amount of bed rest, with one or more doctors or medics checking up on you regularly. You are getting sleep and being taken care of, not training or researching a new jutsu. You can most likely have visitors.
-
-Every ninja village's hospital is always open to its shinobi. That said, if you try to check yourself in because you have no vitality and half your HP, and want to spar your friend again that afternoon, you will promptly get kicked out. On the other hand, if you're beaten to a pulp (unconscious at 0 HP) or severely injured (you have a Wound of Major or greater) you can check yourself in.
-
-However, once you've gone to a hospital they won't let you leave for 24 OOC hours, unless it's on important business– such as being required for a mission your village is sending you on. The doctors have gotten very good at seeing through people's excuses.
-
----
-
-## Guidelines
-
-Sometimes people get silly ideas and have to be corrected. This is to hopefully preempt that, by clarifying a few things! You probably don't need to read anything in this section unless it actually comes up during gameplay.
-
-### IC and OOC Recovery
-
-What happens if you're IC and need to know how fast you heal? For example, if you're on a mission, or trying to buy time between fights. If it takes ten minutes to RP a conversation, have you healed in that time? What about if you need to step away from your computer for an hour to do laundry, but there's someone who just drew a knife on you? For the most part, this really doesn't matter; you can assume OOC healing times apply unless it actually is an important situation.
-
-Should such a situation (that is, an important one, or a GM-run event), use the following in-character times:
-
-- 10% Vitality: 1 hour
-- 10% HP: 6 hours
-- 1 Fatigue level: 6 hours
-- Willpower: Restored fully after six consecutive hours of restful sleep.
-- Wounds: 1 OOC day = 1 IC week
-
-Medical attention halves all of these, except as detailed above.
-
-### Rest
-
-Your body can't heal when you're putting too much stress on it. It's why doctors recommend bed rest (and lots of fluids, and "grape" flavored medicine that tastes just horrid, and nothing like grapes).
-
-'Rest' for a ninja, however, does not entail laying in bed for the afternoon. Taking damage, or failing a Stamina or Chakra Exhaustion roll, interrupts your healing; this applies to Vitality, HP, and Stamina. So, if you had been recovering from 0 Vitality, Fatigue 3, and full HP for an hour and fifteen minutes, then did something to exert yourself and failed a Stamina roll, you'd have recovered 70% of your maximum Vitality (75 minutes, /10 = 7) and 1 Fatigue level, putting you at Fatigue 2–except you just failed that roll, so back to Fatigue 3 you go.
-
-That doesn't apply to Wounds (unless specified otherwise) or Willpower. If your healing of a Wound is interrupted (usually by a method mentioned in that Wound's description), you still keep however many days of progress you've made towards recovering from it–you just don't get to count the current day.
-
-If, for some reason, you are suffering from starvation, dehydration, or sleep deprivation (less than 6 hours of restful sleep a night), all of your healing times, including Willpower, are doubled. For wounds, this means that every 2 consecutive days of healing count as only 1 (in case you, before having fully recovered, return to sleeping/eating/drinking and are able to resume healing at the normal rate).
+Hitpoints, Vitality, Fatigue and Willpower are reset at the start of every scene or event. Wounds heal on their own timer (see Wound Recovery on the Wounds page) and cannot be recovered with Downtime.

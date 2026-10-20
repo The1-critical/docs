@@ -17,17 +17,17 @@ Every CQC technique has one or more tags drawn from the following set:
 | **Solo** | A standalone technique that can be used as its own complete action. |
 | **Opener** | May be used without an active Combo. On hit, starts a Combo at CC 1. |
 | **Extension** | Requires an active Combo. On hit, increases CC by 1. |
-| **Finisher** | May be used at any time only during an active combo. Using a Finisher ends the Combo. |
-| **Grapple-Opener** | Functions as an Opener, but also initiates a grapple. Only valid outside of an active grapple. |
+| **Finisher** | Requires an active Combo, and may be used at any Combo Counter. Using a Finisher ends the Combo or Grapple. To use a Finisher in a grapple, the current Combo must have been started with a Grapple-Opener. |
+| **Grapple-Opener** | Functions as an Opener, but also initiates a grapple. |
 | **Grapple-Extension** | Functions as an Extension, but requires an active grapple. Does not break the combo or the hold. |
 
 A technique tagged as both Opener and Extension may be used as either depending on context. When used as an Extension, it does not re-apply the Opener's persistent effect.
 
 ### Combo Counter (CC)
 
-When you hit with an Opener, your Combo Counter starts at 1. Each Extension that hits increases CC by 1. CC bonuses listed on Extension techniques multiply by your current CC _before_ that hit — so your first Extension hit applies CC 1 bonuses, your second applies CC 2, and so on.
+When you hit with an Opener, your Combo Counter starts at 1. Each Extension that hits increases CC by 1. CC bonuses listed on Extension techniques multiply by your current CC _before_ that hit, so your first Extension hit applies CC 1 bonuses, your second applies CC 2, and so on.
 
-Finisher Combo Bonuses multiply by the CC at time of use. Combo Counter has a limit of (Athletics) rank.
+Finisher Combo Bonuses multiply by the CC _at time of use_. Combo Counter has a limit of 5 ranks.
 
 ### Combo Breaking
 
@@ -45,18 +45,20 @@ Hitting a clone of your intended target does not count as attacking a new target
 
 ### Grapple Mixup
 
-When you are in a grapple, you may freely use Grapple-Extensions and Grapple-Finishers from your active Combo without breaking it. If your Combo was active before the grapple was established (via a Grab used as an Extension), your CC carries over.
-
-Breaking a Combo does not end a grapple. A new Grapple-Opener must be used before Grapple-Extensions can be used again.
+When you are in a grapple, you may freely use Grapple-Extensions and Openers from your active Combo without breaking the grapple. If your Combo was active before the grapple was established, your CC carries over. Breaking a Combo does not end a grapple. A new Grapple-Opener must be used before Grapple-Extensions can be used again.
 
 The grapple rules from the PHB apply normally with the following clarifications:
 
 - The attacker maintains one hand on the defender unless a specific technique states otherwise
+- When in a grapple, both attacker and defender suffer halved movement
+- The attacker can make a grapple check (Speed 5) as an interrupt to abort the defender's movement action
 - Dodge and Parry both have Speed +2 while grappling
 - Neither participant can Hide from the other
 - No miss chance (clones) applies between participants
-- Grapple checks: Attacker rolls `1d20 + PDB + STR/15`. Defender rolls `1d20 + PDB + AGI/15`. Both round down.
-- The defender may still use **Shift Grapple** (Speed 5, Stamina 5) which makes the defender now the attacker or **Break Grapple** (Speed 4) which ends the grapple any time regardless of Combo state.
+
+Grapple checks: Attacker rolls `1d20 + PDB + STR/15`. Defender rolls `1d20 + PDB + AGI/15`. Both round down.
+
+The defender may still use **Shift Grapple** (Speed 5, Stamina 5), which makes the defender the attacker, or **Break Grapple** (Speed 6, Stamina 5), which ends the grapple at any time regardless of Combo state. Both require a grapple check, and on a failure the action is not completed.
 
 ### Power Attack and Unarmed Focus
 
@@ -70,14 +72,12 @@ When any CQC technique references your Basic Unarmed Attack, it includes Unarmed
 
 In the chaos of close-quarters combat, even the simplest motion can decide life or death. The user sweeps low, targeting the legs with practiced precision. Should the opponent fail to maintain their balance... they fall. A prone shinobi is vulnerable and is open to far more devastating attacks and mixups. Many a prodigy has underestimated such basics, only to have their "genius" shattered against the dirt.
 
-- **Stamina:** 10
-- **Accuracy:** +3
+- **Stamina:** 8
+- **Accuracy:** +2
 - **Speed:** 4
-- **Tags:** Solo, Opener
+- **Tags:** Solo
 
 **Effects:** On hit, the target makes an Athletics roll against your Accuracy. They gain +3 to this roll for each previous trip attempt in this battle. On failure, they are knocked Prone. A prone target has -3 Accuracy, -2 to defensive rolls, and moves at half speed. Standing is a Speed 5 action.
-
-**Opener Effect (Persistent):** While this Combo is active, any Extension that hits a Prone target forces a new Athletics check (TN 10 + CC). On failure, the target's Combo Counter increases by +1.
 
 ---
 
@@ -85,40 +85,48 @@ In the chaos of close-quarters combat, even the simplest motion can decide life 
 
 Deception is the shinobi's oldest weapon. With a subtle shift of the body and intent, the user misleads their foe. The opponent's defensive reaction slows, their timing thrown into disarray. A feint when perfectly timed can shatter even the most perfect of defenses, yet patience and guts will be the ultimate decider of one's fate. The technique was first documented in the chronicles of the Warring States period, where a Konoha scout reportedly defeated three samurai in single combat using nothing but feints and footwork.
 
-- **Stamina:** +4
-- **Accuracy:** +2
+- **Stamina:** +6
+- **Special:** +2 Accuracy
 - **Speed:** +5
 - **Tags:** Link
 
-**Effects:** Used alongside any other melee-range CQC attack. Make an opposed Espionage roll. On success, the target's defensive action has its Speed doubled for determining their next IC. Does not prevent the defense from being a valid Interrupt. This cannot be used in an active combo—a feint is a setup, not a continuation.
+**Effects:** Used alongside any other melee-range CQC or touch based Ninjutsu and Genjutsu attack. Make an opposed Espionage roll. On success, you gain +2 Accuracy to either CQC or Ninjutsu/Genjutsu Accuracy for the attack.  Each use of this technique gives the target +1 to their Espionage roll.
 
 ---
 
 **–( Grab )–**
 
-The most fundamental of grapples. You seize your opponent, locking them in place. It's not elegant, and it's not subtle, but it opens up a world of possibilities—for them, a world of pain; for you, a world of control.
+The most fundamental of grapples. You seize your opponent, locking them in place. It's not elegant, and it's not subtle, but it opens up a world of possibilities, for them, a world of pain; for you, a world of control.
 
 - **Stamina:** 8 (miss) / 12 (hit)
 - **Speed:** 10
-- **Tags:** Grapple-Opener, Extension
+- **Tags:** Grapple-Opener
 
-**Effects:** You initiate a grapple. If used as a Grapple-Opener, you start a Combo at CC 1. If used as an Extension, you maintain your current CC and transition the Combo into a grapple. You must not already be in a grapple to initiate one.
-
-**Opener Effect (Persistent):** While in a grapple combo started with Grab, your Grapple-Extensions (Limb Lock, Choke Hold, etc.) apply their penalties for 15 IC instead of 10, refreshed on each successful Grapple-Extension—the hold grows tighter with each passing moment.
+**Effects:** You initiate a grapple. If used as a Grapple-Opener, you start a Combo at CC 1. You must not already be in a grapple to initiate one, meaning at CC 2 you cannot grab again as long as this opener is active.
 
 ---
 
-**–( Headbutt )–**
+**–( Escape Grapple )–**
 
-There's a reason this is the first thing every drunk in every tavern tries. It's simple, direct, and hurts. The refined shinobi version uses chakra reinforcement, turning what would be a concussion into someone else's problem. The technique's effectiveness is matched only by its absolute refusal to be subtle.
+Being held in place by one person and then punched into submission by all their friends is a pretty exceptionally undignified way for a ninja to go down. Accordingly, ninja are usually taught the basics of how to writhe their way out of all manner of holds.
 
-- **Stamina:** 12
-- **Damage:** (STR/10)d8
+- **Stamina:** 5 + X
+- **Speed:** 5 + X, Delay X
+- **Special:** Grapple-only; Can only be used by the defender in a grapple.
+
+**Effects:** Roll a grapple check against everyone you are in a grapple with. The “X” in this jutsu’s cost and speed is the amount you fail your grapple check by (or the highest amount failed by, if in multiple grapples). Thus, if you rolled a 12 against your opponent’s 16, Escape Grapple would be a Stamina 9 check and have a Speed of 9. On the other hand, if you passed your check against the Attacker’s roll and you met or exceeded their roll, it would be only Stamina 5 and Speed 5. This ends all grapples you’re currently in. This technique cannot be Aborted, despite its Delay.
+
+---
+
+**–( Rendan — Combo )–**
+
+Not so much a proper technique as a catch-all term for any series of attacks made in rapid succession, without breaking one's flow or allowing an opponent time to retreat. The name is simple because the concept is simple: hit them, and keep hitting them until they stop moving.
+
+- **Stamina:** 10
+- **Damage:** Basic Unarmed Attack + 1d\*
 - **Speed:** 10
-- **Tags:** Grapple-Opener, Grapple-Extension
-- **CC Bonus:** −1 Speed, +1d8 damage
-
-**Effects:** May be used by either attacker or defender. Does not require a free hand. Automatically hits if used in a grapple. If it causes a wound, it is automatically a Head wound and its severity cannot be reduced (though it can be negated or ignored). Damage applies to both participants; the attacker also takes damage if the final damage dealt would be enough to wound themselves, using the attacker's own Vitality thresholds but not their reductions. "You hit me, I hit you. Fair's fair."
+- **Tags:** Extension
+- **CC Bonus:** +1d\* damage, −1 Speed
 
 ---
 
@@ -131,11 +139,9 @@ In one smooth motion, the user extends their arm and pushes aside an oncoming bl
 - **Stamina:** 10
 - **Damage:** (2 + STR/10)d4
 - **Speed:** 5
-- **Tags:** Opener, Interrupt
+- **Tags:** Interrupt, Solo
 
-**Effects:** Used as an unarmed parry with +3 Accuracy. On successful defense, this immediately becomes an attack using the parry roll as Accuracy. Links may be added at the time of use as a defense.
-
-**Opener Effect (Persistent):** While this Combo is active, your CQC Parry interrupts (not jutsu-based parries) are Speed 1 and have a +2 bonus. This applies to bare parries only, not to Halting Blow itself or any other parry-technique.
+**Effects:** Used as a CQC parry with +3 Accuracy. On successful defense, this immediately becomes an attack using the parry roll as Accuracy.
 
 ---
 
@@ -147,55 +153,51 @@ The user rotates while extending one leg, starting with a high roundhouse that's
 - **Damage:** (2 + STR/10)d10
 - **Area:** 2
 - **Speed:** 12
-- **Tags:** Solo, Opener, Point Blank AoE
+- **Tags:** Solo, Point Blank Area of Effect
 
 **Effects:** Hits all enemies in range. Partial defense applies at 25% damage per point hit by (rather than 20%).
-
-**Opener Effect (Persistent):** While this Combo is active, all your Extensions resolve partial defense at 25% per point rather than 20%.
 
 ---
 
 **–( Houshou — Crushing Fist )–**
 
-Usually considered a rude thing to do to someone, the user slams their fist into their opponent's stomach at an upward angle. If done properly, it knocks the air from their lungs and leaves them gasping for minutes. It's the kind of technique that makes people reconsider their life choices—usually while curled on the ground.
+Usually considered a rude thing to do to someone, the user slams their fist into their opponent's stomach at an upward angle. If done properly, it knocks the air from their lungs and leaves them gasping for minutes. It's the kind of technique that makes people reconsider their life choices, usually while curled on the ground.
 
 - **Stamina:** 10
 - **Damage:** (2 + STR/10)d8
 - **Speed:** 14
-- **Tags:** Solo, Finisher
+- **Tags:** Solo, Extension
+- **CC Bonus:** +1 Stamina penalty
 
-**Effects:** On hit, the target's Stamina penalty increases by 2, +1 per wound severity inflicted (3 at Minor, 4 at Major). If blocked, the Stamina penalty from Finisher use is halved. This is an automatic called shot to the abdomen.
+**Effects:** On hit, the target's Stamina penalty increases by 2, +1 per wound severity inflicted (3 at Minor, 4 at Major). This is an automatic called shot to the abdomen.
 
 ---
 
 **–( Reppuu — Gale )–**
 
-With alarming quickness you drop low to the ground and perform a full 360-degree sweeping kick that knocks opponents off their feet when they attempt to close in for an attack of their own. The wind from the kick is almost as intimidating as the kick itself—and that's exactly how you want it.
-
-The technique is said to have been developed by a Suna scout who was constantly ambushed in the narrow canyons of the desert. He needed a defense that could turn a surprise attack into a counterattack in a single motion. The result was Reppuu—a technique that treats aggression as an invitation.
+With alarming quickness you drop low to the ground and perform a full 360-degree sweeping kick that knocks opponents off their feet when they attempt to close in for an attack of their own. The wind from the kick is almost as intimidating as the kick itself, and that's exactly how you want it.
 
 - **Stamina:** 10
 - **Damage:** (2 + STR/10)d6
 - **Speed:** 6
-- **Tags:** Opener, Interrupt
+- **Tags:** Interrupt, Solo
 
-**Effects:** May be used as an interrupt immediately after successfully dodging a melee-range attack, using the dodge roll as Accuracy. May also be used as a normal attack. When used as an interrupt following a dodge, no Links may be added.
-
-**Opener Effect (Persistent):** While this Combo is active, your Dodge interrupt speed (not any interrupt jutsu that uses the dodge interrupt) is reduced by -1.
+**Effects:** This may be used immediately after you have successfully dodged a melee-range attack. Reppuu is an attack against whoever’s action you dodged (which can be used regardless of the speed of their attack), and uses your dodge roll as its Accuracy. Alternately, you may use Reppuu as a normal attack, using your regular Accuracy (rather than a dodge roll). When used as an Interrupt following a dodge, Reppuu can not have Links added onto it, but as its own attack, Reppuu can have links applied as normal.
 
 ---
 
 **–( Dainamikku Entorii — Dynamic Entry )–**
 
-This technique is nothing more than a jumpkick at an opponent from hiding. The hiding part became required because of genin's tendency to shout out things like "HIYAH!" as they did it. Once the element of surprise is gone, so is the technique's effectiveness, which is why veterans use it once and then never again.
+This technique is nothing more than a jumpkick at an opponent from hiding. The hiding part became required because of Genin tendency to shout out things like "HIYAH!" as they did it. Once the element of surprise is gone, so is the technique's effectiveness, which is why veterans use it once and then never again.
 
 - **Stamina:** 12
 - **Damage:** (4 + STR/6)d12
+- **Accuracy:** -6
 - **Speed:** 10
 - **Tags:** Solo
 - **Requires:** Hidden from target.
 
-**Effects:** This technique is not affected by the damage reduction from the ability Sudden attack. After the first use of this technique in a battle (by anyone), it has −6 Accuracy for the rest of that battle.
+**Effects:** When used the first time in a fight, it is considered a Sneak attack.
 
 ---
 
@@ -212,31 +214,32 @@ The user gets in close and slams their knee into the midsection of their opponen
 
 ---
 
-**–( Tokken — Thrusting Shoulder )–**
+**–( Headbutt )–**
 
-By charging forward and turning at the last moment to bring a shoulder out front, the user slams into the enemy, knocking them back. It relies mostly on the weight of the user, with the expectation they'll be heavier than the person they're running into. If they're not, the technique becomes a comedy of errors rather than a combat maneuver.
+There’s a reason this is the first thing every drunk in every tavern tries. It’s simple, direct, and hurts. The refined shinobi version uses chakra reinforcement, turning what would be a concussion into someone else’s problem. The technique’s effectiveness is matched only by its absolute refusal to be subtle.
 
-- **Stamina:** 12
-- **Damage:** (2 + RES/8)d8
-- **Speed:** 12
-- **Tags:** Solo, Finisher
-- **CC Bonus:** +1 knockback per 2 CC
+- **Stamina:** 14
+- **Speed:** 10
+- **Tags:** Grapple-Opener, Grapple-Extension
+- **CC Bonus:** +5 IC to all active Head wound durations per CC at time of use, +1 Stun
 
-**Effects:** Knocks target back (RES/10 + 2) yards.
+**Effects:** May be used by either attacker or defender. Does not require a free hand. Automatically hits if used in a grapple. On hit, both participants receive a **Blunt Head Minor wound**. The wound cannot have its severity reduced, but can be negated or ignored as normal. The target’s wound durations begin at a base of 5 IC and are extended by the CC bonus at time of use.
+
+**Opener (Persistent):** When used for the first time in battle it is considered a surprise attack.
 
 ---
 
 **–( Throw )–**
 
-You use leverage, brute force, or a combination of the two to physically throw an enemy, either by flipping them over you, hurling them into a nearby object, or slamming them to the ground. The ground is usually the preferred destination—it's always there, it never complains, and it hits harder than you ever could.
+You use leverage, brute force, or a combination of the two to physically throw an enemy, either by flipping them over you, hurling them into a nearby object, or slamming them to the ground. The ground is usually the preferred destination, it's always there, it never complains, and it hits harder than you ever could.
 
-- **Stamina:** 8 (Solo) / +8 (linked to Grab)
+- **Stamina:** 10
 - **Damage:** (2+STR/10)d10
-- **Speed:** 8 (Solo) / +4 (linked)
-- **Tags:** Grapple-Extension
-- **CC Bonus:** +2 Stun, +2 yards knockback per 5 CC
+- **Speed:** 8
+- **Tags:** Finisher
+- **CC Bonus:** +2 yards knockback per 1 CC
 
-**Effects:** Ends the grapple. Target is Stunned (severity 4 + damage after reductions / 50) and knocked back up to (STR/20) yards. Throw cannot be Blocked. While this ends the grapple, it does not end the Combo, the attacker may continue with a new Opener or a non-grapple Extension on the following action.
+**Effects:** Ends the grapple. Target is Stunned (severity 4 + damage after reductions / 50) and knocked back up to (STR/20) yards. Throw cannot be Blocked.
 
 ---
 
@@ -247,15 +250,13 @@ While there are almost countless ways to perform it, locks are an essential part
 - **Stamina:** 10
 - **Speed:** 8
 - **Tags:** Grapple-Extension
-- **CC Bonus:** Immobilization increases by 1 per CC beyond the base values listed below (max total 5 across all Immobility from this source).
+- **CC Bonus:** -1 speed
 
-**Effects:** Choose one body part to lock: Arm, Leg, or Head. This can only be applied to a given limb type once per grapple. You may have one Arm Lock, one Leg Lock, and one Head Lock active simultaneously. The next locks after the first can be initiated by spending speed 6.
+**Effects:** Choose one body part to lock: Arm, Leg, or Head. Each limb type can be locked at most twice per grapple.
 
-- **Arm:** Immobility 2. −1 Grapple roll. Seal Speeds doubled. Both arms locked: no handseals (Single-Handed Seals reduces penalty by one stage).
-- **Leg:** Immobility 3. −2 Grapple roll. Both legs locked: movement speed reduced to 0.
-- **Head:** Immobility 4. −2 Grapple roll, −4 Stamina penalty. Mouth-aimed techniques (fire breath, needle spit) take −5 Accuracy.
-
-All lock penalties last 10 IC from the most recent Grapple-Extension, refreshing each time any Grapple-Extension is used.
+- Arm: Immobility 2. −1 Grapple roll. Seal Speeds doubled. Both arms locked: no handseals (Single-Handed Seals reduces penalty by one stage).
+- Leg: Immobility 3. −2 Grapple roll. Both legs locked: movement speed reduced to 0.
+- Head: Immobility 4. −2 Grapple roll, −4 Stamina penalty. Mouth-aimed techniques (fire breath, needle spit) take −5 Accuracy.
 
 ---
 
@@ -267,40 +268,23 @@ You grab your opponent's neck and cut off either the flow of blood to their brai
 - **Speed:** 8
 - **Tags:** Grapple-Extension
 
-**Effects:** Each use applies Suffocation 1, stacking. Requires one arm dedicated to maintaining hold. The Suffocation persists as long as you maintain control of the grapple and do not use the holding arm for anything else. Any non-grapple action (other than holds or Full Nelson) ends the Suffocation.
+**Effects:** Each use applies Suffocation 1, stacking. Requires one arm dedicated to maintaining the hold. The Suffocation persists as long as you maintain control of the grapple and do not use the holding arm for anything else.
 
 ---
 
-**–( Rendan — Combo )–**
+**–( Flash Step )–**
 
-Not so much a proper technique as a catch-all term for any series of attacks made in rapid succession, without breaking one's flow or allowing an opponent time to retreat. The name is simple because the concept is simple: hit them, and keep hitting them until they stop moving.
+You make small decisive leaps allowing you to effectively close the distance between you and your enemy.
 
-- **Stamina:** 10
-- **Damage:** Basic Unarmed Attack + 1d\*
-- **Speed:** 10
-- **Tags:** Extension
-- **CC Bonus:** +1d\* damage, −1 Speed
+- **Stamina:** +X / 3 (rounded up)
+- **Speed:** X / 3 (rounded up)
+- **Tags:** Link
+
+**Effects:** This is used alongside a melee Taijutsu or Kenjutsu attack, increasing your move with attack by X yards to a maximum of the speed of the jutsu. This speed increase does not add to the Speed * DB calculation for damage.
 
 ---
 
 ## C-Rank
-
-**–( Daisenpuu — Great Whirlwind )–**
-
-A more complex version of Senpuu which involves three kicks to the target's body going in the reverse order as before, starting low and going high to end with an axekick to the opponent's head. The speed and constant rotation is strong enough to actually lift the practitioner into the air during execution. It's the kind of technique that makes people wonder if you're actually fighting or just showing off.
-
-- **Stamina:** 18
-- **Damage:** (3 + STR/8)d12
-- **Area:** 3
-- **Speed:** 14
-- **Requires:** Senpuu
-- **Tags:** Solo, Opener, Point Blank AoE
-
-**Effects:** Hits all enemies in range. Partial defense at ⅓ damage per point hit by.
-
-**Opener Effect (Persistent):** While this Combo is active, all your Extensions resolve partial defense at ⅓ damage per point. This replaces Senpuu's effect, it does not stack.
-
----
 
 **–( Tsutenkyaku — Painful Sky Leg )–**
 
@@ -311,10 +295,10 @@ After concentrating chakra in the user's legs, they leap high into the air and c
 - **Accuracy:** −6
 - **Area:** 3 + PDB
 - **Speed:** 20
-- **Tags:** Solo, Finisher, Targeted AoE, Ground
-- **CC Bonus:** −1 Accuracy penalty (min 0) per 5 CC
+- **Tags:** Solo, Finisher, Point Blank Area of Effect, Ground
+- **CC Bonus:** −1 Accuracy penalty per CC
 
-**Effects:** Partial success does not apply. The primary target takes full damage on a failed defense. Even on a miss, the shockwave from impact deals (PDB × Speed)/2 damage to all in the area (including the intended target). A successful defense reduces this shockwave damage by 10% per point exceeded. Airborne targets avoid the shockwave automatically. The intended primary target, if they fail to defend, takes both the direct damage and the shockwave as one combined damage source.
+**Effects:** Partial success does not apply. Even if you miss, the shockwave from its impact deals only (PDB × Speed)/2 damage to all in the area (including the intended target). A successful defense reduces this shockwave damage by 10% per point exceeded (so a 20 dodge against an Accuracy 20 dodges the attack, but takes 100% shockwave). Airborne targets avoid the shockwave automatically. The intended primary target, if they fail to defend, they take the attack’s full damage, as a single damage source (defenses and damage reduction applies only once to the combined damage, not separately against the hit and the shockwave).
 
 ---
 
@@ -328,9 +312,9 @@ The user lowers themselves to get underneath their opponent, and then knocks the
 - **Speed:** 6
 - **Tags:** Solo, Opener
 
-**Effects:** On hit, the target is treated as Airborne until their next non-interrupt action. They ignore ground effects while airborne but are exposed. The next Solo CQC or Basic Unarmed attack you make against them while airborne gains +1 Accuracy and −1 Speed per point you beat their defense, up to +5/-5
+**Effects:** On hit, the target is treated as Airborne until their next non-interrupt action. They ignore ground effects while airborne but are exposed. The next Solo CQC or Basic Unarmed Attack you make against the target while they’re Airborne will gain a bonus to its Accuracy and a reduction to its Speed for every point you beat their defense by, to a maximum of 5 each.
 
-**Opener Effect (Persistent):** While this Combo is active, all your Extensions and Finishers gain +2 Accuracy and −2 Speed. Your next opener can also benefit from this accuracy and speed reduction.
+**Opener Effect (Persistent):** While this Combo is active, all your Extensions and Finishers gain −2 Speed and as long as Kage Buyou is the Opener effect, the target is Airborne.
 
 ---
 
@@ -344,7 +328,23 @@ By flipping forward into a crouch, the user builds momentum that's used to insta
 - **Tags:** Solo, Interrupt
 - **Requires:** Trip, Reppuu
 
-**Effects:** Follows Reppuu rules. On hit, the target is knocked Prone automatically.
+**Effects:** Similar to Reppuu, this can be used as an interrupt immediately after a successful dodge. If the attack lands a hit the target is automatically knocked prone which reduces their accuracy by -3 and their defensive rolls by -2.
+
+---
+
+**–( Attsu Buchikomu — Pain Driver )–**
+
+A brutal technique, and completely inappropriate for training (because someone would have thought it was okay, if we didn't say that). The attacker finds a weak point on their opponent's body, the site of a previous injury, and strikes there to amplify the existing wound.
+
+- **Stamina:** 20
+- **Chakra:** 12
+- **Damage:** (3 + STR/6)d6
+- **Speed:** 12
+- **Tags:** Solo, Finisher
+
+**Finisher:** At Combo Counter 4 or higher, instead remove all existing wounds from the location and replace each of them with a wound of the next severity at that location.
+
+**Effects:** Must be a called shot to a location with an existing wound of any type. Cannot itself cause a wound. If it deals damage: removes the existing wound and replaces it with a wound of the next severity at the same location (Minor → Major → Severe → Critical).
 
 ---
 
@@ -356,10 +356,9 @@ Ninja can perform incredible feats of strength; after years of grueling training
 - **Damage:** (3 + X + STR/5)d12
 - **Speed:** 13
 - **Delay:** X
-- **Tags:** Solo, Finisher
-- **CC Bonus:** X maximum increases by +1 per 5 CC and reduces delay by -1
+- **Tags:** Solo
 
-**Effects:** X has minimum 0, maximum PDB. Against a person: rolls wound location (or called shot). Before wounds and damage, it completely destroys any armor at the location hit. Against objects or out of battle: destroys up to STR/10 cubic yards of hard contiguous material (not chakra-reinforced). Cannot be used against flexible materials.
+**Effects:** X has minimum 0, maximum of your PDB. Against a person: roll wound location (or make a Called Shot) before wounds and damage; it completely destroys any armor at the location hit. Against inanimate objects or out of battle: destroys up to STR/10 cubic yards of hard contiguous material (not chakra-reinforced). Cannot be used against flexible materials.
 
 ---
 
@@ -370,11 +369,10 @@ You deliver a powerful, downwards palm blow to an opponent's stomach or the smal
 - **Stamina:** 22
 - **Damage:** (3 + STR/6)d8
 - **Speed:** 20
-- **Special:** Stun 12
 - **Tags:** Solo, Finisher
-- **CC Bonus:** Target makes Stamina roll TN (2 × CC), Stun is increased by +2 per 5 CC
+- **CC Bonus:** +(2 × CC) to the Stamina 15 roll
 
-**Effects:** On hit, target must make a Stamina 15 roll. If the target is Prone, it also inflicts Stun 12.
+**Effects:** On hit, target must make a Stamina 15 roll. If the target is Prone, the Stun is increased to 16.
 
 ---
 
@@ -393,72 +391,44 @@ With a burst of chakra to one of the user's legs, they spin around and extend an
 
 ---
 
-**–( Attsu Buchikomu — Pain Driver )–**
-
-A brutal technique, and completely inappropriate for training (because someone would have thought it was okay, if we didn't say that). The attacker finds a weak point on their opponent's body, the site of a previous injury, and strikes there to amplify the existing wound.
-
-- **Stamina:** 20
-- **Chakra:** 12
-- **Damage:** (3 + STR/6)d6
-- **Speed:** 12
-- **Tags:** Solo, Finisher
-
-**Finisher:** If CC is 6 or higher, the wound escalation affects any wound type at that location, not just Blunt, and moves it into the higher tier of wound within the same type.
-
-**Effects:** Must be a called shot to a location with an existing wound of any type. Cannot itself cause a wound. If it deals damage: removes the existing wound and replaces it with a wound of the next severity at the same location (Minor → Major → Severe → Critical).
-
----
-
 **–( Maboroshi Tejun — Phantom Step )–**
 
 Despite the fancy name, it's a fairly simple 'technique'. With a momentary burst of energy (and probably adrenaline, considering the circumstances where it's likely to be used) the user does their best to get out of the way of an impending attack. The "phantom" came mostly from the way a shinobi using this can, to the untrained eye, seemed to almost disappear. And because ninjas thought it sounded cool.
 
-- **Stamina:** +X × 6
+- **Stamina:** +X × 4
 - **Speed:** +X
 - **Tags:** Link
 
-**Effects:** Used alongside a Dodge attempt (or dodge-like interrupts). Provides +X bonus to dodge roll. X has a maximum of your AGI/10 (rounded down). The Speed increase from Phantom Step cannot be reduced by AP spending or abilities that modify Speed. This does not break a Combo.
-
----
-
-**–( Shishi Rendan — Lion Combo )–**
-
-Ideally meant to be used after performing Kage Buyo, this is a series of high-speed punches and kicks. The technique's name suggests something primal and predatory, and that's exactly what it is. You don't just attack; you just devour their defenses.
-
-- **Stamina:** 16
-- **Damage:** Basic Unarmed Attack + 2d\*
-- **Speed:** 10
-- **Tags:** Extension
-- **CC Bonus:** +1 Accuracy, −1 Speed
+**Effects:** Used alongside a Dodge attempt (or dodge-like interrupts such as Leaping Shadow Evasion). Provides +X bonus to dodge roll. X has a maximum of your AGI/10 (rounded down). The Speed increase from Phantom Step cannot be reduced by AP spending or abilities that modify Speed. This does not break a Combo.
 
 ---
 
 **–( Hangeki Rendan — Counter Combo )–**
 
-Exploiting a momentary break in your opponent's attacks, you turn the tables on them! It's very exciting, and stuff. The technique is about recognizing the exact moment your opponent overcommits—and making them pay for it.
+Exploiting a momentary break in your opponent's attacks, you turn the tables on them! It's very exciting, and stuff. The technique is about recognizing the exact moment your opponent overcommits, and making them pay for it.
 
 - **Stamina:** 20
 - **Speed:** 8
 
-**Effects:** Make opposed CQC Accuracy rolls with your opponent. If your opponent is in a Combo, their Accuracy roll is made at -2 per CC they have above 3 (representing overcommitment). On success: break their Combo and execute any Opener you know as an Interrupt at CC equal to whatever theirs was.
+**Effects:** Make opposed CQC Accuracy rolls with your opponent. If your opponent is in a Combo, their Accuracy roll is made at -2 per CC they have above you. On success: break their Combo and execute any Opener you know as an Interrupt at CC equal to whatever theirs was.
 
-If used against a grapple combo: breaking the Combo also reverses the grapple (you become the attacker). If the grapple is maintained by a weapon, Nara shadow, or similar, the Combo breaks and grapple ends, but no counter Opener fires.
+If used against a grapple combo: breaking the Combo also reverses the grapple (you become the attacker). If the grapple is maintained by a weapon, Nara shadow, or similarly irreversible situations, the Combo breaks and grapple ends, but no counter Opener fires.
 
-On failure: opponent may immediately use any Extension they know against you as an Interrupt.
+On failure: opponent may immediately use any Extension they know against you as an Interrupt, paying costs as normal.
 
 ---
 
 **–( Counter Throw )–**
 
-You throw an enemy who's grabbing you off, freeing yourself from them and injuring them in the process. It's the kind of technique that turns a bad situation into an even worse one—for them.
+You throw an enemy who's grabbing you off, freeing yourself from them and injuring them in the process. It's the kind of technique that turns a bad situation into an even worse one, for them.
 
 - **Stamina:** 12 + X
 - **Damage:** (3+STR/10)d10
 - **Speed:** 4 + X, Delay X
-- **Tags:** Grapple-Finisher
+- **Tags:** Solo
 - **Requires:** Throw, Defender in grapple only
 
-**Effects:** Make an opposed grapple check. X equals the amount you fail by (0 if you succeed). Attacker is Thrown (per D-rank Throw) with damage always calculated at Speed 10, using the formula: (2+STR/10)d10 + (PDB × 10). Ends the grapple. Cannot be Aborted despite its Delay.
+**Effects:** Make an opposed grapple check. X equals the amount you fail by (0 if you succeed). The Attacker is Thrown and is Stunned (severity 4 + damage after reductions / 50) and knocked back up to (STR/20) yards, with damage always calculated at Speed 10. Ends the grapple. Cannot be Aborted despite its Delay.
 
 ---
 
@@ -471,9 +441,9 @@ You grab your opponent in such a way that you can put continual strain on one of
 - **Speed:** 8
 - **Tags:** Grapple-Extension
 - **Requires:** Target in Arm Lock, Leg Lock, or Full Nelson
-- **CC Bonus:** +5% damage
+- **CC Bonus:** +10% damage
 
-**Effects:** Declare which locked limb is being targeted. Head is not valid. Damage is applied to the targeted limb. After reductions, actual damage is halved. For wound purposes, damage is treated as full before halving. The CC Bonus stacks multiplicatively: at CC 4 with Joint Lock, +20% applies before the halving.
+**Effects:** Declare which locked limb is being targeted. Head is not valid. Damage is applied to the targeted limb. After reductions, actual damage is halved. For wound purposes, damage is treated as full before halving. The CC Bonus stacks multiplicatively: at CC 5 with Joint Lock, +50% applies before the halving.
 
 ---
 
@@ -483,20 +453,20 @@ You get in close to your opponent and begin beating on them! Doing so for a prol
 
 - **Stamina:** 18
 - **Damage:** Basic Unarmed Attack + 4d\*
-- **Accuracy:** −2
+- **Accuracy:** −4
 - **Speed:** 8
 - **Tags:** Extension
-- **CC Bonus:** Blocking is 5% less effective, +20 damage
+- **CC Bonus:** Blocking is 10% less effective, +20 damage
 
 ---
 
 **–( Shishi Danmaku — Lion Barrage )–**
 
-A popular way to end the similarly-named combo-assault, the Lion Barrage is often taught to students along with Lion Combo itself. Advanced taijutsu users, however, have been known to appreciate the flexibility and fluidity that comes from separating the techniques. The Lion Barrage is simply a series of fast, strong fist and knee strikes, but when done right, it's anything but simple.
+Advanced CQC practitioners ARE known to appreciate the flexibility and fluidity that comes from being able to split a jaw. The Lion Barrage is simply a series of fast, strong fist and knee strikes, but when done right, it's anything but simple.
 
 - **Stamina:** 23
-- **Damage:** Basic Unarmed Attack + 6d\*
-- **Accuracy:** +4
+- **Damage:** Basic Unarmed Attack + 4d\*
+- **Accuracy:** +3
 - **Speed:** 12
 - **Tags:** Finisher
 - **Combo Bonus:** +2d\* damage per CC
@@ -517,33 +487,19 @@ Conventional wisdom says that one must prioritize speed or power, having to choo
 
 ---
 
-**–( Bunka-ken — Splintering Fist )–**
-
-A powerful blow that smashes through defenses. Your attack carries almost concussive force behind it, enough to overcome all but the most resilient of enemies. The name comes from the sound it makes when it connects, the splintering of bones, armor, or whatever else was unlucky enough to be in the way.
-
-- **Stamina:** +12
-- **Speed:** +6
-- **Damage:** Basic Unarmed Attack, Maximized
-- **Tags:** Finisher
-- **CC Bonus:** Ignore 10 DR, target takes +2 damage from all attacks for the rest of the battle
-
-**Effects:** Added as a Link to a Basic Unarmed Attack, turning it into a Finisher. All damage dice from the Basic Unarmed Attack are treated as their maximum value (d6 → 6, d8 → 8, d10 → 10, d12 → 12). The lasting +2 damage applies after all reductions. Multiple Splintering Fists stack.
-
----
-
 **–( Line of Attack )–**
 
-You use ninja wire and momentum to fly across the battlefield at amazing speeds and prevent your opponent from escaping your offensive. The wire is both leash and weapon—it binds you together, and when they try to run, you're right there to remind them why that's a terrible idea.
+You use ninja wire and momentum to fly across the battlefield at amazing speeds and prevent your opponent from escaping your offensive. The wire is both leash and weapon, it binds you together, and when they try to run, you're right there to remind them why that's a terrible idea.
 
 - **Stamina:** 14
 - **Speed:** 9
 - **Damage:** Basic Unarmed Attack
-- **Requires:** X yards Ninja Wire
+- **Upkeep:** 2
+- **Area:** PDB+2
+- **Requires:** 10 yards Ninja Wire
 - **Tags:** Opener
 
-**Effects:** Strike and bind with wire, tethering you and the target. Target movement is reduced by 30% by default. Adjust by changing wire length: +2 yards = −5% less reduction (max 20 yards / 5% reduction); −2 yards = +5% more reduction (max 2 yards / 50% reduction). Target beyond X × 2 yards breaks the tether and the Combo.
-
-**Opener Effect (Persistent):** You and the target cannot hide from each other. Your movement speed toward the bound target increases by 10% per CC, max +100%. Slashing called shot against the wire (TN 15 + your Chakra Control ranks / 10) severs it; you may attempt to move the wire to avoid the cut, making a Dodge roll with your opponent's called shot Accuracy as the target.
+**Effects:** Strike and bind your target with wire, tethering you and the target together. While this is maintained anyone except you within this area suffers Immobility 2.
 
 ---
 
@@ -556,63 +512,75 @@ The basis of combos in battle is maintaining one's momentum, striking one blow b
 - **Speed:** 6
 - **Tags:** Preparation
 
-**Effects:** While maintained, Move actions do not break your Combo. Movement-based jutsu (Shunshin, etc.) still break it. When you move as part of a CQC attack, you gain a bonus to your PDB for that attack equal to +0.5% to your base PDB per yard moved, to a maximum of 50% of your base PDB. This bonus does not apply to techniques that may increase PDB such as Chakra Bulk.<br />
+**Effects:** While maintained, Move actions do not break your Combo. Movement-based jutsu (Shunshin, etc.) still break it. When you move as part of a CQC attack, you gain a bonus to your PDB for that attack equal to +0.5% to your base PDB per yard moved, to a maximum of 50% of your base PDB. This bonus does not apply to techniques that may increase PDB such as Chakra Bulk.
+
+---
+
+**–( Compression Hold )–**
+
+A less brutal alternative to joint locking (which has this nasty tendency to tear people apart), a compression hold is still exceptionally painful–that’s the point. You twist the victim’s body in such a way that their own joints are being used to hurt them–forcing their elbow to press against their sternum is a popular one.
+
+- **Stamina:** 15
+- **Speed:** 6
+- **Tags:** Grapple-Extension
+- **Requires:** Opponent already in a Lock
+- **CC Bonus:** −1 stamina
+
+**Effects:** You improve a current Lock you have on someone, applying a further -1 penalty to their grapple rolls, and increasing the Speed of any Dodge or Parry actions they take by 1 more. You can apply Compression hold at most twice to someone, but must apply it to a different lock each time you use it.
+
+---
+
+**–( Suplex )–**
+
+[en.wikipedia.org/wiki/Suplex](https://en.wikipedia.org/wiki/Suplex). Just… read that, okay? That’s what you do to them.
+
+- **Stamina:** 24
+- **Damage:** (4 + STR/6)d12
+- **Speed:** 10
+- **Tags:** Solo, Finisher
+- **Requires:** Airborne
+- **CC Bonus:** +5% wounding
+
+**Effects:** If this attack inflicts a wound, it is dealt to the opponent’s head with a bonus to wounding 20%. Suplex can not be blocked. After the wound has been given, you are knocked prone and the target is buried. You can not perform Suplex while you are Prone.
 
 ---
 
 ## B-Rank
 
-**–( Hasu Rendan — Lotus Combo )–**
-
-The user of this technique launches into a sequence of strikes designed to alternately wind, disorient, and daze their opponent, combining those effects to prevent their adversary from fighting back effectively for as long as possible. The technique's name comes from the lotus flower—beautiful, but with roots that run deep and hold tight.
-
-- **Stamina:** 10 + X × 4
-- **Damage:** Basic Unarmed Attack + 2d\*
-- **Speed:** 4 + X × 2 (cannot be reduced by AP spending or abilities that modify Speed)
-- **Tags:** Extension
-- **CC Bonus:** +2d\* damage, +2 Stamina, +1 Accuracy
-
-**Effects:** Each consecutive use without other non-interrupt actions increases X by 1 and grants additional X CC. X starts at 0. Fourth consecutive Lotus: Speed 10, Stamina 22 base, grants 4 CC. If a Stunned target is hit by Lotus Combo, the Stun is extended by (X + 1) × 2 IC.
-
----
-
 **–( Rankyaku — Storm Kick )–**
 
-Using this technique a shinobi kicks with extreme precision, not aiming at an opponent but instead kicking the air itself. Their leg slices through the air with such speed and precision that it compresses the air into a blade. It's the kind of technique that makes people wonder if you're actually fighting or just showing off—until they see what happens to the person on the receiving end.
+Using this technique a shinobi kicks with extreme precision, not aiming at an opponent but instead kicking the air itself. Their leg slices through the air with such speed and precision that it compresses the air into a blade. It's the kind of technique that makes people wonder if you're actually fighting or just showing off, until they see what happens to the person on the receiving end.
 
 - **Stamina:** 24
 - **Damage:** (4 + STR/6)d8
 - **Accuracy:** +2
 - **Range:** STR/4
 - **Speed:** 14
-- **Tags:** Solo, Opener, Projectile
+- **CC Bonus:** At 5 CC, this attack fires two projectiles instead. You may choose an additional target, or double the damage dice against the same target
+- **Tags:** Solo, Finisher, Projectile
 
-**Effects:** Cannot be parried by standard Parry (ninjutsu-based parries function). Deals Slashing wounds.
-
-**Opener Effect (Persistent):** While this Combo is active, all your Extensions gain Range STR/20 yards, cannot be parried with a standard parry and deal Slashing damage.
+**Effects:** Cannot be parried by CQC Parry (ninjutsu-based parries still function). Deals Slashing wounds.
 
 ---
 
 **–( Gouriki Senpuu — Strong Whirlwind )–**
 
-Taking the Whirlwind back to the basics, the shinobi no longer bothers with a series of strikes, and instead just focuses their ability into a single roundhouse with more speed and power than the previous versions. Sometimes simplicity is the most sophisticated choice.
+Taking the Whirlwind back to the basics, the shinobi no longer bothers with a series of strikes, and instead just focuses their ability into a single roundhouse with more speed and power than the previous version. Sometimes simplicity is the most sophisticated choice.
 
 - **Stamina:** 25
 - **Damage:** (4 + STR/6)d12
 - **Speed:** 16
 - **Area:** STR/20
-- **Requires:** Daisenpuu
-- **Tags:** Solo, Opener, Point Blank AoE
+- **Requires:** Senpuu
+- **Tags:** Solo, Point Blank Area of Effect
 
 **Effects:** Damages everyone in range. Partial defense at 50% per point. Anyone hit is knocked back (STR/15 + 3) yards.
-
-**Opener Effect:** Designate one target hit by this technique as your Combo Target. All Extensions gain Knockback STR/30 yards against that target. You may move STR/30 yards for free as part of normal movement with Extensions.
 
 ---
 
 **–( Chouyaku Kage Kaihi no Jutsu — Leaping Shadow Evasion )–**
 
-You leap away from an attack, getting yourself safely out of range. However, you don't pause to regain your orientation and settle into your new position, instead keeping ready to move again. It's the kind of defense that makes people think they hit you—until they realize you're already somewhere else.
+You leap away from an attack, getting yourself safely out of range. However, you don't pause to regain your orientation and settle into your new position, instead keeping ready to move again. It's the kind of defense that makes people think they hit you, until they realize you're already somewhere else.
 
 - **Stamina:** 20
 - **Speed:** 4
@@ -631,7 +599,7 @@ The shinobi bring their palm from waist height and strike upwards to full extens
 - **Damage:** (10 + STR/6)d12
 - **Accuracy:** −6
 - **Speed:** 16
-- **Tags:** Solo, Grapple-Finisher
+- **Tags:** Solo, Finisher
 - **CC Bonus:** −1 Accuracy penalty (min 0)
 
 **Effects:** Accuracy penalty negated when in grapple. Stun 8 on hit. Grapple ends on hit. Knocked back STR/10 yards and Prone.
@@ -647,7 +615,7 @@ One of the simplest hand-to-hand maneuvers at the highest of levels, this attack
 - **Speed:** +6 or 12 (solo)
 - **Tags:** Link, Solo
 
-**Effects:** You add the damage from basic unarmed with all ranks of Power attack with it and add it to the technique you are performing.
+**Effects:** Add the damage of your Basic Unarmed Attack, with all ranks of Power Attack, to the technique you are performing.
 
 ---
 
@@ -656,6 +624,7 @@ One of the simplest hand-to-hand maneuvers at the highest of levels, this attack
 The ultimate recourse of taijutsu fighters who are frustrated with only being able to land glancing blows on their opponents, this technique sends a surge of chakra through the attacking limb. This results in a burst of speed and strength, and also a chakra 'shockwave' along the edge of the attack that carries almost as much force as the strike itself.
 
 - **Chakra:** +(10 + X/3)
+- **Tags:** Link
 
 **Effects:** Activated after hitting with a damage dealing CQC attack at melee range whose damage is reduced by partial defense. X = that technique's Stamina cost after all modifications. Retroactively increases your Accuracy by 2 (or minimum to overcome partial defense, whichever is lower). Opponents may spend Willpower after River Style is declared. Cannot be used while a Combo is active.
 
@@ -684,7 +653,7 @@ You flip your opponent over you and hurl them to the ground (or otherwise maneuv
 - **Stamina:** 28
 - **Damage:** (4 + STR/5)d12
 - **Speed:** 12
-- **Tags:** Grapple-Finisher
+- **Tags:** Finisher
 - **Combo Bonus:** +2d12 damage per CC, +1 to grapple check
 
 **Effects:** Make opposed grapple check. On success: target takes Stun 10 + X (X = amount you beat them by, capped at 30). You take Stun 4 regardless. The Combo and Grapple ends.
@@ -698,9 +667,8 @@ A special technique passed down through generations, the true origin of the Full
 - **Stamina:** 16
 - **Speed:** 10
 - **Tags:** Grapple-Extension
-- **CC Bonus:** Immobilization = 2 × CC (max 8)
 
-**Effects:** Applies penalties of Head Lock + double Arm Lock, but with a single combined −8 to grapple rolls (rather than each lock's individual penalties). Immobilization refreshes on each Grapple-Extension. Penalties last 15 IC from the most recent Grapple-Extension. Requires both your arms. Allows Joint Lock and Choke Hold while maintained. Does not count as double Arm Lock for Black Bear Strength.
+**Effects:** Applies penalties of Head Lock + double Arm Lock, but with a single combined −8 to grapple rolls. Requires both your arms. Allows Joint Lock and Choke Hold while maintained. Does not count as double Arm Lock for Black Bear Strength.
 
 ---
 
@@ -708,11 +676,10 @@ A special technique passed down through generations, the true origin of the Full
 
 Delivering a precise, rapid, and powerful series of blows to vital points on an opponent's body, this causes their blood vessels to spontaneously rupture, resulting in both internal hemorrhaging and dramatic external bleeding. The name is a reference to a legendary martial artist who could kill with a single touch, you need a few more hits, but you get the idea.
 
-- **Stamina:** 28
+- **Stamina:** 20
 - **Damage:** Basic Unarmed Attack + 9d\*
-- **Accuracy:** +2
 - **Speed:** 20
-- **Tags:** Finisher
+- **Tags:** Extension
 - **Combo Bonus:** +1d\* to base attack per CC, +2 Bleed per CC
 
 **Effects:** Bleed applies even if parried.
@@ -721,14 +688,14 @@ Delivering a precise, rapid, and powerful series of blows to vital points on an 
 
 **–( Aragami no Jutsu — God of Battle )–**
 
-Rather than waiting for your opponents to give you openings and then capitalizing upon them, you make openings. When that doesn't work, you break through your opponent's defenses anyway, attacking even when it seems fruitless, until finally something gives. The name refers to the god of battle—ruthless, relentless, and never satisfied.
+Rather than waiting for your opponents to give you openings and then capitalizing upon them, you make openings. When that doesn't work, you break through your opponent's defenses anyway, attacking even when it seems fruitless, until finally something gives. The name refers to the god of battle, ruthless, relentless, and never satisfied.
 
 - **Stamina:** 20
 - **Upkeep:** 0
 - **Speed:** 6
 - **Tags:** Preparation
 
-**Effects:** Each time you hit with an Extension that increases CC, CC increases by 2 more and Aragami's Upkeep increases by 4. When Combo breaks, Upkeep resets to 0. This cannot be used alongside a trip as an opener. Ending Aragami immediately sets CC to 0.
+**Effects:** Each time you hit with an Extension that increases CC, CC increases by 1 more and Aragami's Upkeep increases by 4. When Combo breaks, Upkeep resets to 0. Ending Aragami immediately sets CC to 0.
 
 ---
 
@@ -738,8 +705,8 @@ You break off your combo with an abrupt transition back into more traditional ta
 
 - **Stamina:** +20
 - **Speed:** +6
-- **Tags:** Finisher
-- **Combo Bonus:** +0.5 Accuracy, +5% damage per 5 CC
+- **Tags:** Link, Finisher
+- **Combo Bonus:** +1 Accuracy, +5% damage per CC
 
 **Effects:** Combined with any Finisher CQC technique. Combo Bonuses and link speed apply to that technique.
 
@@ -749,15 +716,15 @@ You break off your combo with an abrupt transition back into more traditional ta
 
 **–( Chishi Kakato Suto — Deadly Heel Strike )–**
 
-Used as a killing blow, this technique is commonly performed upon an airborne opponent, who is then cratered into the ground. Leaping into the air, the shinobi comes down with a full power downward heel strike, usually aiming to smash the ribcage, crush a skull, or even snap the spine of their target—and destroy everything around them in the process. It's not subtle. It's not meant to be.
+Used as a killing blow, this technique is commonly performed upon an airborne opponent, who is then cratered into the ground. Leaping into the air, the shinobi come down with a full power downward heel strike, usually aiming to smash the ribcage, crush a skull, or even snap the spine of their target—and destroy everything around them in the process. It's not subtle. It's not meant to be.
 
 - **Stamina:** 50
 - **Damage:** (5 + STR/4)d20
 - **Accuracy:** −8
 - **Area:** PDB × 2
 - **Speed:** 26
-- **Tags:** Solo, Finisher, Targeted AoE, Ground
-- **CC Bonus:** −1 Accuracy penalty per 5 CC (min 0)
+- **Tags:** Solo, Finisher, Point Blank Area of Effect, Ground
+- **CC Bonus:** −1 Accuracy penalty per CC (min 0)
 
 **Effects:** Partial success does not apply. Accuracy penalty negated against Prone targets and those underground. Uses double damage bonus. On a miss, the shockwave still applies, but deals (PDB × Speed)/2 damage to all in the area (including the intended target). A successful defense reduces this damage by 10% per point succeeded by. Airborne targets avoid the shockwave but are easier to hit, so the accuracy penalty is reduced to -4.
 
@@ -765,15 +732,15 @@ Used as a killing blow, this technique is commonly performed upon an airborne op
 
 **–( Okasho — Cherry Blossom Impact )–**
 
-Taking chakra-infused muscles to the next level, the user focuses a massive amount of chakra into their fist, foot, or even fingertip. Upon striking, the chakra is released into their target causing a great deal of damage. Given that the damage is dependent on the amount of chakra channeled, a truly great shinobi can even use this technique with a single fingertip. The name comes from the cherry blossom petals that seem to fall when the technique is used—a poetic touch for something so brutal.
+Taking chakra-infused muscles to the next level, the user focuses a massive amount of chakra into their fist, foot, or even fingertip. Upon striking, the chakra is released into their target causing a great deal of damage. Given that the damage is dependent on the amount of chakra channeled, a truly great shinobi can even use this technique with a single fingertip. The name comes from the cherry blossom petals that seem to fall when the technique is used, a poetic touch for something so brutal.
 
 - **Stamina:** 30
 - **Chakra:** X×2
 - **Damage:** (5 + X + STR/6)d12
 - **Speed:** 20
-- **Requires:** Chakra Strengthening active, Chakra Control 25
+- **Requires:** Chakra Bulk active, Chakra Control 25
 - **Tags:** Solo, Finisher
-- **CC Bonus:** +1 to X maximum per 5 CC
+- **CC Bonus:** +1 to X maximum per CC
 
 **Effects:** Adds half NDB (in addition to PDB) to damage. Optional Area (X): reduces dice to d8, becomes Targeted AoE. X has a maximum of your NDB.
 
@@ -781,7 +748,7 @@ Taking chakra-infused muscles to the next level, the user focuses a massive amou
 
 **–( Shigan — Finger Gun )–**
 
-Using a single finger, the shinobi strikes with speed and precision to drive their finger into an opponent's body. There is a danger in the technique as an inaccurate strike can easily damage the user. When it works, however, it's devastating—a single point of impact with the force of a bullet.
+Using a single finger, the shinobi strikes with speed and precision to drive their finger into an opponent's body. There is a danger in the technique as an inaccurate strike can easily damage the user. When it works, however, it's devastating, a single point of impact with the force of a bullet.
 
 - **Stamina:** 40
 - **Damage:** (5 + STR/3)d6
@@ -789,7 +756,7 @@ Using a single finger, the shinobi strikes with speed and precision to drive the
 - **Speed:** 15
 - **Special:** Bleed 15
 - **Tags:** Solo, Finisher
-- **CC Bonus (Extension):** Partial defense does not apply. If a wound is inflicted, the attacker chooses the location as called shot.
+- **CC Bonus:** Once the CC reaches 5, partial defense does not apply. If a wound is inflicted, the attacker chooses the location as a called shot.
 
 **Effects:** Automatic called shot (no Accuracy penalty for called shot). Damage tripled for wound purposes. Deals Piercing. If partial defense applies on a non-Finisher use, the attacker takes half their rolled damage and suffers a Sprained Arm (Blunt, Major).
 
@@ -797,9 +764,7 @@ Using a single finger, the shinobi strikes with speed and precision to drive the
 
 **–( Benkei-do — Way of Benkei )–**
 
-A mixture of folk hero and mythical character, Benkei was a warrior monk known for his peerless skill in combat and unswerving loyalty to his master. One of the popular stories about his exploits involved Benkei guarding a bridge, holding back hundreds of warriors before finally succumbing to his wounds. This technique pays homage to his exploits, focusing all a shinobi's efforts on defense.
-
-The story goes that Benkei stood on the Gojo Bridge in Kyoto, defeating 999 swordsmen and collecting their weapons. He never retreated. When he finally fell, it was standing, surrounded by the bodies of his enemies.
+Inspired by Benkei, the legendary warrior monk famed for his unmatched combat skills. At Gojo Bridge, he is said to have defeated 999 swordsmen, collecting their weapons without ever retreating.
 
 - **Stamina:** +10 (activation) / 10 + 3 × X (end)
 - **Speed:** +0
@@ -817,7 +782,7 @@ A very impressive, though somewhat impractical, technique, the user gathers ener
 - **Damage:** (5 + STR/3)d6
 - **Speed:** 20, Delay X
 - **Tags:** Finisher
-- **Combo Bonus:** Damage considered Y% higher for wounds (Y = yards knocked back). AP loss = current AP ÷ knockback divisor.
+- **Combo Bonus:** Damage considered Y% higher for wounds (Y = yards knocked back). AP loss = current AP ÷ knockback divisor. X is your Current PDB which includes effects that may be used as a link for this attack.
 
 **Effects:** On hit: target Prone and knocked back STR/4 × (Speed after reductions / 20) + (Delay × PDB / 2) yards. Make Athletics roll (−10 penalty, +X bonus) against target Athletics. If they exceed yours: knockback halved. For every 5 points over, increase the divisor by 1.
 
@@ -831,10 +796,10 @@ This technique is, at a glance, not all that different from a regular flip-your-
 - **Damage:** (5 + STR/4)d10
 - **Speed:** 18, Delay 14
 - **Requires:** Tora Rakka
-- **Tags:** Grapple-Finisher
+- **Tags:** Solo, Finisher
 - **Combo Bonus:** +2d10 damage per CC, −2 Delay, +1 grapple check roll
 
-**Effects:** Make opposed grapple check. Amount succeeded by adding to Speed for damage purposes and adding Stun equal to half that amount. Failure: Stamina cost paid, IC advances, attack fails. Grapple ends either way.
+**Effects:** Make opposed grapple check. The amount you succeed by is added to its Speed for damage purposes, and it inflicts Stun equal to half that amount. Failure: Stamina cost paid, IC advances, attack fails. Grapple ends either way.
 
 ---
 
@@ -845,11 +810,11 @@ This move was supposedly developed by a martial arts master who was tackled and 
 - **Stamina:** 15 + X
 - **Speed:** 12 + X
 - **Requires:** Dragon Takedown
-- **Tags:** Opener
+- **Tags:** Grapple-Opener
 
-**Effects:** Declare any valid Grapple-Extension or Grapple-Finisher of B-rank or lower. On hit: initiate grapple and immediately perform the declared technique.
+**Effects:** Declare any valid Grapple-Extension or Grapple-Finisher of B-rank or lower as X. On hit: initiate grapple and immediately perform the declared technique.
 
-**Opener:** starts combo at CC 4.
+**Opener:** starts combo at CC 3.
 
 ---
 
@@ -862,9 +827,9 @@ The pinnacle of ways to brutally maim your opponents when you already have them 
 - **Speed:** 8
 - **Requires:** Target in Joint Lock for the targeted limb
 - **Tags:** Grapple-Extension
-- **CC Bonus:** +5 Stamina cost, +1d\* damage, +2 Speed (not for damage), wound multiplier = CC (max 6)
+- **CC Bonus:** +5 Stamina cost, +1d\* damage, +2 Speed (not for damage), wound multiplier = CC
 
-**Effects:** Unarmed Focus and Power Attack apply. After reductions: actual damage halved. For wound purposes: original damage multiplied by CC (max 6).
+**Effects:** Unarmed Focus and Power Attack apply. After reductions: actual damage halved. For wound purposes: original damage multiplied by CC.
 
 ---
 
@@ -875,7 +840,7 @@ A devastating move, developed by a shinobi who claimed he had gained inspiration
 - **Stamina:** 32
 - **Damage:** (4 + STR/4)d12
 - **Speed:** 16
-- **Tags:** Grapple-Finisher
+- **Tags:** Finisher
 - **Combo Bonus:** Increase PDB multiplier by 0.5 per CC
 - **Requires:** Target in two Arm Locks + Joint Lock
 
@@ -906,6 +871,8 @@ For once, the name actually has a basis in reality! This technique is a single, 
 - **Accuracy:** +2
 - **Speed:** 18
 - **Tags:** Finisher
-- **Combo Bonus:** +1 Stun per CC, +1 Stamina penalty per CC, +1d20 per CC
+- **Combo Bonus:** +2 Stun per CC, +2 Stamina penalty per CC, +2d20 per CC
 
 **Effects:** If total Stun exceeds the Speed of an active Perform Handseals action, that action is automatically Aborted. Target must still make a Chakra Exhaustion roll against the aborted technique.
+
+---
