@@ -1,0 +1,47 @@
+/* Word-diff highlighting for the revision "Exact Changes" pages. */
+.rev-diff ins {
+  background: #d9f2df;
+  color: #0f5a2a;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+.rev-diff del {
+  background: #fbe0e0;
+  color: #8a1f1f;
+  text-decoration: line-through;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+.dark .rev-diff ins {
+  background: #173b24;
+  color: #9de3b2;
+}
+.dark .rev-diff del {
+  background: #45191c;
+  color: #f3a9a9;
+}
+.rev-diff .hunk {
+  border-top: 1px dashed rgba(128, 128, 128, 0.35);
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+}
+.rev-diff .hunk:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+.rev-diff p {
+  margin: 0.35rem 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.rev-diff .ctx {
+  opacity: 0.6;
+}
+.rev-diff .lineno {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
