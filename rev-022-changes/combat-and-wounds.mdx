@@ -1,0 +1,435 @@
+---
+title: "REV-022: Combat and Wounds"
+description: "Word-by-word changes to 2 pages in REV-022."
+---
+
+Open a page to see its changes: <span className="rev-diff"><ins>added text</ins> and <del>removed text</del></span>, with unchanged lines around them in grey. Changes that only touch formatting (links, anchors, quote marks, bold and italics) are left out. Back to the [REV-022 overview](/rev-022-changes).
+
+<AccordionGroup>
+<Accordion title={"Combat"} description={"/Combat/combat · was /untitled-page · +485 −426 words"}>
+<div className="rev-diff">
+<div className="hunk">
+<p className="lineno">{"Line 248"}</p>
+<p className="ctx">{"When Fatigue penalizes both Accuracy and defensive rolls, Weapon Parry suffers only the defensive roll penalty. If something penalizes only Accuracy, Weapon Parry suffers that penalty. "}</p>
+<p className="chg"><del>{"#### Escape Grapple (Speed 6 + X, Delay X, Special, Interrupt)"}</del></p>
+<p className="chg"><del>{"Escape Grapple may only be used by the defender in a grapple. When you attempt to escape, you make a grapple check against everyone you are currently grappled with. The \"X\" in the technique's Speed and Delay is the amount you fail your grapple check by, or the highest amount you fail by, if you are in multiple grapples. The minimum speed of the escape grapple is speed 4."}</del></p>
+<p className="chg"><del>{"- If you roll a 12 against your opponent's 16, you fail by 4. Escape Grapple has Speed 8 and Delay 8 (4 + 4)."}</del></p>
+<p className="chg"><del>{"- If you roll a 24 against your opponent's 16, you succeed by 8. Escape Grapple has Speed 4 and Delay 4."}</del></p>
+<p className="chg"><del>{"- If you roll a 30 against your opponent's 16, you succeed by 14. Escape Grapple costs Speed 4 and Delay 4 (minimum)."}</del></p>
+<p className="chg"><del>{"A successful Escape Grapple ends all grapples you are currently in. The technique has a Delay equal to its final Speed, and cannot be Aborted despite its Delay."}</del></p>
+<p className="chg"><del>{"**Important Interactions:**"}</del></p>
+<p className="chg"><del>{"- This action does not require free hands and can be performed even when your hands are restrained or occupied."}</del></p>
+<p className="chg"><del>{"- If you are in multiple grapples, you must roll against each grappler's grapple check. The highest amount you fail by determines X."}</del></p>
+<p className="chg"><del>{"- Escape Grapple can be attempted even if you have already taken an action this IC, as it is a defensive response to being grappled."}</del></p>
+<p className="ctx">{"#### Perform Handseals (Speed Variable, Abort)"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 329"}</p>
+<p className="ctx">{"## Conditions and Status Effects"}</p>
+<p className="ctx">{"### [Wounded](/Combat/wounds)"}</p>
+<p className="chg">{"See the Wounds section. Effects "}<ins>{"are listed per wound,"}</ins>{" and healing times are "}<del>{"listed per wound."}</del><ins>{"under Wound Recovery."}</ins></p>
+<p className="ctx">{"### Fatigued"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 351"}</p>
+<p className="ctx">{"### Status Effects"}</p>
+<p className="chg"><ins>{"#### Airborne"}</ins></p>
+<p className="chg"><ins>{"Airborne represents being lifted into the air, violently or otherwise. An Airborne ninja ignores all Ground-tagged effects and ground-based environmental hazards, but similarly cannot benefit from effects that require contact with the ground, and cannot be knocked Prone. They may still defend themselves, but their move speed is reduced to 0, potentially impacting their ability to escape areas of effect. The status ends on the Airborne target's next non-interrupt action, unless stated otherwise."}</ins></p>
+<p className="ctx">{"#### Bleed"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 371"}</p>
+<p className="ctx">{"Buried Status applieds a immobilization penalty equal to twice its rating. You can dig yourself out of being buried equal to the immobilization penalty you are suffering in speed. Which means buried 4 would require a speed 8 action to dig yourself out."}</p>
+<p className="chg"><ins>{"#### Grounded"}</ins></p>
+<p className="chg"><ins>{"Grounded represents being submerged at least partially in the ground. A Grounded character's move speed is reduced to 0, and any penalties inflicted on them by the Prone condition are doubled, until they remove themselves from the ground as a Speed 10, Delay 5 action. Buried characters cannot be knocked Airborne, and applying the Buried condition removes the Airborne condition."}</ins></p>
+<p className="ctx">{"#### Ignite"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 391"}</p>
+<p className="ctx">{"#### Paralysis"}</p>
+<p className="chg">{"Paralysis"}<del>{"differs from immobilization in that paralysis"}</del>{" is an internal"}<del>{"or mental"}</del>{" effect which impedes your ability to "}<del>{"move, whereas immobilization is generally used for effects"}</del><ins>{"properly use your own muscles, temporarily causing spasms and twitches that prevent you from going full force,"}</ins>{" which "}<del>{"somehow physically restrain you."}</del><ins>{"many ninja like to do, as it turns out."}</ins></p>
+<p className="chg">{"When paralyzed, "}<ins>{"you treat"}</ins>{" the"}<del>{"base Speed of all your actions is increased by the paralysis rating, to a maximum of double their original Speed. At the same time, when determining"}</del>{" damage from your attacks"}<del>{"treat their Speed"}</del>{" as if "}<del>{"it was"}</del><ins>{"they were"}</ins>{" (Paralysis severity) "}<del>{"lower."}</del><ins>{"lower, to a minimum of half their final, modified Speed."}</ins></p>
+<p className="chg">{"For example, at Paralysis 3 your "}<del>{"basic unarmed attack"}</del><ins>{"Speed 8 Basic Attack"}</ins>{" would "}<del>{"be"}</del><ins>{"deal damage as if it were a"}</ins>{" Speed "}<del>{"11;"}</del><ins>{"5 attack; if"}</ins>{" you "}<del>{"could reduce it"}</del><ins>{"spent AP"}</ins>{" to "}<del>{"a minimum of"}</del><ins>{"reduce its"}</ins>{" Speed "}<del>{"(11/2 = 5.5) 6 with AP, and then"}</del><ins>{"to 4,"}</ins>{" it would "}<del>{"multiply your"}</del><ins>{"then be treated as a Speed 2 attack for its"}</ins>{" damage "}<del>{"bonus"}</del><ins>{"(because it can’t reduce it"}</ins>{" by "}<del>{"(6 - 3) 3. That same Paralysis would change your dodge to a"}</del><ins>{"more than half, and its"}</ins>{" Speed "}<del>{"4 Interrupt (meaning that some extremely quick, previously-avoidable attacks might become undodgeable)."}</del><ins>{"is 4)."}</ins></p>
+<p className="ctx">{"Paralysis effects do not combine. If you are afflicted with two paralysis effects at once, the more potent one overwrites the less severe one. If they both have the same severity, the one with the longer duration overwrites the other."}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 407"}</p>
+<p className="ctx">{"Make Resistance roll against the poison's Toxicology roll. Failure: take Severity damage per IC for the duration. Multiple poisons can exist simultaneously, but only the highest Poison and one set of Special Effects apply. Same source only renews duration."}</p>
+<p className="chg"><ins>{"#### Shock"}</ins></p>
+<p className="chg"><ins>{"Similar to Paralysis but more of a general impediment to one’s ability to move and act, Shock effects slow down ordinarily fast-moving, fast-acting shinobi, making it easier to outmaneuver an enemy before they can recover."}</ins></p>
+<p className="chg"><ins>{"Shock increases the effective Speed of all non-Variable Speed Actions by its Severity; a Shock 3 would increase a Basic Unarmed Attack from Speed 8 to Speed 11, but would deal damage based off of its original Speed (in this case, 8). If it then had its Speed reduced (such as with AP), it could then be reduced to a minimum of Speed (11/2 = 5.5) 6 with AP, and deal damage as a Speed 6 attack; in essence, AP spent counteracts this status effect until you begin to lower its Speed below that of its unshocked amount."}</ins></p>
+<p className="chg"><ins>{"Shock does apply to Interrupt actions, but at only half its severity, rounded down. Performing a Dodge (normally Speed 2) with a Shock 4 would increase its Speed to 4 (meaning that some extremely quick, previously-avoidable attacks might become undodgeable)."}</ins></p>
+<p className="chg"><ins>{"Shock effects do not combine, and no action can have its speed more than doubled regardless of your Shock severity. If you are afflicted with two Shock effects at once, the more potent one overwrites the less severe one. If they both have the same severity, the one with the longer duration overwrites the other."}</ins></p>
+<p className="ctx">{"#### Sleep"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 597"}</p>
+<p className="ctx">{"## **Recovery**"}</p>
+<p className="chg"><del>{"Downtime can be spent in numerous ways, but chiefly, it’s your recovery resource."}</del><ins>{"Hitpoints,"}</ins>{" Vitality, "}<del>{"hitpoints, fatigue,"}</del><ins>{"Fatigue"}</ins>{" and "}<del>{"willpower all require Downtime to be spent in order to recover them. They can be spent"}</del><ins>{"Willpower are reset"}</ins>{" at the "}<del>{"following amounts to recover your character;"}</del></p>
+<p className="chg"><del>{"- 1 Downtime to recover 25% of your max vitality"}</del></p>
+<p className="chg"><del>{"- 1 Downtime to recover 20%"}</del><ins>{"start"}</ins>{" of "}<del>{"your max hitpoints"}</del></p>
+<p className="chg"><del>{"- 1 Downtime to recover 1 Fatigue level"}</del></p>
+<p className="chg"><del>{"- 4 Downtime to recover your WP up to your WP maximum"}</del><ins>{"every scene or event. Wounds heal on their own timer (see Wound Recovery on the Wounds page) and cannot be recovered with Downtime."}</ins></p>
+</div>
+</div>
+</Accordion>
+<Accordion title={"Wounds"} description={"/Combat/wounds · was /Combat/untitled-page · +195 −1555 words"}>
+<div className="rev-diff">
+<div className="hunk">
+<p className="lineno">{"Line 19"}</p>
+<p className="ctx">{"<br />"}</p>
+<p className="chg"><ins>{"## **Wound Recovery**"}</ins></p>
+<p className="chg"><ins>{"Wounds heal on a flat timer based on their severity. Downtime cannot be spent to recover from wounds."}</ins></p>
+<p className="chg"><ins>{"| Severity | Recovery |"}</ins></p>
+<p className="chg"><ins>{"| :-- | :-- |"}</ins></p>
+<p className="chg"><ins>{"| **Minor** | Heals at the end of the battle |"}</ins></p>
+<p className="chg"><ins>{"| **Major** | 4 days of healing |"}</ins></p>
+<p className="chg"><ins>{"| **Severe** | 8 days of healing |"}</ins></p>
+<p className="chg"><ins>{"| **Critical** | 16 days of healing. Only heals on days you roleplay in a Hospital or with a Doctor |"}</ins></p>
+<p className="chg"><ins>{"Healing is counted in real-world (OOC) days. Each day, every wound you have heals by:"}</ins></p>
+<p className="chg"><ins>{"| That day | Days of healing |"}</ins></p>
+<p className="chg"><ins>{"| :-- | :-- |"}</ins></p>
+<p className="chg"><ins>{"| No medical roleplay | 1 |"}</ins></p>
+<p className="chg"><ins>{"| Roleplay for at least an hour in a Hospital | 2 |"}</ins></p>
+<p className="chg"><ins>{"| Roleplay for at least an hour with a character who has the Doctor ability | 4 |"}</ins></p>
+<p className="chg"><ins>{"A Doctor can provide this to a number of patients at the same time equal to their ranks in the Doctor ability. This limit is doubled when they treat patients in a Hospital."}</ins></p>
+<p className="chg"><ins>{"---"}</ins></p>
+<p className="ctx">{"# **Blunt (Minor)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 50"}</p>
+<p className="ctx">{"### **(21–40) Bruised Ribs (Torso)**"}</p>
+<p className="chg">{"The bones, not the skin over them. Ribs hurt more than they have any right to. Breathing is the worst part. Deep breaths especially. Every action you take has its **Speed increased by 1**, similar to Paralysis."}<del>{"It fades after an hour."}</del></p>
+<p className="ctx">{"### **(41–60) Winded (Abdomen)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 74"}</p>
+<p className="ctx">{"You **lose all AP you currently have**. Any effects with Upkeeps end, doujutsu excluded, because you've lost the concentration to hold them. If you were standing on water or a wall, you fall."}</p>
+<p className="chg">{"Everything seems slightly off after that. You can't quite place what. Sounds are muffled, colors muted, and things keep moving at the edge of your vision. This distraction gives you a **-3 penalty to all skill checks and defensive Genjutsu rolls**."}<del>{"It takes 5 Downtime to recover from."}</del></p>
+<p className="ctx">{"### **(21–40) Collapsed Lung (Torso)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 80"}</p>
+<p className="ctx">{"Your lung quit its day job. Unfortunately, that day job was letting you breathe. Your **Fatigue rolls take a -4 penalty**. You can survive with both lungs collapsed, though that pushes the penalty to **-12** rather than -8."}</p>
+<p className="chg"><del>{"3 clears it. But, this requires professional treatment. Without a Doctor or a Hospital, you cannot spend Downtime on recovering from this."}</del></p>
+<p className="ctx">{"### **(41–60) Groin Shot (Abdomen)**"}</p>
+<p className="ctx">{"If this was a called shot, you should probably have a serious talk with your opponent about what counts as fair fighting. Even ninja have standards."}</p>
+<p className="chg">{"It's a **Stun 7**, and you're probably feeling more than a little nauseous. Don't be ashamed about doubling over and whimpering. Until it heals,"}<del>{"which takes 5 Downtime, or 10 if you enter combat again before it’s fully healed,"}</del>{" your **Agility counts as 25% lower** for determining movement speed. You also take a **-3 penalty to Resistance rolls** until recovery is complete."}</p>
+<p className="ctx">{"### **(61–80) Sprained Arm (Arm)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 90"}</p>
+<p className="ctx">{"Your elbow or wrist got forced to bend in a way it isn't meant to, and it sprained from the blow. You take a **-4 penalty to rolls and Accuracy** for attacks using that arm. That includes grapple rolls, grapple TNs, and all two-handed weapons. Single-handed weapons held in the other hand, ninjutsu, and taijutsu jutsu that specify kicks only suffer a **-2**. Your **Seal Speeds increase by 5**."}</p>
+<p className="chg"><del>{"Recovery takes 9 Downtime. Each combat in which you use the arm increases the recovery requirement by another 3 Downtime."}</del></p>
+<p className="ctx">{"### **(81–100) Sprained Leg (Leg)**"}</p>
+<p className="ctx">{"The muscles and ligaments in your knee or ankle stretched past what they can take. Any time you move, including dodging, the pain leaves your **Accuracy and d20 rolls at a -4 penalty for the next 15 IC**."}</p>
+<p className="chg"><del>{"The sprain heals with 7 Downtime, or 14 Downtime if you enter combat again before it’s fully healed."}</del></p>
+<p className="ctx">{"---"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 102"}</p>
+<p className="ctx">{"Somebody turned out the lights. It's very dark, and you are likely to be eaten by a grue. You get over that before your enemies can capitalize, or before you're eaten. Whichever comes first."}</p>
+<p className="chg">{"You take a **-5 penalty on all d20 rolls**, and the **AP you gain is halved**, rounded down. Whenever you suffer a head wound, you have a **10% chance per level of that wound to be knocked unconscious**."}<del>{"Any time that happens, your recovery time resets."}</del></p>
+<p className="chg"><del>{"\\*\\*14 Downtime clears a concussion. 28 if you enter combat again before it’s fully healed."}</del></p>
+<p className="ctx">{"### **(21–40) Broken Ribs**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 110"}</p>
+<p className="ctx">{"Blocking's effectiveness drops by **30%**, from 50% to 20% for most attacks, and from 25% to nothing against weapons. You take a **-4 penalty to Accuracy and d20 rolls**. Every action you take has its **Speed increased by 2**."}</p>
+<p className="chg"><del>{"\\*\\*5 Downtime restores 10% of blocking’s effectiveness. Once blocking is back to normal, the Accuracy, roll, and Speed penalties also disappear."}</del></p>
+<p className="ctx">{"### **(41–60) Crushed Organ (Abdomen)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 116"}</p>
+<p className="ctx">{"Your **maximum HP and Vitality drop by 10%**. Your current values of both drop by 10% of your maximum. You take a **-5 penalty to Resistance rolls**."}</p>
+<p className="chg"><del>{"5 Downtime reduces the max HP and Vitality reduction by 2%, and the Resistance penalty by 1."}</del></p>
+<p className="ctx">{"### **(61–80) Broken Arm (Arm)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 122"}</p>
+<p className="ctx">{"You can still form handseals. When you finish, make a **Resistance roll with a -10 penalty** against the base Seal Speed. Failure means you flinch. You still get the jutsu off, but you inflict **Stun 12** on yourself."}</p>
+<p className="chg"><del>{"\\*\\*20 Downtime heals it."}</del></p>
+<p className="ctx">{"### **(81–100) Broken Leg (Leg)**"}</p>
+<p className="ctx">{"Severe damage to your leg leaves you with a reduced ability to get around the battlefield. If things get bad enough, you can still power-hobble on it. It doesn't directly penalize your movement, but moving adds **Stun 4**, even when the movement is part of an attack."}</p>
+<p className="chg">{"While the leg is broken, you can't use any jutsu or abilities that increase your movement speed."}<del>{"It also won't heal if you keep walking on it."}</del></p>
+<p className="chg">{"With crutches, a cane, or something similar, you move at **half speed**."}<del>{"Recovering from this wound takes 20 Downtime. Every time you choose to run around on it unaided, the required Downtime increases by 3."}</del></p>
+<p className="ctx">{"---"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 140"}</p>
+<p className="ctx">{"Aside from **Stun 15**, you take a **-5 penalty to Accuracy and all d20 rolls**, doubled for skill checks."}</p>
+<p className="chg"><del>{"Healing takes 35 Downtime. Any"}</del><ins>{"Until this heals, any"}</ins>{" time"}<del>{"during that period that"}</del>{" you suffer a Head Wound, of any type or severity, roll 1d20. On a 1–10, you suffer the wound normally. On an 11–20, you’re unconscious and comatose for one day for each rank of the wound’s Severity (Minor = 1, critical = 4)."}</p>
+<p className="ctx">{"### **(21–40) Sternal Fracture (Torso)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 150"}</p>
+<p className="ctx">{"You take a **-15 penalty on all Stamina checks**, your **damage bonuses are halved**, and you take a **-5 penalty on all defensive rolls**."}</p>
+<p className="chg"><del>{"Each 3 Downtime reduces the Stamina penalty by 1. Once it reaches -10, your damage bonuses return to normal. Once it reaches -5, your defensive actions stop being penalized."}</del></p>
+<p className="ctx">{"### **(41–60) Rupture (Abdomen)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 158"}</p>
+<p className="ctx">{"Treating this with First Aid requires a **Medicine skill of at least 10**. It generally involves cutting open the victim's abdomen and letting it drain, or in rare cases ventilating it, before figuring out what's actually bleeding and making it stop. Treatment is a **Speed 25 action**, but it stops the persistent HP loss."}</p>
+<p className="chg">{"Any time you take an action, you have a **5 × (action's Speed)% chance** of causing the injury to act up again. That brings back all its effects and requires treatment to bring it back under control."}<del>{"Every 7 Downtime you spend, the multiplier drops by 1. If you trigger this, you increase the Downtime by 7, plus however many Downtime you spent recovering from this wound this week."}</del></p>
+<p className="ctx">{"### **(61–80) Shattered Arm (Arm)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 166"}</p>
+<p className="ctx">{"The pain is horrible and makes concentrating almost impossible. You take a **-6 penalty to d20 rolls and Accuracy**, and a **-4 penalty to Fatigue checks**."}</p>
+<p className="chg"><del>{"After 10 spent Downtime which must be done in a Hospital or with a Doctor, the pain becomes manageable and the penalties drop to -3 Accuracy. You still can’t use the arm. Only after that does it begin to heal, which takes 24 Downtime total, or 72 if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(81–100) Shattered Leg (Leg)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 172"}</p>
+<p className="ctx">{"You can't stand without something to prop you up. Because you're a tough-as-nails, super-resourceful ninja, you can still move, though your **movement distance is divided by 4**. You take a **-8 penalty to Dodge** and **-4 to other d20 rolls**."}</p>
+<p className="chg">{"Once you’ve "}<del>{"spent 5 Downtime"}</del><ins>{"been treated"}</ins>{" in a Hospital or "}<del>{"with"}</del><ins>{"by"}</ins>{" a Doctor and"}<del>{"been"}</del>{" put in a splint, you can walk. So long as you carry a crutch, cane, or walking stick, which occupies a hand, you move at half speed and suffer only half the above penalties. You can do this without the aid, though each time you take an action requiring movement, dodging included, or get hit, you have a 50% chance of your leg giving out and suffering the full penalties again."}<del>{"After treatment, healing takes 24 Downtime. 72 if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"# **Energy (Minor)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 204"}</p>
+<p className="ctx">{"There's a nasty burn across your face now. Blistered. Partially charred. Disorienting in ways you didn't expect. The smell of burnt flesh is stuck in your nostrils, and the taste of it lingers in your mouth, so every deep breath makes you nauseous. The more you exert yourself, the more you smell it, the sicker you get."}</p>
+<p className="chg">{"Every time you make a Stamina or Chakra roll, you increase your penalty to both by 2."}<del>{"This takes 5 Downtime to heal, 10 if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(21–40) Scorched Chest (Torso)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 210"}</p>
+<p className="ctx">{"The majority of your body has been burned. Chest, back, stomach. Any hair that used to be there is gone. It isn't deep, since it covers such a large surface area, but that's almost worse. So much exposed, aggravated tissue. It makes it easy for anyone to make your day worse."}</p>
+<p className="chg">{"You take an additional 10% damage when hit, after all normal reductions but before determining if you suffer wounds. One of the worst parts is how it makes getting additional wounds that much easier."}<del>{"This takes 3 Downtime to heal, 6 if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(41–60) Scalded Stomach (Abdomen)**"}</p>
+<p className="chg">{"Whatever hit you burned away what covered your midriff and had enough power behind it to heat up your internal organs. Your organs are sensitive about that kind of thing. You are afflicted with a Stun 8 and have your current and maximum Hit Points and Vitality reduced by your RES until this heals."}<del>{"7 Downtime."}</del></p>
+<p className="ctx">{"### **(61–80) Second Degree Burn (Arm)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 220"}</p>
+<p className="ctx">{"The majority of your arm is burned. Not life-threatening, but the amount of skin that's been damaged is substantial. Using that arm in a fight is a great deal more painful than it should be."}</p>
+<p className="chg">{"When you perform handseals, attack, or parry, you take twice the base Speed of the action as damage, which bypasses reductions like DR. You also have a -2 to Accuracy."}<del>{"This takes 6 Downtime to heal, 12 if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(81–100) Second Degree Burn (Leg)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 226"}</p>
+<p className="ctx">{"One of your legs has been burned down to the dermis, the layer beneath the epidermis. Multiple small blisters have formed at the surface, and the skin has reddened and toughened considerably."}</p>
+<p className="chg">{"You have a -5 Immobilization penalty, along with a Burn 3. When the Burn status is removed, the Immobilization penalty drops to 3."}<del>{"It takes 5 Downtime per point of Immobilization penalty."}</del></p>
+<p className="ctx">{"---"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 240"}</p>
+<p className="ctx">{"When that happens, your Visibility Penalty increases by 1 per rank of the jutsu. 1 for E, 3 for C, and so on, to a maximum of -8. The technique has to deal damage to trigger this."}</p>
+<p className="chg"><del>{"Your eyes are slow to stop being so sensitive. The penalty you incur when blinded reduces by 1 every 5 Downtime, for a total of 25 Downtime before you’re not blinded by A-rank jutsu."}</del></p>
+<p className="ctx">{"### **(21–40) Dark Halo (Torso)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 246"}</p>
+<p className="ctx">{"You're going into shock. At the start, it isn't so bad. It reduces the bonus to CE and Stamina rolls from Fatigue by 1, so +5 becomes +4. Every time your Fatigue increases, though, the bonus lowers by one per level. If you were at Fatigue 3 when you received this wound, then went up to Fatigue 5 in the same battle, you'd have only +2 to Chakra Exhaustion and Stamina rolls per Fatigue category, for a total of +10 at Fatigue 5."}</p>
+<p className="chg"><del>{"Your Fatigue bonus recovers at a rate of +1 per 5 Downtime spent. After that, it takes 14 more Downtime, to fully recover from the wound. These numbers increase to 10 and 24 if you enter combat again before this is fully healed. The bonus can still be lowered in that time. If that happens, you have to re-recover the lost Fatigue bonus, then pick up where you left off on healing the rest of the wound."}</del></p>
+<p className="ctx">{"### **(41–60) Side Burns (Abdomen)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 256"}</p>
+<p className="ctx">{"Every time you spend more than your current Willpower in AP on an action, including the surcharge from this wound, you are afflicted with Suffocation 1. This Suffocation penalty persists for the duration of the fight but resets to 0 after combat."}</p>
+<p className="chg"><del>{"This takes 17 Downtime to heal, 34 if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(61–80) Muscle Melting (Arms)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 264"}</p>
+<p className="ctx">{"Whenever you deal damage, the Damage Bonus used is lowered by 5%, to a minimum of 50%, halving your damage bonus. When either reaches 50%, your Accuracy is lowered by an additional 1 point, to a maximum of -5."}</p>
+<p className="chg"><del>{"A ninja's body is an amazing machine, though. Every 3 Downtime, you recover 5% of each damage bonus. If you enter combat again before this is fully healed, that increases to 5 Downtime per 5%. Once both damage bonuses are back to normal, the Accuracy penalty goes away and your bonuses stop decreasing when used."}</del></p>
+<p className="ctx">{"### **(81–100) Fused Foot (Leg)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 270"}</p>
+<p className="ctx">{"You have a -5 to Dodges, since shifting your weight and pivoting on that leg is now genuinely difficult. It makes turning into and away from blows harder too, imposing a -2 penalty to Parries. Running effectively is off the table. You lose the benefits of any effects which increase your AGI for the sole purpose of movement, like the Runner ability or Racing Thunder Technique, and your movement speed is halved on top of that."}</p>
+<p className="chg">{"How you fix it medically is unpleasant to hear about and worse to experience. You should want medical attention for it."}<del>{"This takes 17 Downtime to heal, 34 if you enter combat again before this has fully healed., assuming you're crazy enough to try and have a first aid kit on hand."}</del></p>
+<p className="ctx">{"---"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 286"}</p>
+<p className="ctx">{"Every 10 IC that passes, you suffer a -1 penalty to Accuracy, Fatigue rolls, and defensive rolls, with a maximum of -10. If you close both eyes, these penalties reduce by 1 every 20 IC, to a minimum of half the highest value reached. If it got up to -7, closing your eyes couldn't reduce it below -4. Closing both eyes also incurs a -10 Visibility Penalty, so there's that."}</p>
+<p className="chg"><del>{"This heals naturally. The penalty to Accuracy and so on lowers by 1 for every 2 Downtime you spend. Once it’s been reduced to 0, it takes 17 more Downtime to recover. If the Accuracy penalty returns during that time, healing is interrupted and Downtime cannot be spent, until it’s back to 0. At that point you stop suffering this wound’s effects but have a semi-permanent -2 Visibility Penalty. If you enter combat again before this is fully healed, this increases to 4 Downtime for each Accuracy, and 34 Downtime to recover. After another 12 Downtime is spent with a Doctor or at a Hospital, the semi-permanent -2 Visibility Penalty is removed too."}</del></p>
+<p className="ctx">{"### **(21–40) Atrial Fibrillation (Torso)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 296"}</p>
+<p className="ctx">{"This penalty doesn't increase outside of combat but will continue to affect you every time you fight. One of the worst problems with this injury is that it's a chronic condition the body can't fix on its own once it's happened. You must receive medical attention."}</p>
+<p className="chg"><del>{"Once you have gotten to a Hospital or found a Doctor, it takes 14 Downtime before you no longer suffer penalties to d20 rolls. Another 14 Downtime after that, you stop taking penalties to Defensive rolls. Another 14 Downtime after that, you stop taking penalties to Accuracy, and any penalty you still had is removed."}</del></p>
+<p className="ctx">{"### **(41–60) Slow Roasted (Abdomen)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 304"}</p>
+<p className="ctx">{"You automatically advance one Fatigue level. Penalties to your Stamina and Chakra Exhaustion rolls are not reset to 0 when you advance a Fatigue level, and you advance an additional Fatigue category for every 10 points you fail a roll by, rather than every 15."}</p>
+<p className="chg">{"You can still Rest, but it becomes a Speed 15 action, to which AP still cannot be applied."}<del>{"Out of combat, you recover Fatigue levels at the rate of 1 per 3 Downtime instead of 1, and cannot recover below Fatigue 1. It also costs 6 Downtime to recover your WP, instead of 3. After 20 Downtime, your Fatigue and Chakra Exhaustion penalties reset normally, and you can recover down to Fatigue 0. After another 20 Downtime, your recovery rates return to normal."}</del>{" It is very, very difficult for your body to come back from this."}<del>{"If you enter combat again before this is fully healed, it requires 40 Downtime instead of 20 Downtime on each step."}</del></p>
+<p className="ctx">{"### **(61–80) Red Right Hand (Arms)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 312"}</p>
+<p className="ctx">{"You lose the usage of a hand. You cannot make seals, hold two-handed weapons, and so on. You take a -8 to Accuracy rolls and a -4 to Defensive rolls. Parrying suffers the penalty to Defensive rolls, not Accuracy rolls, as normal."}</p>
+<p className="chg">{"Recovering from this is about as painful and drawn-out as you'd expect from losing most of your hand."}<del>{"This takes 35 Downtime to heal, 70 if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(81–100) Melted Leg (Legs)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 320"}</p>
+<p className="ctx">{"This reduces Agility by 75% for the purposes of movement. It also prevents you from using movement-enhancing jutsu like Shunshin or Racing Thunder Technique. The Doton Mud Wave Technique can still be used normally, as it doesn't rely on actual use of your legs."}</p>
+<p className="chg"><del>{"On your own, this takes 3 Downtime to heal for every 5% movement speed reduction. Every 15% recovered also lowers the dodge penalty by 2, and the penalties to other rolls by 1.  if you enter combat again before this has fully healed it increases to 5 Downtime for every 5%."}</del></p>
+<p className="ctx">{"# **Slashing (Minor)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 356"}</p>
+<p className="ctx">{"As your mouth fills with blood, breathing gets progressively harder and not vomiting gets progressively harder too. You gain a **Suffocation 1** effect every **20 IC**. Whenever you **Rest**, the severity of the Suffocation drops by **1**."}</p>
+<p className="chg">{"It’s also amazingly easy to get this infected."}<del>{"It won’t heal without a Hospital or a Doctor. With one of those, it takes 7 Downtime."}</del></p>
+<p className="ctx">{"### **(21–40) Pulmonary Gash (Chest)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 364"}</p>
+<p className="ctx">{"You gain a **Bleed effect of 3 × Fatigue Level, minimum 3**. Every time your Fatigue level increases, you gain another **Bleed 3**. If you already have Bleed from this wound, the existing Bleed increases by 3 instead."}</p>
+<p className="chg">{"It’s a deep but narrow "}<del>{"injury, so it heals fairly quickly. 5 Downtime to recover .—-------—-------—-------—-------—-------"}</del><ins>{"injury."}</ins></p>
+<p className="ctx">{"### **(41–60) Open Cavity (Abdomen)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 372"}</p>
+<p className="ctx">{"You can **no longer Rest**. Your bonus to Stamina and Chakra Exhaustion rolls from Fatigue drops to **+3 per Fatigue level** instead of +5. The penalty you incur from failing a Stamina or Chakra Exhaustion roll becomes **(action's cost)/4** instead of /5."}</p>
+<p className="chg"><del>{"Takes 10 Downtime to heal."}</del></p>
+<p className="ctx">{"### **(61–80) Muscle Tear (Arm)**"}</p>
+<p className="ctx">{"Your bicep, tricep, or both have been partially torn, which makes functioning in combat a lot harder. Your arm goes from a dry noodle to a limp one."}</p>
+<p className="chg">{"Your **STR is reduced by 25%**. That affects everything derived from STR you're hoping it doesn't. Vitality, Damage Bonus, damage dice with taijutsu, all of it."}<del>{"Heals at 5% per 3 Downtime without medical attention or rest, or 5% per 3 Downtime if you enter into combat again before it’s fully healed."}</del></p>
+<p className="ctx">{"### **(81–100) Muscle Tear (Leg)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 382"}</p>
+<p className="ctx">{"Your quadriceps have been torn. Not to fear. The tendon is fine and you haven't been hamstrung. You're not going to be put down like an animal, though this should teach you to treat pets better."}</p>
+<p className="chg">{"Your **AGI is reduced by 20%**. That affects everything derived from AGI you're hoping it doesn't. Dodge, Initiative, max AP, movement speed."}<del>{"Heals at 5% per 3 Downtime without medical attention or rest, or 5% per 3 Downtime if you enter into combat again before it’s fully healed."}</del></p>
+<p className="ctx">{"---"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 396"}</p>
+<p className="ctx">{"You're also treated as being **one Fatigue category higher than you actually are** for the purpose of penalties, but not benefits. If you're at Fatigue 1, you take a -2 to Accuracy and -4 to defensive rolls instead of the normal -1/-2. Under normal circumstances, that means you fall unconscious at one Fatigue less than usual."}</p>
+<p className="chg">{"The blood can be drained easily with medical attention, but not in battle."}<del>{"This takes 10 Downtime to heal, 20  if you enter combat again before this has fully healed."}</del>{" It'll probably scar either way, less likely with treatment."}</p>
+<p className="ctx">{"### **(21–40) Clavicle Cut (Torso)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 406"}</p>
+<p className="ctx">{"Crash course in anatomy: you have two clavicles. Odd result means right, even means left. With proper medical attention, a trip to a doctor or a Medicine roll of 20+ using a First Aid kit, you can get the arm completely immobilized against your body. That reduces the Paralysis to **2** and halves the damage from Stamina rolls, but means you can't use that arm or hand at all."}</p>
+<p className="chg"><del>{"\\*\\*14 Downtime to heal."}</del></p>
+<p className="ctx">{"### **(41–60) Chopped Liver (Abdomen)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 414"}</p>
+<p className="ctx">{"This also messes with your body's ability to process chemicals properly. If you're under the effects of a **Soldier Pill or Blood Pill**, they end immediately, including the Fatigue reduction, which can knock you unconscious. Taking either pill with this wound does nothing beneficial. The Akimichi clan's pills still work normally."}</p>
+<p className="chg"><del>{"\\*\\*This takes 12 Downtime to heal, 24  if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(61–80) Hand of Benediction (Arm)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 424"}</p>
+<p className="ctx">{"Your **DEX bonus to Accuracy becomes DEX/20**, and **Seal Speeds increase by 50%** before any reductions are applied, such as uniques or DEX/10. You can avoid the Seal Speed increase by performing seals one-handed with the opposite hand, if you're able to do so."}</p>
+<p className="chg"><del>{"Won't heal without treatment. Nerves are tricky and need medical ninjutsu to properly restore. With a Hospital or a Doctor, 12 Downtime to heal."}</del></p>
+<p className="ctx">{"### **(81–100) Hamstrung (Leg)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 432"}</p>
+<p className="ctx">{"You no longer benefit from the **Active** ability, and your **AP cap becomes AGI/4**. Any Athletics rolls use only half your total ranks in the skill."}</p>
+<p className="chg"><del>{"If you survive the fight that caused this, 14 Downtime to heal, 28  if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"---"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 448"}</p>
+<p className="ctx">{"On the bright side, you're a super implausible magic ninja. If you carefully apply pressure to your neck with both hands, you can temporarily suspend both the Suffocation rolls and the Bleed damage. You may take no other actions while doing this, not even Speed 0 ones. This suspension applies after you've been doing it for at least **10 consecutive IC**."}</p>
+<p className="chg"><del>{"This won’t start healing until it receives medical treatment. After that, once you have access to a Hospital or a Doctor, 30 Downtime to heal, 60 if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(21–40) Injured Spine (Torso)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 456"}</p>
+<p className="ctx">{"First, you suffer a **Stun of half its Speed**. Second, you acquire **Paralysis 1**, or increase your existing Paralysis from this wound by **1**. The Paralysis lasts until the end of battle."}</p>
+<p className="chg"><del>{"Won’t heal without medical treatment. Once you have access to a Hospital or a Doctor, 30 Downtime to recover."}</del></p>
+<p className="ctx">{"### **(41–60) Disemboweled (Abdomen)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 464"}</p>
+<p className="ctx">{"Until you receive treatment, any **called shots to your abdomen automatically deal their damage to your Hit Points**."}</p>
+<p className="chg"><del>{"\\*\\*28 Downtime to heal, 56 if you enter combat again before this has fully healed. Every time you advance a Fatigue level after receiving this wound, add another 3 Downtime to recovery. The wound won’t begin healing until you’ve received medical treatment, whether from a first aid kit, a Hospital or a Doctor."}</del></p>
+<p className="ctx">{"### **(61–80) Avulsed Arm (Arm)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 470"}</p>
+<p className="ctx">{"The arm is useless. You can't hold weapons, any you're holding drop, make handseals, or use items. You take **Bleed 6**, **-8 to Accuracy**, and **-4 to defensive rolls**. Every time you perform an attack that deals damage, your Bleed from this wound increases by **DB/5, minimum 1**. If it's down to 0, you acquire a brand new one."}</p>
+<p className="chg"><del>{"The Accuracy and defensive roll penalties drop by 1 per 5 Downtime, or 10 if you enter combat again before this has fully healed. Once those penalties are gone entirely, you stop incurring Bleed effects when you attack."}</del></p>
+<p className="ctx">{"### **(81–100) Achilles Tendon Cut (Leg)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 478"}</p>
+<p className="ctx">{"The worst part is you just can't move. You can't move as part of an attack or use jutsu that affect movement, like Shunshin. You can still take a Move action, but at that point you're really just rolling and crawling, so the total distance moved is **divided by 4** after all other factors are applied. You can still \"move\" to get out of the way of Area of Effect attacks, but it suffers the same /4 as regular movement."}</p>
+<p className="chg"><del>{"Won’t heal without access to a Hospital or a Doctor. With it, you reduce the Dodge penalty every 5 Downtime spent and the Accuracy and d20 roll penalties every 10 Downtime . After 20 Downtime, the movement penalty becomes /2. After the full 40 Downtime recovery time, the movement penalty goes away entirely."}</del></p>
+<p className="ctx">{"---"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 534"}</p>
+<p className="ctx">{"Flinch 4 (TN 14)."}</p>
+<p className="chg"><del>{"This takes 5 Downtime to heal, 10  if you enter combat again before this has fully healed."}</del>{"### **(31–60) Organ "}<del>{"Hemmorrhage"}</del><ins>{"Hemorrhage"}</ins>{" (Abdomen)**"}</p>
+<p className="ctx">{"Your abdomen happens to have several internal organs all closely packed together. While space-saving, it also happens to mean that if you're hit there, one of them is bound to be injured in some form or fashion, and that's exactly what happened."}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 544"}</p>
+<p className="ctx">{"Flinch 4 (TN 14)."}</p>
+<p className="chg"><del>{"This takes 3 Downtime to heal, 5  if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(61–80) Joint Pierced (Arm)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 554"}</p>
+<p className="ctx">{"Flinch 4 (TN 14)."}</p>
+<p className="chg"><del>{"This takes 3 Downtime to heal, 7  if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(81–100) Joint Pierced (Leg)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 564"}</p>
+<p className="ctx">{"Flinch 4 (TN 14)."}</p>
+<p className="chg"><del>{"This takes 3 Downtime to heal, 5  if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"---"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 578"}</p>
+<p className="ctx">{"Flinch 5 (TN 15). Every time you take an action with a Speed greater than (5 + RES/10), your own ribs stab into you, inflicting an additional Flinch 2."}</p>
+<p className="chg"><del>{"This takes 12 Downtime to heal, 24  if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(31–60) Cavitation (Abdomen)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 590"}</p>
+<p className="ctx">{"Flinch 6 (TN 16)."}</p>
+<p className="chg"><del>{"This takes 14 Downtime to heal, 28  if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(61–80) Tricep Tear (Arm)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 598"}</p>
+<p className="ctx">{"Flinch 6 (TN 16)."}</p>
+<p className="chg"><del>{"Tendons are tricky business, and require either a Hospital or a Doctor to fix. Without medical attention, it won’t heal; with it, it takes 14 Downtime."}</del></p>
+<p className="ctx">{"### **(81–100) Hamstrung (Leg)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 606"}</p>
+<p className="ctx">{"You can only accomplish 15 IC of movement before having to take a Rest action. Movement as part of an attack counts towards this limit. Any effects which require you to channel chakra through your legs (such as standing on walls or water, or jutsu such as Mizutamari) end, and cannot be used until you've healed."}</p>
+<p className="chg"><del>{"Speaking of which, healing takes a while; 17 Downtime."}</del></p>
+<p className="ctx">{"---"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 622"}</p>
+<p className="ctx">{"You can't take Rest actions, and the final results of your Stamina rolls are halved. As in, if you have a 12+5+15 = 32, that's actually a 16. Probably less brutal, you have a -5 penalty to your Accuracy and d20 rolls from the agonizing pain, and a -5 penalty to Chakra Exhaustion rolls due to general poor physical condition. Moving any distance forces a roll of Stamina 10, +1 per yard moved; this even applies when moving as part of an attack or with the aid of a jutsu. This can be avoided by moving at one tenth your normal movement speed."}</p>
+<p className="chg"><del>{"The ‘agonizing pain’ bit goes away in a month (or, more likely, you get used to it). It takes 28 Downtime to recover from the effects. Once it’s done, you’re good as new."}</del></p>
+<p className="ctx">{"Oh, unless you get your second lung punctured before the first one's healed. Then you just die after 50 IC have passed. Sucks to be to you."}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 630"}</p>
+<p className="ctx">{"Flinch 8 (TN 18)."}</p>
+<p className="chg">{"This inflicts you with a Poison 1 effect. 20 IC later, it becomes Poison 2; another 20 IC, and it becomes Poison 3. This continues, all the way up to Poison 10. It doesn't end. If treated with First Aid, make a Medicine check. Its effects will be held at bay for 1 hour per point you get on your skill roll. However, any time you advance a Fatigue level you have an 75% chance of reopening the wound."}<del>{"This goes down by 15% every 7 Downtime that you spend."}</del></p>
+<p className="ctx">{"### **(61–80) Shoulder Orifice (Arm)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 642"}</p>
+<p className="ctx">{"When you're first hit, this inflicts a Bleed 15 which will go away normally."}</p>
+<p className="chg"><del>{"This won’t even begin healing until you’ve spent 10 Downtime in a Hospital. After that, it’ll take another 14 Downtime, 28  if you enter combat again before this has fully healed."}</del></p>
+<p className="ctx">{"### **(81–100) Penetrated Artery (Leg)**"}</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 652"}</p>
+<p className="ctx">{"If you have 0 Vitality remaining, your current HP, maximum HP, and maximum Vitality are all reduced by that amount. This includes move actions, unless you move at only one tenth your normal speed. If your maximum Hit Points are reduced to 0, you die."}</p>
+<p className="chg"><del>{"Recovery takes 28 Downtime. At that point, you begin regaining"}</del><ins>{"When this wound heals, your"}</ins>{" lost maximum HP and"}<del>{"Vitality. Every 3 additional Downtime you regain (RES)/2 max HP, and half that in vitality. Once your max HP is fully restored, you begin gaining lost maximum"}</del>{" Vitality "}<del>{"at the same rate."}</del><ins>{"are restored."}</ins></p>
+<p className="ctx">{"<br />"}</p>
+</div>
+</div>
+</Accordion>
+</AccordionGroup>

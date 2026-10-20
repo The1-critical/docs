@@ -24,7 +24,19 @@
         "pages": [
           "Welcome",
           "Changelog",
-          "rev-022-changes",
+          {
+            "group": "REV-022 Exact Changes",
+            "pages": [
+              "rev-022-changes",
+              "rev-022-changes/combat-and-wounds",
+              "rev-022-changes/character-and-advancement",
+              "rev-022-changes/clans-and-provinces",
+              "rev-022-changes/jutsu",
+              "rev-022-changes/equipment-and-dwellings",
+              "rev-022-changes/summoning",
+              "rev-022-changes/index-and-credits"
+            ]
+          },
           "index-of-lists",
           "Credits"
         ]
