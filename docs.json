@@ -25,6 +25,17 @@
           "Welcome",
           "Changelog",
           {
+            "group": "REV-023 Exact Changes",
+            "pages": [
+              "rev-023-changes",
+              "rev-023-changes/combat-and-wounds",
+              "rev-023-changes/character-and-advancement",
+              "rev-023-changes/clans-and-provinces",
+              "rev-023-changes/jutsu",
+              "rev-023-changes/welcome"
+            ]
+          },
+          {
             "group": "REV-022 Exact Changes",
             "pages": [
               "rev-022-changes",
