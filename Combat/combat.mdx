@@ -50,7 +50,7 @@ You can spend AP whenever you take an action. Each AP spent reduces the action�
 
 ### Attacking
 
-The simplest and most effective way to resolve a conflict is often violence. The first step is to declare your attack: its name, Speed, cost(s) (Stamina or Chakra), and Accuracy, so the defender knows what they face and can decide how to respond.
+The simplest and most effective way to resolve a conflict is often violence. The first step is to declare your attack: its name, Speed, cost(s) (Stamina or Chakra), Accuracy, and any TNs it sets, including ones that only apply on hit (such as a status or poison), so the defender knows what they face and can decide how to respond.
 
 _Example: Choji rushes toward Shikamaru and swings a heavy fist toward his face! (Basic Unarmed, Speed 8, Stamina 5, Accuracy based on STR/10)_
 
@@ -88,7 +88,7 @@ Most Ninjutsu and Genjutsu have a Seal Speed entry. A Seal Speed of 0 means that
 
 Genjutsu are mind‑affecting, often illusory techniques. Attempting to influence someone with Genjutsu is resolved through opposed Genjutsu rolls.
 
-- **Attacker:** 1d20 + XP/400 plus any offensive Genjutsu bonuses.
+- **Attacker:** 10 + XP/400 plus any offensive Genjutsu bonuses.
 - **Defender:** 1d20 + XP/200 plus any defensive Genjutsu bonuses.
 
 If the defender rolls lower, they suffer the technique's effects.
@@ -197,6 +197,10 @@ Bonuses to “d20 rolls” apply to:
 
 They do not apply to CQC Accuracy, Ninjutsu Accuracy, Weapon Accuracy (rolled or TN), Fatigue rolls, or damage rolls.<br />
 
+### Opposed Rolls
+
+When one character acts against another, such as applying a status effect, poisoning, hiding, using Genjutsu or grappling, the attacker does not roll. Their result is a Target Number of 10 + their modifiers (11 + for Specialization, or 13+ for Skill Mastery). The defender rolls 1d20 + their modifiers and must match or beat it. The defender always wins ties.
+
 ### Basic Actions
 
 These are actions anyone can perform in combat.
@@ -278,7 +282,7 @@ You may hide under one of four circumstances:
 
 ##### Hide (Speed 10)
 
-Make a Stealth skill roll; the result is your Stealth TN. You are hidden at Stealth level 1. Each time you hide in the same battle, future Hide rolls take a cumulative -5 penalty. If your Stealth TN reaches 0 or below, you are no longer hidden.
+Your Stealth TN is 10 + your Stealth (see Opposed Rolls). You are hidden at Stealth level 1. Each time you hide in the same battle, your future Stealth TNs take a cumulative -5 penalty. If your Stealth TN reaches 0 or below, you are no longer hidden.
 
 ##### Improve Hiding (Speed 7)
 
@@ -404,7 +408,7 @@ Paralysis effects do not combine. If you are afflicted with two paralysis effect
 
 #### Poison
 
-Make Resistance roll against the poison's Toxicology roll. Failure: take Severity damage per IC for the duration. Multiple poisons can exist simultaneously, but only the highest Poison and one set of Special Effects apply. Same source only renews duration.
+Make a Resistance roll against the poison's Toxicology TN. Failure: take Severity damage per IC for the duration. Multiple poisons can exist simultaneously, but only the highest Poison and one set of Special Effects apply. Same source only renews duration.
 
 #### Shock
 
