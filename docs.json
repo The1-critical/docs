@@ -140,8 +140,7 @@
             "group": "Advancement",
             "pages": [
               "Advancement/slice-of-life",
-              "Advancement/rank-benefits-ninja-rank-benefits-are-specialized-abilities-acquired-when-one-ranks-up-each-rank-will-have-several-for-you-to-choose-from-you-automatically-acquire-any-two-of-your-choice-for-free",
-              "Advancement/untitled-page-2",
+              "Advancement/rank-benefits",
               "Advancement/the-nature-of-advancement-in-the-shinobi-world-the-path-of-a-shinobi-is-not-a-straightforward-ascent-measured-in-years-of-service-or-even-in-the-mastery-of-dangerous-techniques-rather-it-is-a-comp",
               "Advancement/the-nature-of-certification-the-certification-system-emerged-from-the-chaos-of-the-pre-confederacy-era-when-villages-had-no-standardized-way-to-assess-the-capabilities-of-shinobi-from-other-region",
               "Advancement/untitled-page-3"
@@ -271,6 +270,14 @@
     {
       "source": "/Advancement/untitled-page",
       "destination": "/Advancement/slice-of-life"
+    },
+    {
+      "source": "/Advancement/rank-benefits-ninja-rank-benefits-are-specialized-abilities-acquired-when-one-ranks-up-each-rank-will-have-several-for-you-to-choose-from-you-automatically-acquire-any-two-of-your-choice-for-free",
+      "destination": "/Advancement/rank-benefits"
+    },
+    {
+      "source": "/Advancement/untitled-page-2",
+      "destination": "/Advancement/rank-benefits"
     }
   ]
 }
