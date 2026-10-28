@@ -1,0 +1,223 @@
+---
+title: "REV-024: Combat and Wounds"
+description: "Word-by-word changes to 2 pages in REV-024."
+---
+
+Open a page to see its changes: <span className="rev-diff"><ins>added text</ins> and <del>removed text</del></span>, with unchanged lines around them in grey. Changes that only touch formatting (links, anchors, quote marks, bold and italics) are left out. Back to the [REV-024 overview](/rev-024-changes).
+
+<AccordionGroup>
+<Accordion title={"Combat"} description={"/Combat/combat · +256 −348 words"}>
+<div className="rev-diff">
+<div className="hunk">
+<p className="lineno">{"Line 41"}</p>
+<p className="ctx">One of the things that makes battles dramatic is sudden, unpredicted surprises – and among shinobi that’s par for the course. Mechanically, this is represented by Action Points; thematically, this can be a burst of adrenaline or the result of carefully luring your opponent into position for a counter‑attack.</p>
+<p className="chg">You gain 5 AP every time the Initiative Count reaches a multiple of 20. You start battle with zero AP, and your maximum AP is <del>DEX/2.</del><ins>AGI/2.</ins></p>
+<p className="ctx">You can spend AP whenever you take an action. Each AP spent reduces the action’s Speed by 1. </p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 51"}</p>
+<p className="ctx">&#35;&#35;&#35; Attacking</p>
+<p className="chg">The simplest and most effective way to resolve a conflict is often violence. The first step is to declare your attack: its name, Speed, cost&#40;s&#41; &#40;Stamina or Chakra&#41;,<del>and</del> Accuracy, <ins>and any TNs it sets, including ones that only apply on hit &#40;such as a status or poison&#41;,</ins> so the defender knows what they face and can decide how to respond.</p>
+<p className="ctx">&#95;Example: Choji rushes toward Shikamaru and swings a heavy fist toward his face&#33; &#40;Basic Unarmed, Speed 8, Stamina 5, Accuracy based on STR/10&#41;&#95;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 75"}</p>
+<p className="ctx">Your Damage Bonus is determined by STR for CQC, CHA for Ninjutsu, and DEX for Weapons divided by 15 and rounded to one decimal place. This bonus is multiplied by the attack’s final Speed – slower, more solid attacks benefit more from raw power. Unless noted otherwise, any alteration to an action’s Speed also affects the Speed used for the damage bonus multiplication. </p>
+<p className="chg">All bonuses to Damage Bonus are additive, not multiplicative. For example, using <del>a two‑handed weapon &#40;+33%&#41;, Chakra Flow: Fire &#40;+25%&#41;, and Weapon Focus</del><ins>Kurokumaken at Combo Counter 2 &#40;×1.5, plus +0.5 per CC from its Combo Bonus&#41; with Peak Effort</ins> &#40;+1 flat&#41;<del>on a Burning Spear that already uses NDB instead of WDB</del> gives: <del>&#40;CHA/15&#41;</del><ins>&#40;STR/15&#41;</ins> × &#40;1 + <del>0.33</del><ins>0.5</ins> + <del>0.25&#41;</del><ins>1.0&#41;</ins> + 1, not <del>&#40;CHA/15</del><ins>&#40;STR/15</ins> × <del>1.33</del><ins>1.5</ins> × <del>1.25&#41;</del><ins>2&#41;</ins> + 1. Flat bonuses &#40;like <del>Weapon Focus</del><ins>Peak Effort</ins> ranks&#41; are added after multiplication.</p>
+<p className="ctx">Damage is applied to an opponent’s Vitality until it reaches 0. Any overflow, and all future damage, goes directly to their Hit Points.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 89"}</p>
+<p className="ctx">Genjutsu are mind‑affecting, often illusory techniques. Attempting to influence someone with Genjutsu is resolved through opposed Genjutsu rolls.</p>
+<p className="chg">- &#42;&#42;Attacker:&#42;&#42; <del>1d20</del><ins>10</ins> + XP/400 plus any offensive Genjutsu bonuses.</p>
+<p className="ctx">- &#42;&#42;Defender:&#42;&#42; 1d20 + XP/200 plus any defensive Genjutsu bonuses.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 146"}</p>
+<p className="ctx">5. Any other percent‑based reductions &#40;additive&#41;.</p>
+<p className="chg">“Additive” means percentage bonuses are added together into a single multiplier. Example: +25% and +33% gives DB × &#40;1 + 0.25 + 0.33&#41; = DB × 1.58. A <del>CQC Specialist</del><ins>Competitive character</ins> using Sudden <del>Attack, CQC</del><ins>Attack</ins> 2 &#40;‑20%&#41; gives &#40;base dice + DB × Speed&#41; × &#40;1 + <del>0.1</del><ins>0.05</ins> – 0.2&#41; = <del>×0.9. &#60;br</del><ins>×0.85. &#60;br</ins> /&#62;</p>
+<p className="ctx">&#35;&#35;&#35; Action Qualities</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 198"}</p>
+<p className="ctx">They do not apply to CQC Accuracy, Ninjutsu Accuracy, Weapon Accuracy &#40;rolled or TN&#41;, Fatigue rolls, or damage rolls.&#60;br /&#62;</p>
+<p className="chg"><ins>&#35;&#35;&#35; Opposed Rolls</ins></p>
+<p className="chg"><ins>When one character acts against another, such as applying a status effect, poisoning, hiding, using Genjutsu or grappling, the attacker does not roll. Their result is a Target Number of 10 + their modifiers &#40;11 + for Specialization, or 13+ for Skill Mastery&#41;. The defender rolls 1d20 + their modifiers and must match or beat it. The defender always wins ties. These TNs are affected by d20 penalties and bonuses. Opposed Initiative rolls do not use TNs: both sides roll.</ins></p>
+<p className="ctx">&#35;&#35;&#35; Basic Actions</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 208"}</p>
+<p className="ctx">&#35;&#35;&#35;&#35; Basic Unarmed &#40;Speed 8, Stamina 5&#41;</p>
+<p className="chg">A catch‑all for punches, kicks, and other body‑based attacks. Deals 2d4 base damage. This uses your CQC Accuracy, and your <del>Physical</del><ins>CQC</ins> Damage Bonus.</p>
+<p className="ctx">&#35;&#35;&#35;&#35; Basic &#40;Weapon&#41; &#40;Speed Varies, Stamina Varies&#41;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 283"}</p>
+<p className="ctx">&#35;&#35;&#35;&#35;&#35; Hide &#40;Speed 10&#41;</p>
+<p className="chg"><del>Make a</del><ins>Your</ins> Stealth <del>skill roll; the result</del><ins>TN</ins> is <ins>10 +</ins> your Stealth <del>TN.</del><ins>&#40;see Opposed Rolls&#41;.</ins> You are hidden at Stealth level 1. Each time you hide in the same battle, <ins>your</ins> future <del>Hide rolls</del><ins>Stealth TNs</ins> take a cumulative -5 penalty. If your Stealth TN reaches 0 or below, you are no longer hidden.</p>
+<p className="ctx">&#35;&#35;&#35;&#35;&#35; Improve Hiding &#40;Speed 7&#41;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 357"}</p>
+<p className="ctx">&#35;&#35;&#35;&#35; Airborne</p>
+<p className="chg">Airborne represents being lifted into the air, violently or otherwise. An Airborne ninja ignores all Ground-tagged effects and ground-based environmental hazards, but similarly cannot benefit from effects that require contact with the <del>ground, and cannot be knocked Prone.</del><ins>ground.</ins> They may still defend themselves, but their move speed is reduced to 0, potentially impacting their ability to escape areas of effect. The status ends on the Airborne target's next non-interrupt action, unless stated otherwise.</p>
+<p className="ctx">&#35;&#35;&#35;&#35; Bleed</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 363"}</p>
+<p className="ctx">Lose Vitality or HP equal to double severity every 5 IC. Stamina penalty equal to half severity &#40;rounded down&#41;. Reduce severity by RES/20 every 20 IC &#40;minimum 1&#41;. Bleeds from the same source do not stack; different sources stack damage but only the highest severity applies the Stamina penalty.</p>
+<p className="chg">&#35;&#35;&#35;&#35;<del>Burns</del></p>
+<p className="chg"><del>Generally resulting from exposure to fire or intense heat, such as some katon jutsu, being burnt makes it harder to fight effectively. Your Stamina penalty is equal to severity. If you get multiple burns: only the strongest applies. Effects that reduce Stamina penalties reduce all burn severities by the same amount; advancing a Fatigue category clears all burns.</del></p>
+<p className="ctx"> Buried</p>
+<p className="chg"><del>If you dig a hole to give you</del><ins>Buried represents being submerged at least partially in</ins> the <del>buried status</del><ins>ground. A Buried character's move speed is reduced to 0,</ins> and <ins>any penalties inflicted on them by the Prone condition</ins> are <del>not seen this gives you a chance to hide similar to</del><ins>doubled, until they remove themselves from the ground as</ins> a <del>visibly penalty would.</del><ins>Speed 10, Delay 5 action. Buried characters cannot be knocked Airborne, and applying the Buried condition removes the Airborne condition.</ins></p>
+<p className="chg"><del>Buried is a status caused by the usage of doton jutsu. You can be buried up to a rating of ten. At buried one through five you can attack and be targeted. Higher than this you can not attack or be targetted. Unless you used a jutsu that says otherwise &#40;or have oxygen tank&#33;&#41;, you are at suffocation 1 when buried more than five.</del></p>
+<p className="chg"><del>Buried Status applies a immobilization penalty equal to twice its rating. You can dig yourself out of being buried equal to the immobilization penalty you are suffering in speed. Which means buried 4 would require a speed 8 action to dig yourself out.</del>&#35;&#35;&#35;&#35; <del>Grounded</del><ins>Burns</ins></p>
+<p className="chg"><del>Grounded represents</del><ins>Generally resulting from exposure to fire or intense heat, such as some katon jutsu,</ins> being <del>submerged at least partially in the ground. A Grounded character's move speed</del><ins>burnt makes it harder to fight effectively. Your Stamina penalty</ins> is <del>reduced</del><ins>equal</ins> to <del>0, and any</del><ins>severity. If you get multiple burns: only the strongest applies. Effects that reduce Stamina</ins> penalties <del>inflicted on them</del><ins>reduce all burn severities</ins> by the <del>Prone condition are doubled, until they remove themselves from the ground as</del><ins>same amount; advancing</ins> a <del>Speed 10, Delay 5 action. Buried characters cannot be knocked Airborne, and applying the Buried condition removes the Airborne condition.</del><ins>Fatigue category clears all burns.</ins></p>
+<p className="ctx">&#35;&#35;&#35;&#35; Ignite</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 397"}</p>
+<p className="ctx">&#35;&#35;&#35;&#35; Prone</p>
+<p className="chg">-3 CQC, Ninjutsu, and Weapon Accuracy, -2 defensive rolls, half movement speed. Stand up as Speed 5 action.<del>Being knocked prone while airborne causes immediate fall to ground</del></p>
+<p className="ctx">&#35;&#35;&#35;&#35; Poison</p>
+<p className="chg">Make <ins>a</ins> Resistance roll against the poison's Toxicology <del>roll.</del><ins>TN.</ins> Failure: take Severity damage per IC for the duration. Multiple poisons can exist simultaneously, but only the highest Poison and one set of Special Effects apply. Same source only renews duration.</p>
+<p className="ctx">&#35;&#35;&#35;&#35; Shock</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 565"}</p>
+<p className="ctx">Weapons are typically carried attached to one's person somehow; swords have sheathes, a pair of tonfa might be tucked through belt holsters, a fan could be strapped across your back, and so forth. Drawing a weapon is retrieving it from wherever you have it stored and placing it in your hands. At this point you can use it to attack, parry, or whatever else you please, with the downside being that your hands aren't free for, say, handseals. You may also draw a weapon at the start of combat &#40;when you roll initiative&#41;, without taking an action to do so. If you wish, you can draw two weapons as a single Speed 5 action. Note that you only need to Draw weapons you intend to hold and use in melee. This Speed to attack with thrown or multi-thrown weapons includes the time needed to retrieve them from holsters. The same is true for Bows.</p>
+<p className="chg"><del>Be aware: While holding one or more weapons, you can still make basic unarmed attacks. You cannot, however, use CQC Taijutsu. Except only Grappling is still possible as long as you have at least one hand free.</del></p>
+<p className="ctx">&#35;&#35;&#35; Sheathe Weapon &#40;Speed 6&#41;</p>
+</div>
+</div>
+</Accordion>
+<Accordion title={"Wounds"} description={"/Combat/wounds · +236 −309 words"}>
+<div className="rev-diff">
+<div className="hunk">
+<p className="lineno">{"Line 13"}</p>
+<p className="ctx">Slashing wounds demand your attention, and I must say, they are quite persistent. The blade, the claw, the shard of broken glass. Dreadfully sharp edges that part flesh like water. A sudden, sharp shock of cold. Then heat. Then the wetness of blood running down your skin. Slashing wounds bleed. They accumulate and then reopen. You simply cannot ignore them. They will not let you.</p>
+<p className="chg">Piercing wounds are precise, surgical, and utterly destabilizing. The spear, the arrow, the needle-sharp point that slides between your ribs. These wounds do not just damage; they disrupt, don't you know. Your nerves scream. Your muscles spasm.<del>Before you can act, you must overcome the Flinch. If you fail, you botch. Your attack misses. Your dodge fails.</del> Some say that although the wounds are liveable, its consequences are not. </p>
+<p className="ctx">Minor wounds are the price of admission. Major wounds are the cost of failure. Severe wounds are the cost of survival. Critical wounds are the cost of victory, and I daresay, quite a steep one at that. You will be wounded. It is an inevitable, old sport. What matters is what you do next. You will stop the bleeding. You will stabilize the wound. You will get back up, and you will do it with style. That is what it means to be a shinobi. To get back up, again and again, until the fight is won or you cannot rise anymore. The wound is not the end, the wound is the beginning of the next fight.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 480"}</p>
+<p className="ctx">---</p>
+<p className="chg">&#35;<del>&#42;&#42;Piercing &#40;Minor&#41;&#42;&#42;</del></p>
+<p className="chg"><del>&#35;</del> -=&#91; <del>Flinch</del><ins>Needling</ins> &#93;=-</p>
+<p className="chg"><ins>Needling is a status effect, unique to Piercing wounds. Every</ins> Piercing <ins>wound will inflict some amount of Needling, which represents the slow, steady pain and debilitating effect of being stabbed, which accordingly fully stacks with itself. One or two you can typically bear without too much trouble &#40;assuming they don’t go through you&#41;, but the more puncture</ins> wounds <del>are about deep, focused trauma. Spears, bullets, broken glass bottles</del><ins>you take, the harder it becomes to have those bursts of energy that ninja depend upon to turn the tide of battle. Needling reduces your current</ins> and <del>stilettos sting deeper than any gash. It causes involuntary spasms</del><ins>maximum Action Points according to its Severity, to a minimum of 0 for your current AP,</ins> and <del>severely disrupting motor control. This is captured mechanically by the status bFlinch.</del><ins>a minimum of half your normal maximum &#40;i.e., if you had an AGI of 100, your normal maximum would be 100/2 = 50, which could be reduced as low as 25 from Needling&#41;.</ins></p>
+<p className="chg"><del>When you have Flinch X, before attempting any defensive interrupt action &#40;parry, dodge, etc.&#41;, you must succeed on</del><ins>Even if</ins> a <del>Stamina roll against</del><ins>Piercing wound has</ins> a <del>Target Number</del><ins>timed effect, the maximum AP reduction aspect</ins> of <del>10 + Flinch Severity. On success,</del><ins>Needling from</ins> the <del>action proceeds normally. On failure,</del><ins>wound lasts until</ins> the <del>action is Botched, it automatically fails and</del><ins>end of the battle. Wounds that are healed mid-battle similarly have their AP reduction removed &#40;though you do not regain</ins> any <ins>current</ins> AP <del>spent</del><ins>that was lost as a result&#41;, and it</ins> is <del>lost, so yes you could get punched after failing</del><ins>possible</ins> to <del>activate</del><ins>heal</ins> a <del>defense. You may spend 1 Willpower to remove all Flinch.</del><ins>Piercing wound whose main effect has ended, but its AP reduction from Needling remains.</ins></p>
+<p className="chg"><del>Flinch severity decreases by 1 every 10 IC outside of combat, or every 20 IC in combat. Botching a defense  reduces Flinch by 3 immediately. The roll does not increase your stamina penalty.</del><ins>&#35; &#42;&#42;Piercing &#40;Minor&#41;&#42;&#42;</ins></p>
+<p className="chg">&#35;&#35;&#35; &#42;&#42;&#40;1–30&#41; <del>Needling</del><ins>Silhouette</ins> &#40;Torso&#41;&#42;&#42;</p>
+<p className="ctx">You've got a small but fairly deep incision from what struck you. The initial shock of pain was worse than the wound really is, though.</p>
+<p className="chg"><del>Flinch 1 &#40;TN 11&#41;.</del><ins>Needling 2.</ins> You take a Stun 3, which increases by 1 for every time you take this wound in the same battle.</p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;31–60&#41; Flesh Wound &#40;Abdomen&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 498"}</p>
+<p className="ctx">You've been shanked in the gut. It managed to miss your vitals, but it's still going to cause blood to trickle out of you.</p>
+<p className="chg"><del>Flinch 2 &#40;TN 12&#41;.</del><ins>Needling 2.</ins> You take a -1 to Chakra Exhaustion and Stamina rolls.</p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;61–80&#41; Reflexive Flinch &#40;Arm&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 504"}</p>
+<p className="ctx">The back of your hand was hit, causing your fingers to spasm momentarily. Any weapons you're holding are dropped, and any seals you're forming are automatically aborted.</p>
+<p className="chg"><del>Flinch 1 &#40;TN 11&#41;.</del><ins>Needling 2.</ins> You take a -1 to Accuracy for the next 50 IC.</p>
+<p className="ctx">Repeatedly applications of this wound do not stack the penalty to Accuracy, but instead add 50 IC to its duration &#40;or, if it has expired, re-apply it&#41;.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 512"}</p>
+<p className="ctx">They struck your quadricep, which is a fairly easy target, all things considered.</p>
+<p className="chg"><del>Flinch 1 &#40;TN 11&#41;.</del><ins>Needling 2.</ins> If you spent the IC before you received this wound moving, you are inflicted with a Stun 8; whether you were moving or not, though, you have a -1 to Defensive rolls for the next 50 IC.</p>
+<p className="ctx">Repeated applications of this wound do not stack the penalty to defensive rolls, but instead add 50 IC to its duration &#40;or, if it has expired, re-apply it&#41;.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 520"}</p>
+<p className="ctx">&#35;&#35; &#42;&#42;Piercing &#40;Major&#41;&#42;&#42;</p>
+<p className="chg"><del>Every Major Piercing wound you're suffering from reduces your current and maximum AP by 4. This stacks additively with all other AP reductions, including multiples of the same wounds.</del></p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;1–30&#41; Punctured Cavity &#40;Torso&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 528"}</p>
+<p className="ctx">Multiple instances of this wound count towards raising the penalty, and all lower your AP normally, but their penalties don't stack--that is, if you had five Punctured Cavities, your total penalty would be -4, not -20.</p>
+<p className="chg"><del>Flinch 4 &#40;TN 14&#41;.</del><ins>Needling 4.</ins></p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;31–60&#41; Organ Hemorrhage &#40;Abdomen&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 538"}</p>
+<p className="ctx">Repeated applications of this wound raise the penalties by 1 each, though still not above -4. These penalties last until the wound has healed.</p>
+<p className="chg"><del>Flinch 4 &#40;TN 14&#41;.</del><ins>Needling 4.</ins></p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;61–80&#41; Joint Pierced &#40;Arm&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 548"}</p>
+<p className="ctx">The increase and decrease cannot exceed 50% of an action's base speed. For example, after 20 separate applications of this wound your basic unarmed attack would be Speed 12, and deal damage as if it was Speed 4. You may still use AP to reduce these actions to half their new base speed.</p>
+<p className="chg"><del>Flinch 4 &#40;TN 14&#41;.</del><ins>Needling 4.</ins></p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;81–100&#41; Joint Pierced &#40;Leg&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 558"}</p>
+<p className="ctx">Finally, this applies a -1 penalty to defensive rolls for every 15% it reduces your movement speed.</p>
+<p className="chg"><del>Flinch 4 &#40;TN 14&#41;.</del><ins>Needling 4.</ins></p>
+<p className="ctx">---</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 564"}</p>
+<p className="ctx">&#35;&#35; &#42;&#42;Piercing &#40;Severe&#41;&#42;&#42;</p>
+<p className="chg"><del>Every Severe Piercing wound you're suffering from reduces your current and maximum AP by 6. This stacks additively with all other AP reductions, including multiples of the same wounds.</del></p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;1–30&#41; Rib Spearing &#40;Torso&#41;&#42;&#42;</p>
+<p className="ctx">The object that struck you did so in such a way as to cause your ribs not just to fracture, but to split entirely. Both ends are curved inward, making movement, breathing, and life in general very painful.</p>
+<p className="chg">You take a -2 to Accuracy, Fatigue, and d20 rolls just for having your ribs broken. Additionally, every time you advance a fatigue category, or spend Willpower, you take the Minor Piercing wound <del>Needling,</del><ins>Silhouette,</ins> which stacks cumulatively with any other <del>Needling</del><ins>Silhouette</ins> wounds taken in the fight, for determining the severity of its stun.</p>
+<p className="chg"><del>Flinch 5 &#40;TN 15&#41;.</del><ins>Needling 8.</ins> Every time you take an action with a Speed greater than &#40;5 + RES/10&#41;, your own ribs stab into you, inflicting an additional <del>Flinch</del><ins>Needling</ins> 2.</p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;31–60&#41; Cavitation &#40;Abdomen&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 582"}</p>
+<p className="ctx">The only good part about this injury is that once your organs are displaced--well, they're displaced. If you are already suffering from this injury and are unlucky enough to have it happen again, you advance a fatigue category, but the category for unconsciousness is not lowered more than once, regardless of how many times you suffer this wound.</p>
+<p className="chg"><del>Flinch 6 &#40;TN 16&#41;.</del><ins>Needling 8.</ins></p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;61–80&#41; Tricep Tear &#40;Arm&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 590"}</p>
+<p className="ctx">If you're using a weapon, then your damage bonus is halved; unarmed only has its damage bonus reduced by a fourth. You take a -3 to Accuracy, but against disarm attempts, this increases to -5 &#40;whether you try to parry or dodge it&#41;.</p>
+<p className="chg"><del>Flinch 6 &#40;TN 16&#41;.</del><ins>Needling 8.</ins></p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;81–100&#41; Hamstrung &#40;Leg&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 596"}</p>
+<p className="ctx">Your hamstring, or some similarly important muscle in your leg, got cut badly enough that it's not doing its job any more. You can stand, barely, and you can balance, sort of.</p>
+<p className="chg"><del>Flinch 6 &#40;TN 16&#41;.</del><ins>Needling 8.</ins> Track how many yards you move. Every time you travel more than AGI/10 yards cumulatively, you take another <del>Flinch</del><ins>Needling</ins> 1.</p>
+<p className="ctx">You can only accomplish 15 IC of movement before having to take a Rest action. Movement as part of an attack counts towards this limit. Any effects which require you to channel chakra through your legs &#40;such as standing on walls or water, or jutsu such as Mizutamari&#41; end, and cannot be used until you've healed.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 604"}</p>
+<p className="ctx">&#35;&#35; &#42;&#42;Piercing &#40;Critical&#41;&#42;&#42;</p>
+<p className="chg"><del>Every Critical Piercing wound you're suffering from reduces your current and maximum AP by 8. This stacks additively with all other AP reductions, including multiples of the same wounds.</del></p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;1–30&#41; Punctured Lung &#40;Torso&#41;&#42;&#42;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 610"}</p>
+<p className="ctx">...Ready for the bad news? Yeah, lungs aren't actually meant to get ventilated. You have difficulty breathing, for one thing. In fact, you can't actually breathe normally, because there's an extra hole in your lung. Still, you're a super awesome ninja, and as long as you have one hand free to cover the wound up, you can still breathe.</p>
+<p className="chg"><del>Flinch 8 &#40;TN 18&#41;.</del><ins>Needling 16.</ins> Anytime you are inflicted with <del>Flinch,</del><ins>Needling,</ins> you suffer a Stun equal to twice its severity, and gain Shock 1 and Paralysis 1 until the <del>Flinch</del><ins>Needling</ins> fades.</p>
+<p className="ctx">You can't take Rest actions, and the final results of your Stamina rolls are halved. As in, if you have a 12+5+15 = 32, that's actually a 16. Probably less brutal, you have a -5 penalty to your Accuracy and d20 rolls from the agonizing pain, and a -5 penalty to Chakra Exhaustion rolls due to general poor physical condition. Moving any distance forces a roll of Stamina 10, +1 per yard moved; this even applies when moving as part of an attack or with the aid of a jutsu. This can be avoided by moving at one tenth your normal movement speed.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 620"}</p>
+<p className="ctx">You're bleeding from the midsection. And, the blood is black. Every ninja knows at least a little about anatomy, first aid, and injuries, and everyone ninja knows what black blood means: you're bleeding from the liver and about to die.</p>
+<p className="chg"><del>Flinch 8 &#40;TN 18&#41;.</del><ins>Needling 16.</ins></p>
+<p className="ctx">This inflicts you with a Poison 1 effect. 20 IC later, it becomes Poison 2; another 20 IC, and it becomes Poison 3. This continues, all the way up to Poison 10. It doesn't end. If treated with First Aid, make a Medicine check. Its effects will be held at bay for 1 hour per point you get on your skill roll. However, any time you advance a Fatigue level you have an 75% chance of reopening the wound.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 630"}</p>
+<p className="ctx">On top of that, your arm is pretty much worthless. It's still there, muscular &#40;or toned, for the ladies&#33;&#41; and attached and awesome, but it's not doing anything but helping to keep your clothing on, at this point. You're not really able to feel anything that the arm or hand happens to touch, and the only way you get it to do so is by flopping it against something as dead weight.</p>
+<p className="chg"><del>Flinch 8 &#40;TN 18&#41;.</del><ins>Needling 16.</ins> You lose the usage of your arm. If you don't have single handed seals, you can not make seals anymore. You have a -6 Accuracy penalty, can't use two-handed weapons, and when you multi-throw the total number of weapons you can throw is halved.</p>
+<p className="ctx">When you're first hit, this inflicts a Bleed 15 which will go away normally.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 638"}</p>
+<p className="ctx">Your femoral artery has been hit, and blood is literally spraying out of you into the air. Aside from the general pain involved and the fact that it's completely disgusting, you're losing a potentially fatal amount of blood and if it isn't stopped--no, a hand and some pressure won't stop this--you're going to die.</p>
+<p className="chg"><del>Flinch 12 &#40;TN 18&#41;.</del><ins>Needling 16.</ins> You have the effects of Hamstrung.</p>
+<p className="ctx">Your maximum Vitality is reduced by 10%. Every time you take an action, your current and maximum Vitality are reduced by &#40;that action's base Speed&#41;&#92;&#42;2; every time you spend AP, your current and maximum Vitality are reduced by &#40;AP spent&#41;.</p>
+</div>
+</div>
+</Accordion>
+</AccordionGroup>
