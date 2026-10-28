@@ -9,10 +9,10 @@ A complete, dated record of every revision made to the Shotai Player's Handbook,
 </Note>
 
 <CardGroup cols={4}>
-  <Card title="26 Updates" icon="list-check">
+  <Card title="27 Updates" icon="list-check">
   </Card>
 
-  <Card title="Mar 20 — Oct 22, 2026" icon="calendar">
+  <Card title="Mar 20 — Oct 28, 2026" icon="calendar">
   </Card>
 
   <Card title="Every Friday" icon="clock">
@@ -27,6 +27,91 @@ A complete, dated record of every revision made to the Shotai Player's Handbook,
 ## Legend
 
 <Badge color="green">New</Badge>  <Badge color="yellow">Changed</Badge>  <Badge color="purple">Reworked</Badge>  <Badge color="blue">Clarified</Badge>  <Badge>Renamed</Badge>  <Badge color="red">Removed</Badge>  <Badge color="blue">New Clan / System</Badge>  <Badge color="orange">Major Update</Badge>
+
+---
+
+## REV-024 — Pip's Lament {#rev-024}
+
+_October 28, 2026_
+
+<Note>
+  This pass splits physical damage into a CQC Damage Bonus and a Weapon Damage Bonus, and reworks CQC Taijutsu from E- to B-Rank. Opposed rolls now use a fixed TN for the attacker. Flinch is gone in favour of Wayward's Needling, Rank Benefits is one page, and a run of abilities, uniques and jutsu are tidied to match. The character sheet also gains a Sharingan Eye Unlock page.
+</Note>
+
+<AccordionGroup>
+  <Accordion title="Combat">
+    - **Opposed Rolls** <Badge color="blue">New Clan / System</Badge> When one character acts against another, the attacker doesn't roll. Their TN is 10 + modifiers, or 11 + with Specialization, or 13 + with Skill Mastery. The defender rolls 1d20 and wins ties. d20 bonuses and penalties apply to TNs, and opposed Initiative rolls still roll on both sides.
+      - Status rolls, Genjutsu, Poison, Hide, Grapple checks, Touch seals and Tag Concealment all use the new TNs, along with every technique, Unique, summon and piece of gear that called for an opposed roll.
+      - **Killing Intent** (the Unique), **Solar Flare** and **Flash Blade** <Badge color="blue">Clarified</Badge> still roll, as exceptions.
+      - **Counter Combo** <Badge color="blue">Clarified</Badge> you roll against the comboing target's CQC Accuracy TN, with +1 per CC they have above you.
+    - **Attacking** <Badge color="yellow">Changed</Badge> you now declare every TN an attack sets, including ones that only apply on hit.
+    - **Needling** <Badge color="purple">Reworked</Badge> replaces Flinch on Piercing wounds, as in Wayward. It lowers your current and maximum AP: Needling 2 for Minor, 4 for Major, 8 for Severe and 16 for Critical. The extra flat AP loss for each severity is gone, and the Minor Torso wound is now called **Silhouette**.
+    - **Buried** <Badge color="purple">Reworked</Badge> the old rated Buried status is removed, and **Grounded** is renamed Buried.
+    - **Prone** and **Airborne** <Badge color="blue">Clarified</Badge> you can be both at once.
+    - **Draw Weapon** <Badge color="red">Removed</Badge> the note that held weapons stop you using CQC Taijutsu.
+    - **AP** <Badge color="yellow">Changed</Badge> your maximum is AGI/2, not DEX/2.
+  </Accordion>
+
+  <Accordion title="Damage Bonuses">
+    - **CQC Damage Bonus** <Badge>Renamed</Badge> replaces Physical Damage Bonus everywhere: CQC DB = STR/15, for unarmed attacks.
+    - **Weapon Damage Bonus** <Badge color="green">New</Badge> WDB = DEX/15, for weapon attacks. The Two-Handed bonus (33%) now sits under WDB.
+    - **Physical Damage Bonus** <Badge color="blue">Clarified</Badge> is now only shorthand for "both CQC DB and WDB". It isn't a stat of its own.
+    - Techniques and effects that touch weapons now use WDB, and anything that raises or lowers both uses PDB: Centipede poison, Chakra Bulk, Domu, Soushuujin, Paper Shuriken, mounted melee, Chakra Injection, Chodan Bakugeki and the Monkey Prince.
+  </Accordion>
+
+  <Accordion title="CQC Taijutsu">
+    - **E- to B-Rank** <Badge color="purple">Reworked</Badge> with a new introduction and Core Rules: Grapple-Finisher, Weapon Grapples, knockback while grappling, and Ignite spreading between grapplers. CQC Taijutsu can't be used while wielding a weapon unless a technique says so.
+    - **Gouken — Iron Fists** and **Shishi Rendan — Lion Combo** <Badge color="green">New</Badge>
+    - **Dai Dageki**, **Gawa-Ryuu**, **Mouretsu Tora no Jutsu** and **Shishi Danmaku** <Badge color="red">Removed</Badge>
+    - **Hangeki Rendan — Counter Combo** <Badge color="yellow">Changed</Badge> moves from C- to B-Rank.
+    - **Feint** <Badge color="yellow">Changed</Badge> gives the target -2 to their defensive roll, instead of giving you +2 Accuracy.
+    - **Jutsu Rules** <Badge color="red">Removed</Badge> the "two free hands" and "Unarmed Attacks" rules.
+  </Accordion>
+
+  <Accordion title="Abilities">
+    - **Weapon Focus** <Badge>Renamed</Badge> to **Peak Effort** and moved to Vigor. It gives +1 Accuracy and +1 CQC DB per rank on CQC attacks, limit (STR − 30)/30, max 3.
+    - **Sudden Attack, CQC** <Badge color="red">Removed</Badge> and **Sudden Attack, Weapon** <Badge>Renamed</Badge> to Sudden Attack.
+    - **Homing** <Badge color="yellow">Changed</Badge> costs 2 per +1 Accuracy and is capped by the jutsu's rank.
+    - **Monkey Grip** <Badge color="blue">Clarified</Badge> one-handed use loses the two-handed damage bonus.
+    - **Principle of Motion** <Badge color="yellow">Changed</Badge> requires only 100 AGI.
+    - **Specialization** <Badge color="yellow">Changed</Badge> raises that skill's TNs to 11 +.
+  </Accordion>
+
+  <Accordion title="Uniques">
+    - **Weapon Master** <Badge color="red">Removed</Badge>
+    - **Large** <Badge color="yellow">Changed</Badge> adds 2 + RES/25 extra dice to Weapon attacks only. CQC and Weapon attacks both keep +1 Range.
+    - **Seal Master** <Badge color="yellow">Changed</Badge> reduces Seal Speeds by 2 + CHA/8, and every 3 points of excess reduction lowers Speed by 1.
+    - **Martial Prowess** <Badge color="blue">Clarified</Badge> +3 on all Counter Combo rolls.
+  </Accordion>
+
+  <Accordion title="Rank Benefits">
+    - **Rank Benefits** <Badge>Renamed</Badge> it's now one page, at a new address.
+    - **Traveler rank benefits** <Badge color="red">Removed</Badge> Travelers use the same Rank Benefits as everyone else.
+    - **Mentor** <Badge color="red">Removed</Badge>
+    - **Skill Mastery** <Badge color="yellow">Changed</Badge> raises that skill's TNs to 13 +.
+  </Accordion>
+
+  <Accordion title="Clans">
+    - **Swordsman Corps** <Badge color="purple">Reworked</Badge>
+      - **Precision** lowers your WDB divisor by 1 per rank when using a sword, to DEX/12. This is your Sword Damage Modifier (SDM). Limit (DEX − 20)/20, max 3.
+      - **Blademaster** loses its CQC DB clause.
+      - **Clan Swords** features use SDM.
+    - **Uchiha** <Badge color="blue">Clarified</Badge> the Sharingan's -6 Visibility limit is checked after Blind Fighting.
+    - **Hyuuga** <Badge color="yellow">Changed</Badge> Sealed Tenketsu no longer costs HP when you fail a Chakra Exhaustion roll.
+    - **Juugo Suto** <Badge color="yellow">Changed</Badge> Tenacity and Desert Ghosts use RES instead of DEX.
+    - **Weapon Focus references** <Badge color="red">Removed</Badge> from Teshi Sendan, the Kaguya bone weapon, Clan Swords and Paper Shuriken.
+  </Accordion>
+
+  <Accordion title="Jutsu">
+    - **Chakra Scalpel** <Badge color="yellow">Changed</Badge> unarmed attacks use AGI/12 for their damage bonus.
+    - **Touch range** <Badge color="blue">Clarified</Badge> jutsu with Range: Touch use CQC Accuracy.
+    - **Jouro Senbon** and **Shinkuu Enzan** <Badge color="blue">Clarified</Badge> Weapon Focus lines removed or replaced with Sudden Attack.
+  </Accordion>
+
+  <Accordion title="Character Sheet">
+    - **Sharingan Eye Unlock** <Badge color="green">New</Badge> page added to the character sheet.
+  </Accordion>
+</AccordionGroup>
 
 ---
 
