@@ -12,7 +12,7 @@ Energy wounds are the burn that lingers. Fire. Lightning. Raw chakra turned agai
 
 Slashing wounds demand your attention, and I must say, they are quite persistent. The blade, the claw, the shard of broken glass. Dreadfully sharp edges that part flesh like water. A sudden, sharp shock of cold. Then heat. Then the wetness of blood running down your skin. Slashing wounds bleed. They accumulate and then reopen. You simply cannot ignore them. They will not let you.
 
-Piercing wounds are precise, surgical, and utterly destabilizing. The spear, the arrow, the needle-sharp point that slides between your ribs. These wounds do not just damage; they disrupt, don't you know. Your nerves scream. Your muscles spasm. Before you can act, you must overcome the Flinch. If you fail, you botch. Your attack misses. Your dodge fails. Some say that although the wounds are liveable, its consequences are not. 
+Piercing wounds are precise, surgical, and utterly destabilizing. The spear, the arrow, the needle-sharp point that slides between your ribs. These wounds do not just damage; they disrupt, don't you know. Your nerves scream. Your muscles spasm. Some say that although the wounds are liveable, its consequences are not. 
 
 Minor wounds are the price of admission. Major wounds are the cost of failure. Severe wounds are the cost of survival. Critical wounds are the cost of victory, and I daresay, quite a steep one at that. You will be wounded. It is an inevitable, old sport. What matters is what you do next. You will stop the bleeding. You will stabilize the wound. You will get back up, and you will do it with style. That is what it means to be a shinobi. To get back up, again and again, until the fight is won or you cannot rise anymore. The wound is not the end, the wound is the beginning of the next fight.
 
@@ -479,33 +479,31 @@ The worst part is you just can't move. You can't move as part of an attack or us
 
 ---
 
+# -=[ Needling ]=-
+
+Needling is a status effect, unique to Piercing wounds. Every Piercing wound will inflict some amount of Needling, which represents the slow, steady pain and debilitating effect of being stabbed, which accordingly fully stacks with itself. One or two you can typically bear without too much trouble (assuming they don’t go through you), but the more puncture wounds you take, the harder it becomes to have those bursts of energy that ninja depend upon to turn the tide of battle. Needling reduces your current and maximum Action Points according to its Severity, to a minimum of 0 for your current AP, and a minimum of half your normal maximum (i.e., if you had an AGI of 100, your normal maximum would be 100/2 = 50, which could be reduced as low as 25 from Needling).
+
+Even if a Piercing wound has a timed effect, the maximum AP reduction aspect of Needling from the wound lasts until the end of the battle. Wounds that are healed mid-battle similarly have their AP reduction removed (though you do not regain any current AP that was lost as a result), and it is possible to heal a Piercing wound whose main effect has ended, but its AP reduction from Needling remains.
+
 # **Piercing (Minor)**
 
-# -=[ Flinch ]=-
-
-Piercing wounds are about deep, focused trauma. Spears, bullets, broken glass bottles and stilettos sting deeper than any gash. It causes involuntary spasms and severely disrupting motor control. This is captured mechanically by the status bFlinch.
-
-When you have Flinch X, before attempting any defensive interrupt action (parry, dodge, etc.), you must succeed on a Stamina roll against a Target Number of 10 + Flinch Severity. On success, the action proceeds normally. On failure, the action is Botched, it automatically fails and any AP spent is lost, so yes you could get punched after failing to activate a defense. You may spend 1 Willpower to remove all Flinch.  
-
-Flinch severity decreases by 1 every 10 IC outside of combat, or every 20 IC in combat. Botching a defense  reduces Flinch by 3 immediately. The roll does not increase your stamina penalty.  
-
-### **(1–30) Needling (Torso)**
+### **(1–30) Silhouette (Torso)**
 
 You've got a small but fairly deep incision from what struck you. The initial shock of pain was worse than the wound really is, though.
 
-Flinch 1 (TN 11). You take a Stun 3, which increases by 1 for every time you take this wound in the same battle.
+Needling 2. You take a Stun 3, which increases by 1 for every time you take this wound in the same battle.
 
 ### **(31–60) Flesh Wound (Abdomen)**
 
 You've been shanked in the gut. It managed to miss your vitals, but it's still going to cause blood to trickle out of you.
 
-Flinch 2 (TN 12). You take a -1 to Chakra Exhaustion and Stamina rolls.
+Needling 2. You take a -1 to Chakra Exhaustion and Stamina rolls.
 
 ### **(61–80) Reflexive Flinch (Arm)**
 
 The back of your hand was hit, causing your fingers to spasm momentarily. Any weapons you're holding are dropped, and any seals you're forming are automatically aborted.
 
-Flinch 1 (TN 11). You take a -1 to Accuracy for the next 50 IC.
+Needling 2. You take a -1 to Accuracy for the next 50 IC.
 
 Repeatedly applications of this wound do not stack the penalty to Accuracy, but instead add 50 IC to its duration (or, if it has expired, re-apply it).
 
@@ -513,15 +511,13 @@ Repeatedly applications of this wound do not stack the penalty to Accuracy, but 
 
 They struck your quadricep, which is a fairly easy target, all things considered.
 
-Flinch 1 (TN 11). If you spent the IC before you received this wound moving, you are inflicted with a Stun 8; whether you were moving or not, though, you have a -1 to Defensive rolls for the next 50 IC.
+Needling 2. If you spent the IC before you received this wound moving, you are inflicted with a Stun 8; whether you were moving or not, though, you have a -1 to Defensive rolls for the next 50 IC.
 
 Repeated applications of this wound do not stack the penalty to defensive rolls, but instead add 50 IC to its duration (or, if it has expired, re-apply it).
 
 ---
 
 ## **Piercing (Major)**
-
-Every Major Piercing wound you're suffering from reduces your current and maximum AP by 4. This stacks additively with all other AP reductions, including multiples of the same wounds.
 
 ### **(1–30) Punctured Cavity (Torso)**
 
@@ -531,7 +527,7 @@ It's painful to move, or do basic things like breathe. You have a penalty to Fat
 
 Multiple instances of this wound count towards raising the penalty, and all lower your AP normally, but their penalties don't stack--that is, if you had five Punctured Cavities, your total penalty would be -4, not -20.
 
-Flinch 4 (TN 14).
+Needling 4.
 
 ### **(31–60) Organ Hemorrhage (Abdomen)**
 
@@ -541,7 +537,7 @@ What that boils down to is that you're bleeding, a lot. You take a -1 penalty to
 
 Repeated applications of this wound raise the penalties by 1 each, though still not above -4. These penalties last until the wound has healed.
 
-Flinch 4 (TN 14).
+Needling 4.
 
 ### **(61–80) Joint Pierced (Arm)**
 
@@ -551,7 +547,7 @@ The base speed of all your attacks is increased by 2, and the effective speed fo
 
 The increase and decrease cannot exceed 50% of an action's base speed. For example, after 20 separate applications of this wound your basic unarmed attack would be Speed 12, and deal damage as if it was Speed 4. You may still use AP to reduce these actions to half their new base speed.
 
-Flinch 4 (TN 14).
+Needling 4.
 
 ### **(81–100) Joint Pierced (Leg)**
 
@@ -561,21 +557,19 @@ For every yard you move, including as part of an attack or with the aid of a jut
 
 Finally, this applies a -1 penalty to defensive rolls for every 15% it reduces your movement speed.
 
-Flinch 4 (TN 14).
+Needling 4.
 
 ---
 
 ## **Piercing (Severe)**
 
-Every Severe Piercing wound you're suffering from reduces your current and maximum AP by 6. This stacks additively with all other AP reductions, including multiples of the same wounds.
-
 ### **(1–30) Rib Spearing (Torso)**
 
 The object that struck you did so in such a way as to cause your ribs not just to fracture, but to split entirely. Both ends are curved inward, making movement, breathing, and life in general very painful.
 
-You take a -2 to Accuracy, Fatigue, and d20 rolls just for having your ribs broken. Additionally, every time you advance a fatigue category, or spend Willpower, you take the Minor Piercing wound Needling, which stacks cumulatively with any other Needling wounds taken in the fight, for determining the severity of its stun.
+You take a -2 to Accuracy, Fatigue, and d20 rolls just for having your ribs broken. Additionally, every time you advance a fatigue category, or spend Willpower, you take the Minor Piercing wound Silhouette, which stacks cumulatively with any other Silhouette wounds taken in the fight, for determining the severity of its stun.
 
-Flinch 5 (TN 15). Every time you take an action with a Speed greater than (5 + RES/10), your own ribs stab into you, inflicting an additional Flinch 2.
+Needling 8. Every time you take an action with a Speed greater than (5 + RES/10), your own ribs stab into you, inflicting an additional Needling 2.
 
 ### **(31–60) Cavitation (Abdomen)**
 
@@ -587,7 +581,7 @@ The end result is that you automatically advance a fatigue category, and the cat
 
 The only good part about this injury is that once your organs are displaced--well, they're displaced. If you are already suffering from this injury and are unlucky enough to have it happen again, you advance a fatigue category, but the category for unconsciousness is not lowered more than once, regardless of how many times you suffer this wound.
 
-Flinch 6 (TN 16).
+Needling 8.
 
 ### **(61–80) Tricep Tear (Arm)**
 
@@ -595,13 +589,13 @@ They missed your humerus bone, but managed to pierce right through the tendon th
 
 If you're using a weapon, then your damage bonus is halved; unarmed only has its damage bonus reduced by a fourth. You take a -3 to Accuracy, but against disarm attempts, this increases to -5 (whether you try to parry or dodge it).
 
-Flinch 6 (TN 16).
+Needling 8.
 
 ### **(81–100) Hamstrung (Leg)**
 
 Your hamstring, or some similarly important muscle in your leg, got cut badly enough that it's not doing its job any more. You can stand, barely, and you can balance, sort of.
 
-Flinch 6 (TN 16). Track how many yards you move. Every time you travel more than AGI/10 yards cumulatively, you take another Flinch 1.
+Needling 8. Track how many yards you move. Every time you travel more than AGI/10 yards cumulatively, you take another Needling 1.
 
 You can only accomplish 15 IC of movement before having to take a Rest action. Movement as part of an attack counts towards this limit. Any effects which require you to channel chakra through your legs (such as standing on walls or water, or jutsu such as Mizutamari) end, and cannot be used until you've healed.
 
@@ -609,15 +603,13 @@ You can only accomplish 15 IC of movement before having to take a Rest action. M
 
 ## **Piercing (Critical)**
 
-Every Critical Piercing wound you're suffering from reduces your current and maximum AP by 8. This stacks additively with all other AP reductions, including multiples of the same wounds.
-
 ### **(1–30) Punctured Lung (Torso)**
 
 Okay, so, first off, calm down. It's not as bad as it... okay, yeah, it's as bad as it sounds. The good news is, it's not actually lethal. You've still got the other one (...right?) and whatever did this to you probably ventilated the lung, and by extension, the inside of your chest--no air building up in your chest cavity to collapse the other lung.
 
 ...Ready for the bad news? Yeah, lungs aren't actually meant to get ventilated. You have difficulty breathing, for one thing. In fact, you can't actually breathe normally, because there's an extra hole in your lung. Still, you're a super awesome ninja, and as long as you have one hand free to cover the wound up, you can still breathe.
 
-Flinch 8 (TN 18). Anytime you are inflicted with Flinch, you suffer a Stun equal to twice its severity, and gain Shock 1 and Paralysis 1 until the Flinch fades.
+Needling 16. Anytime you are inflicted with Needling, you suffer a Stun equal to twice its severity, and gain Shock 1 and Paralysis 1 until the Needling fades.
 
 You can't take Rest actions, and the final results of your Stamina rolls are halved. As in, if you have a 12+5+15 = 32, that's actually a 16. Probably less brutal, you have a -5 penalty to your Accuracy and d20 rolls from the agonizing pain, and a -5 penalty to Chakra Exhaustion rolls due to general poor physical condition. Moving any distance forces a roll of Stamina 10, +1 per yard moved; this even applies when moving as part of an attack or with the aid of a jutsu. This can be avoided by moving at one tenth your normal movement speed.
 
@@ -627,7 +619,7 @@ Oh, unless you get your second lung punctured before the first one's healed. The
 
 You're bleeding from the midsection. And, the blood is black. Every ninja knows at least a little about anatomy, first aid, and injuries, and everyone ninja knows what black blood means: you're bleeding from the liver and about to die.
 
-Flinch 8 (TN 18).
+Needling 16.
 
 This inflicts you with a Poison 1 effect. 20 IC later, it becomes Poison 2; another 20 IC, and it becomes Poison 3. This continues, all the way up to Poison 10. It doesn't end. If treated with First Aid, make a Medicine check. Its effects will be held at bay for 1 hour per point you get on your skill roll. However, any time you advance a Fatigue level you have an 75% chance of reopening the wound.
 
@@ -637,7 +629,7 @@ Someone has created another orifice in your body. As in--if there wasn't blood p
 
 On top of that, your arm is pretty much worthless. It's still there, muscular (or toned, for the ladies!) and attached and awesome, but it's not doing anything but helping to keep your clothing on, at this point. You're not really able to feel anything that the arm or hand happens to touch, and the only way you get it to do so is by flopping it against something as dead weight.
 
-Flinch 8 (TN 18). You lose the usage of your arm. If you don't have single handed seals, you can not make seals anymore. You have a -6 Accuracy penalty, can't use two-handed weapons, and when you multi-throw the total number of weapons you can throw is halved.
+Needling 16. You lose the usage of your arm. If you don't have single handed seals, you can not make seals anymore. You have a -6 Accuracy penalty, can't use two-handed weapons, and when you multi-throw the total number of weapons you can throw is halved.
 
 When you're first hit, this inflicts a Bleed 15 which will go away normally.
 
@@ -645,7 +637,7 @@ When you're first hit, this inflicts a Bleed 15 which will go away normally.
 
 Your femoral artery has been hit, and blood is literally spraying out of you into the air. Aside from the general pain involved and the fact that it's completely disgusting, you're losing a potentially fatal amount of blood and if it isn't stopped--no, a hand and some pressure won't stop this--you're going to die.
 
-Flinch 12 (TN 18). You have the effects of Hamstrung.
+Needling 16. You have the effects of Hamstrung.
 
 Your maximum Vitality is reduced by 10%. Every time you take an action, your current and maximum Vitality are reduced by (that action's base Speed)\*2; every time you spend AP, your current and maximum Vitality are reduced by (AP spent).
 
