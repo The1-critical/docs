@@ -6,7 +6,7 @@ description: "Word-by-word changes to 2 pages in REV-024."
 Open a page to see its changes: <span className="rev-diff"><ins>added text</ins> and <del>removed text</del></span>, with unchanged lines around them in grey. Changes that only touch formatting (links, anchors, quote marks, bold and italics) are left out. Back to the [REV-024 overview](/rev-024-changes).
 
 <AccordionGroup>
-<Accordion title={"Combat"} description={"/Combat/combat · +256 −348 words"}>
+<Accordion title={"Combat"} description={"/Combat/combat · +383 −340 words"}>
 <div className="rev-diff">
 <div className="hunk">
 <p className="lineno">{"Line 41"}</p>
@@ -39,44 +39,51 @@ Open a page to see its changes: <span className="rev-diff"><ins>added text</ins>
 <p className="ctx">&#35;&#35;&#35; Action Qualities</p>
 </div>
 <div className="hunk">
+<p className="lineno">{"Line 185"}</p>
+<p className="ctx">You may spend Willpower after making an attack or a d20 roll, after determining success/failure, but before seeing results. You cannot spend Willpower after damage is rolled. Any given action may have Willpower applied only once, even if it involves multiple rolls.</p>
+<p className="chg">&#42;&#42;Effect:&#42;&#42; Reroll the relevant roll &#40;or, for an attack, make an Accuracy Roll&#41;. If the d20 result is less than 11, add 10 – this is your new result. Willpower cannot reroll Stamina or Chakra Exhaustion rolls. <ins>If you set a TN rather than rolling, roll 1d10 and add it to the TN instead.</ins></p>
+<p className="ctx">&#35;&#35;&#35; d20 Rolls</p>
+</div>
+<div className="hunk">
 <p className="lineno">{"Line 198"}</p>
 <p className="ctx">They do not apply to CQC Accuracy, Ninjutsu Accuracy, Weapon Accuracy &#40;rolled or TN&#41;, Fatigue rolls, or damage rolls.&#60;br /&#62;</p>
 <p className="chg"><ins>&#35;&#35;&#35; Opposed Rolls</ins></p>
-<p className="chg"><ins>When one character acts against another, such as applying a status effect, poisoning, hiding, using Genjutsu or grappling, the attacker does not roll. Their result is a Target Number of 10 + their modifiers &#40;11 + for Specialization, or 13+ for Skill Mastery&#41;. The defender rolls 1d20 + their modifiers and must match or beat it. The defender always wins ties. These TNs are affected by d20 penalties and bonuses. Opposed Initiative rolls do not use TNs: both sides roll.</ins></p>
+<p className="chg"><ins>When one character acts against another, such as applying a status effect, poisoning, using Genjutsu or grappling, the attacker does not roll. Their result is a Target Number of 10 + their modifiers &#40;11 + for Specialization, or 13+ for Skill Mastery&#41;. The defender rolls 1d20 + their modifiers and must match or beat it. The defender always wins ties. These TNs are affected by d20 penalties and bonuses. Opposed Initiative rolls do not use TNs: both sides roll. Hiding is the exception: you roll Stealth, and the result becomes your Stealth TN.</ins></p>
+<p className="chg"><ins>If you spend Willpower on a TN you set, roll 1d10 and add it to the TN. When something would let you roll 2d20 and keep the higher, or reroll &#40;such as Lucky&#41;, and you are setting a TN instead, roll 1d6 and add it to the TN. When something would make you roll 2d20 and keep the lower, or force you to reroll, roll 1d10 and subtract it from the TN instead. Each follows the timing of the effect it replaces: Willpower is spent after success or failure is known, and anything that must be chosen before rolling must be chosen before the TN is tested.</ins></p>
 <p className="ctx">&#35;&#35;&#35; Basic Actions</p>
 </div>
 <div className="hunk">
-<p className="lineno">{"Line 208"}</p>
+<p className="lineno">{"Line 210"}</p>
 <p className="ctx">&#35;&#35;&#35;&#35; Basic Unarmed &#40;Speed 8, Stamina 5&#41;</p>
 <p className="chg">A catch‑all for punches, kicks, and other body‑based attacks. Deals 2d4 base damage. This uses your CQC Accuracy, and your <del>Physical</del><ins>CQC</ins> Damage Bonus.</p>
 <p className="ctx">&#35;&#35;&#35;&#35; Basic &#40;Weapon&#41; &#40;Speed Varies, Stamina Varies&#41;</p>
 </div>
 <div className="hunk">
-<p className="lineno">{"Line 283"}</p>
+<p className="lineno">{"Line 285"}</p>
 <p className="ctx">&#35;&#35;&#35;&#35;&#35; Hide &#40;Speed 10&#41;</p>
-<p className="chg"><del>Make a</del><ins>Your</ins> Stealth <del>skill roll; the result</del><ins>TN</ins> is <ins>10 +</ins> your Stealth <del>TN.</del><ins>&#40;see Opposed Rolls&#41;.</ins> You are hidden at Stealth level 1. Each time you hide in the same battle, <ins>your</ins> future <del>Hide rolls</del><ins>Stealth TNs</ins> take a cumulative -5 penalty. If your Stealth TN reaches 0 or below, you are no longer hidden.</p>
+<p className="chg">Make a Stealth<del>skill</del> roll; the result is your Stealth TN. You are hidden at Stealth level 1. Each time you hide in the same battle, <ins>your</ins> future <del>Hide</del><ins>Stealth</ins> rolls take a cumulative -5 penalty. If your Stealth TN reaches 0 or below, you are no longer hidden.</p>
 <p className="ctx">&#35;&#35;&#35;&#35;&#35; Improve Hiding &#40;Speed 7&#41;</p>
 </div>
 <div className="hunk">
-<p className="lineno">{"Line 357"}</p>
+<p className="lineno">{"Line 359"}</p>
 <p className="ctx">&#35;&#35;&#35;&#35; Airborne</p>
 <p className="chg">Airborne represents being lifted into the air, violently or otherwise. An Airborne ninja ignores all Ground-tagged effects and ground-based environmental hazards, but similarly cannot benefit from effects that require contact with the <del>ground, and cannot be knocked Prone.</del><ins>ground.</ins> They may still defend themselves, but their move speed is reduced to 0, potentially impacting their ability to escape areas of effect. The status ends on the Airborne target's next non-interrupt action, unless stated otherwise.</p>
 <p className="ctx">&#35;&#35;&#35;&#35; Bleed</p>
 </div>
 <div className="hunk">
-<p className="lineno">{"Line 363"}</p>
+<p className="lineno">{"Line 365"}</p>
 <p className="ctx">Lose Vitality or HP equal to double severity every 5 IC. Stamina penalty equal to half severity &#40;rounded down&#41;. Reduce severity by RES/20 every 20 IC &#40;minimum 1&#41;. Bleeds from the same source do not stack; different sources stack damage but only the highest severity applies the Stamina penalty.</p>
 <p className="chg">&#35;&#35;&#35;&#35;<del>Burns</del></p>
 <p className="chg"><del>Generally resulting from exposure to fire or intense heat, such as some katon jutsu, being burnt makes it harder to fight effectively. Your Stamina penalty is equal to severity. If you get multiple burns: only the strongest applies. Effects that reduce Stamina penalties reduce all burn severities by the same amount; advancing a Fatigue category clears all burns.</del></p>
-<p className="ctx"> Buried</p>
-<p className="chg"><del>If you dig a hole to give you</del><ins>Buried represents being submerged at least partially in</ins> the <del>buried status</del><ins>ground. A Buried character's move speed is reduced to 0,</ins> and <ins>any penalties inflicted on them by the Prone condition</ins> are <del>not seen this gives you a chance to hide similar to</del><ins>doubled, until they remove themselves from the ground as</ins> a <del>visibly penalty would.</del><ins>Speed 10, Delay 5 action. Buried characters cannot be knocked Airborne, and applying the Buried condition removes the Airborne condition.</ins></p>
+<p className="chg"><del>&#35;&#35;&#35;</del> Buried<del>If you dig a hole to give you the buried status and are not seen this gives you a chance to hide similar to a visibly penalty would.</del></p>
 <p className="chg"><del>Buried is a status caused by the usage of doton jutsu. You can be buried up to a rating of ten. At buried one through five you can attack and be targeted. Higher than this you can not attack or be targetted. Unless you used a jutsu that says otherwise &#40;or have oxygen tank&#33;&#41;, you are at suffocation 1 when buried more than five.</del></p>
-<p className="chg"><del>Buried Status applies a immobilization penalty equal to twice its rating. You can dig yourself out of being buried equal to the immobilization penalty you are suffering in speed. Which means buried 4 would require a speed 8 action to dig yourself out.</del>&#35;&#35;&#35;&#35; <del>Grounded</del><ins>Burns</ins></p>
+<p className="chg">Buried <del>Status applies a immobilization penalty equal to twice its rating. You can dig yourself out of</del><ins>represents</ins> being <del>buried equal</del><ins>submerged at least partially in the ground. A Buried character's move speed is reduced</ins> to <ins>0, and any penalties inflicted on them by</ins> the <del>immobilization penalty you</del><ins>Prone condition</ins> are <del>suffering in speed. Which means buried 4 would require</del><ins>doubled, until they remove themselves from the ground as</ins> a <del>speed 8 action to dig yourself out.</del><ins>Speed 10, Delay 5 action. Buried characters cannot be knocked Airborne, and applying the Buried condition removes the Airborne condition.</ins></p>
+<p className="chg">&#35;&#35;&#35;&#35; <del>Grounded</del><ins>Burns</ins></p>
 <p className="chg"><del>Grounded represents</del><ins>Generally resulting from exposure to fire or intense heat, such as some katon jutsu,</ins> being <del>submerged at least partially in the ground. A Grounded character's move speed</del><ins>burnt makes it harder to fight effectively. Your Stamina penalty</ins> is <del>reduced</del><ins>equal</ins> to <del>0, and any</del><ins>severity. If you get multiple burns: only the strongest applies. Effects that reduce Stamina</ins> penalties <del>inflicted on them</del><ins>reduce all burn severities</ins> by the <del>Prone condition are doubled, until they remove themselves from the ground as</del><ins>same amount; advancing</ins> a <del>Speed 10, Delay 5 action. Buried characters cannot be knocked Airborne, and applying the Buried condition removes the Airborne condition.</del><ins>Fatigue category clears all burns.</ins></p>
 <p className="ctx">&#35;&#35;&#35;&#35; Ignite</p>
 </div>
 <div className="hunk">
-<p className="lineno">{"Line 397"}</p>
+<p className="lineno">{"Line 399"}</p>
 <p className="ctx">&#35;&#35;&#35;&#35; Prone</p>
 <p className="chg">-3 CQC, Ninjutsu, and Weapon Accuracy, -2 defensive rolls, half movement speed. Stand up as Speed 5 action.<del>Being knocked prone while airborne causes immediate fall to ground</del></p>
 <p className="ctx">&#35;&#35;&#35;&#35; Poison</p>
@@ -84,7 +91,7 @@ Open a page to see its changes: <span className="rev-diff"><ins>added text</ins>
 <p className="ctx">&#35;&#35;&#35;&#35; Shock</p>
 </div>
 <div className="hunk">
-<p className="lineno">{"Line 565"}</p>
+<p className="lineno">{"Line 567"}</p>
 <p className="ctx">Weapons are typically carried attached to one's person somehow; swords have sheathes, a pair of tonfa might be tucked through belt holsters, a fan could be strapped across your back, and so forth. Drawing a weapon is retrieving it from wherever you have it stored and placing it in your hands. At this point you can use it to attack, parry, or whatever else you please, with the downside being that your hands aren't free for, say, handseals. You may also draw a weapon at the start of combat &#40;when you roll initiative&#41;, without taking an action to do so. If you wish, you can draw two weapons as a single Speed 5 action. Note that you only need to Draw weapons you intend to hold and use in melee. This Speed to attack with thrown or multi-thrown weapons includes the time needed to retrieve them from holsters. The same is true for Bows.</p>
 <p className="chg"><del>Be aware: While holding one or more weapons, you can still make basic unarmed attacks. You cannot, however, use CQC Taijutsu. Except only Grappling is still possible as long as you have at least one hand free.</del></p>
 <p className="ctx">&#35;&#35;&#35; Sheathe Weapon &#40;Speed 6&#41;</p>
