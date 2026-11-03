@@ -139,9 +139,7 @@
               "Field Equipment/field-equipment",
               "Field Equipment/untitled-page-4",
               "Field Equipment/rank-gear",
-              "Field Equipment/vehicles",
-              "Field Equipment/dwellings",
-              "Mounts"
+              "Field Equipment/vehicles"
             ]
           }
         ]
@@ -212,6 +210,10 @@
   },
   "description": "The Guide for the Shinobi",
   "redirects": [
+    {
+      "source": "/Mounts",
+      "destination": "/Province/western-province#major-fma"
+    },
     {
       "source": "/Field Equipment/untitled-page",
       "destination": "/Field%20Equipment/melee-weapons"
