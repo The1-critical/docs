@@ -25,6 +25,18 @@
           "Welcome",
           "Changelog",
           {
+            "group": "REV-025 Exact Changes",
+            "pages": [
+              "rev-025-changes",
+              "rev-025-changes/combat-and-wounds",
+              "rev-025-changes/character-and-advancement",
+              "rev-025-changes/clans-and-provinces",
+              "rev-025-changes/jutsu",
+              "rev-025-changes/equipment-and-dwellings",
+              "rev-025-changes/index-and-credits"
+            ]
+          },
+          {
             "group": "REV-024 Exact Changes",
             "pages": [
               "rev-024-changes",
@@ -46,19 +58,6 @@
               "rev-023-changes/clans-and-provinces",
               "rev-023-changes/jutsu",
               "rev-023-changes/welcome"
-            ]
-          },
-          {
-            "group": "REV-022 Exact Changes",
-            "pages": [
-              "rev-022-changes",
-              "rev-022-changes/combat-and-wounds",
-              "rev-022-changes/character-and-advancement",
-              "rev-022-changes/clans-and-provinces",
-              "rev-022-changes/jutsu",
-              "rev-022-changes/equipment-and-dwellings",
-              "rev-022-changes/summoning",
-              "rev-022-changes/index-and-credits"
             ]
           },
           "index-of-lists",
@@ -153,6 +152,7 @@
               "Advancement/advancement",
               "Advancement/rank-benefits",
               "Advancement/the-nature-of-advancement-in-the-shinobi-world-the-path-of-a-shinobi-is-not-a-straightforward-ascent-measured-in-years-of-service-or-even-in-the-mastery-of-dangerous-techniques-rather-it-is-a-comp",
+              "Advancement/the-nature-of-certification-the-certification-system-emerged-from-the-chaos-of-the-pre-confederacy-era-when-villages-had-no-standardized-way-to-assess-the-capabilities-of-shinobi-from-other-region",
               "Advancement/untitled-page-3"
             ]
           }
