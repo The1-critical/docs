@@ -134,7 +134,7 @@
           {
             "group": "Field Equipment",
             "pages": [
-              "Field Equipment/untitled-page",
+              "Field Equipment/melee-weapons",
               "Field Equipment/ranged-weapons",
               "Field Equipment/field-equipment",
               "Field Equipment/untitled-page-4",
@@ -212,6 +212,14 @@
   },
   "description": "The Guide for the Shinobi",
   "redirects": [
+    {
+      "source": "/Field Equipment/untitled-page",
+      "destination": "/Field%20Equipment/melee-weapons"
+    },
+    {
+      "source": "/Field%20Equipment/untitled-page",
+      "destination": "/Field%20Equipment/melee-weapons"
+    },
     {
       "source": "/untitled-page",
       "destination": "/Combat/combat"
