@@ -1,0 +1,49 @@
+---
+title: "REV-026: Combat and Wounds"
+description: "Word-by-word changes to 2 pages in REV-026."
+---
+
+Open a page to see its changes: <span className="rev-diff"><ins>added text</ins> and <del>removed text</del></span>, with unchanged lines around them in grey. Changes that only touch formatting (links, anchors, quote marks, bold and italics) are left out. Back to the [REV-026 overview](/rev-026-changes).
+
+<AccordionGroup>
+<Accordion title={"Combat"} description={"/Combat/combat · +56 −8 words"}>
+<div className="rev-diff">
+<div className="hunk">
+<p className="lineno">{"Line 118"}</p>
+<p className="ctx">&#42;&#42;Defensive interrupt Speed floor:&#42;&#42; Unlike normal actions, defensive interrupts are not bound by the standard minimum Speed of 3. A Dodge &#40;Speed 2&#41; can be reduced to as low as Speed 1. The absolute floor for any defensive interrupt is Speed 1.</p>
+<p className="chg">Speed increases from Wounds &#40;such as Bruised Ribs&#41; or status effects &#40;such as <del>Paralysis&#41;</del><ins>Shock&#41;</ins> that apply to your defensive interrupt can be fully cancelled out by AP spending, and do not raise the minimum Speed, a Dodge with +3 from <del>Paralysis</del><ins>Shock 6</ins> can still be reduced to Speed 1 with sufficient AP. This allowance does not apply to Links added to a defensive interrupt: a Dodge + Kawarimi chain has its minimum Speed set by the chain as a whole, not the Dodge alone.</p>
+<p className="ctx">In the rare case that a defensive interrupt itself becomes an attack, such as when a parry technique converts on success, the standard minimum Speed of 3 applies to that resulting attack.</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 179"}</p>
+<p className="ctx">&#35;&#35;&#35; Variable Speed Actions</p>
+<p className="chg">Actions like Block, Guard, and Total Defense have no set Speed, you declare a duration in IC. They have the Abort property by default. Any Stun amount forcibly aborts any Variable Speed Action you are performing. Effects that modify Speed &#40;AP, Celerity, Wounds, <del>Paralysis&#41;</del><ins>Shock&#41;</ins> do not apply to Variable Speed Actions.</p>
+<p className="ctx">&#35;&#35;&#35; Willpower</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 218"}</p>
+<p className="ctx">&#35;&#35;&#35;&#35; Block &#40;Variable Speed Action&#41;</p>
+<p className="chg">Declare that you are blocking and state a duration in IC. Until your next action, you may use the Block defense against any incoming attack, even those that normally do not allow a defense &#40;e.g., Environmental tag, <del>Explosive Tags&#41;.</del><ins>Demolition Charges&#41;.</ins> Block negates the Surprise Attack quality on attacks you block. Blocking reduces CQC and ninjutsu damage by 50%, but Weapon damage by only 25%. While blocking you are immune to the sixth sense degrade from surprise or sneak attacks. </p>
+<p className="ctx">&#35;&#35;&#35;&#35; Dodge &#40;Speed 2, Interrupt&#41;</p>
+</div>
+<div className="hunk">
+<p className="lineno">{"Line 429"}</p>
+<p className="ctx">&#35;&#35;&#35;&#35; Visibility</p>
+<p className="ctx">Penalty to Accuracy and Awareness equal to severity, half &#40;rounded down&#41; to defensive rolls. Maximum effective penalty -10. Does not stack – higher overwrites.</p>
+<p className="chg"><del>Closing</del><ins>Many visibility penalties affect areas: clouds of smoke or mist and the like. In this case, you suffer the penalty when inside it, or when trying to attack or watch &#40;but not defend against&#41; someone inside it.</ins></p>
+<p className="chg"><ins>If it ever becomes relevant, closing or opening your</ins> eyes is <ins>a</ins> Speed 0 <del>&#40;not</del><ins>action–but not</ins> an <del>Interrupt&#41;.</del><ins>Interrupt.</ins></p>
+<p className="ctx">&#35;&#35;&#35; Other Effects</p>
+</div>
+</div>
+</Accordion>
+<Accordion title={"Wounds"} description={"/Combat/wounds · +1 −4 words"}>
+<div className="rev-diff">
+<div className="hunk">
+<p className="lineno">{"Line 50"}</p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;21–40&#41; Bruised Ribs &#40;Torso&#41;&#42;&#42;</p>
+<p className="chg">The bones, not the skin over them. Ribs hurt more than they have any right to. Breathing is the worst part. Deep breaths especially. Every action you take has its &#42;&#42;Speed increased by <del>1&#42;&#42;, similar to Paralysis.</del><ins>1&#42;&#42;.</ins></p>
+<p className="ctx">&#35;&#35;&#35; &#42;&#42;&#40;41–60&#41; Winded &#40;Abdomen&#41;&#42;&#42;</p>
+</div>
+</div>
+</Accordion>
+</AccordionGroup>

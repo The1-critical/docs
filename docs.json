@@ -25,6 +25,18 @@
           "Welcome",
           "Changelog",
           {
+            "group": "REV-026 Exact Changes",
+            "pages": [
+              "rev-026-changes",
+              "rev-026-changes/combat-and-wounds",
+              "rev-026-changes/character-and-advancement",
+              "rev-026-changes/clans-and-provinces",
+              "rev-026-changes/jutsu",
+              "rev-026-changes/equipment-and-dwellings",
+              "rev-026-changes/summoning"
+            ]
+          },
+          {
             "group": "REV-025 Exact Changes",
             "pages": [
               "rev-025-changes",
