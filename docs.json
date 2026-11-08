@@ -36,30 +36,6 @@
               "rev-025-changes/index-and-credits"
             ]
           },
-          {
-            "group": "REV-024 Exact Changes",
-            "pages": [
-              "rev-024-changes",
-              "rev-024-changes/combat-and-wounds",
-              "rev-024-changes/character-and-advancement",
-              "rev-024-changes/clans-and-provinces",
-              "rev-024-changes/jutsu",
-              "rev-024-changes/equipment-and-dwellings",
-              "rev-024-changes/summoning",
-              "rev-024-changes/index-and-credits"
-            ]
-          },
-          {
-            "group": "REV-023 Exact Changes",
-            "pages": [
-              "rev-023-changes",
-              "rev-023-changes/combat-and-wounds",
-              "rev-023-changes/character-and-advancement",
-              "rev-023-changes/clans-and-provinces",
-              "rev-023-changes/jutsu",
-              "rev-023-changes/welcome"
-            ]
-          },
           "index-of-lists",
           "Credits"
         ]
@@ -101,7 +77,6 @@
         "pages": [
           "Combat/combat",
           "Combat/wounds",
-          "Honourable",
           "weather"
         ]
       },
@@ -136,7 +111,7 @@
               "Field Equipment/melee-weapons",
               "Field Equipment/ranged-weapons",
               "Field Equipment/field-equipment",
-              "Field Equipment/untitled-page-4",
+              "Field Equipment/poison",
               "Field Equipment/rank-gear",
               "Field Equipment/vehicles"
             ]
@@ -161,14 +136,14 @@
       {
         "tab": "TALENTS",
         "pages": [
-          "Talents/untitled-page",
-          "Talents/untitled-page-2",
-          "Talents/untitled-page-3",
+          "Talents/catalog",
+          "Talents/eight-gates",
+          "Talents/kage-bunshin",
           "summoning-contracts",
           "untitled-page-12",
           "Talents/maestro",
-          "untitled-page-3",
-          "untitled-page-4",
+          "canine-contract",
+          "feline-contract",
           "hare-contract-the-gentle-pact-hares-including-rabbits-but-really-what-ninja-knows-the-difference-are-the-least-adept-in-battle-of-all-the-major-species-of-summoned-animals-much-like-their-wild-cou",
           "untitled-page-5",
           "untitled-page-6",
@@ -209,6 +184,30 @@
   },
   "description": "The Guide for the Shinobi",
   "redirects": [
+    {
+      "source": "/Field Equipment/untitled-page-4",
+      "destination": "/Field Equipment/poison"
+    },
+    {
+      "source": "/Talents/untitled-page-3",
+      "destination": "/Talents/kage-bunshin"
+    },
+    {
+      "source": "/untitled-page-3",
+      "destination": "/canine-contract"
+    },
+    {
+      "source": "/untitled-page-4",
+      "destination": "/feline-contract"
+    },
+    {
+      "source": "/Talents/untitled-page-2",
+      "destination": "/Talents/eight-gates"
+    },
+    {
+      "source": "/Talents/untitled-page",
+      "destination": "/Talents/catalog"
+    },
     {
       "source": "/Advancement/slice-of-life",
       "destination": "/Advancement/advancement"
@@ -264,10 +263,6 @@
     {
       "source": "/Akimichi_talent",
       "destination": "/Province/southern-province#major-akimichi"
-    },
-    {
-      "source": "/untitled-page-13",
-      "destination": "/Honourable"
     },
     {
       "source": "/Jutsu/untitled-page-2",

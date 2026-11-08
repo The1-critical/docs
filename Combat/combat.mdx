@@ -117,7 +117,7 @@ The interrupt's full Speed is added to your current IC to determine when you nex
 
 **Defensive interrupt Speed floor:** Unlike normal actions, defensive interrupts are not bound by the standard minimum Speed of 3. A Dodge (Speed 2) can be reduced to as low as Speed 1. The absolute floor for any defensive interrupt is Speed 1.
 
-Speed increases from Wounds (such as Bruised Ribs) or status effects (such as Paralysis) that apply to your defensive interrupt can be fully cancelled out by AP spending, and do not raise the minimum Speed, a Dodge with +3 from Paralysis can still be reduced to Speed 1 with sufficient AP. This allowance does not apply to Links added to a defensive interrupt: a Dodge + Kawarimi chain has its minimum Speed set by the chain as a whole, not the Dodge alone.
+Speed increases from Wounds (such as Bruised Ribs) or status effects (such as Shock) that apply to your defensive interrupt can be fully cancelled out by AP spending, and do not raise the minimum Speed, a Dodge with +3 from Shock 6 can still be reduced to Speed 1 with sufficient AP. This allowance does not apply to Links added to a defensive interrupt: a Dodge + Kawarimi chain has its minimum Speed set by the chain as a whole, not the Dodge alone.
 
 In the rare case that a defensive interrupt itself becomes an attack, such as when a parry technique converts on success, the standard minimum Speed of 3 applies to that resulting attack.
 
@@ -178,7 +178,7 @@ You may abort an action on any IC before your next action, allowing you to act o
 
 ### Variable Speed Actions
 
-Actions like Block, Guard, and Total Defense have no set Speed, you declare a duration in IC. They have the Abort property by default. Any Stun amount forcibly aborts any Variable Speed Action you are performing. Effects that modify Speed (AP, Celerity, Wounds, Paralysis) do not apply to Variable Speed Actions.
+Actions like Block, Guard, and Total Defense have no set Speed, you declare a duration in IC. They have the Abort property by default. Any Stun amount forcibly aborts any Variable Speed Action you are performing. Effects that modify Speed (AP, Celerity, Wounds, Shock) do not apply to Variable Speed Actions.
 
 ### Willpower
 
@@ -217,7 +217,7 @@ An ordinary attack with a weapon. The base damage, Speed, and Stamina cost are l
 
 #### Block (Variable Speed Action)
 
-Declare that you are blocking and state a duration in IC. Until your next action, you may use the Block defense against any incoming attack, even those that normally do not allow a defense (e.g., Environmental tag, Explosive Tags). Block negates the Surprise Attack quality on attacks you block. Blocking reduces CQC and ninjutsu damage by 50%, but Weapon damage by only 25%. While blocking you are immune to the sixth sense degrade from surprise or sneak attacks. 
+Declare that you are blocking and state a duration in IC. Until your next action, you may use the Block defense against any incoming attack, even those that normally do not allow a defense (e.g., Environmental tag, Demolition Charges). Block negates the Surprise Attack quality on attacks you block. Blocking reduces CQC and ninjutsu damage by 50%, but Weapon damage by only 25%. While blocking you are immune to the sixth sense degrade from surprise or sneak attacks. 
 
 #### Dodge (Speed 2, Interrupt)
 
@@ -428,7 +428,11 @@ Penalty to Stamina and Chakra Exhaustion rolls. Every time the severity increase
 
 #### Visibility
 
-Penalty to Accuracy and Awareness equal to severity, half (rounded down) to defensive rolls. Maximum effective penalty -10. Does not stack – higher overwrites. Closing eyes is Speed 0 (not an Interrupt).
+Penalty to Accuracy and Awareness equal to severity, half (rounded down) to defensive rolls. Maximum effective penalty -10. Does not stack – higher overwrites.
+
+Many visibility penalties affect areas: clouds of smoke or mist and the like. In this case, you suffer the penalty when inside it, or when trying to attack or watch (but not defend against) someone inside it.
+
+If it ever becomes relevant, closing or opening your eyes is a Speed 0 action–but not an Interrupt.
 
 ### Other Effects
 
