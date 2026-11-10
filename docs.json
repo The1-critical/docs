@@ -25,6 +25,14 @@
           "Welcome",
           "Changelog",
           {
+            "group": "REV-028 Exact Changes",
+            "pages": [
+              "rev-028-changes",
+              "rev-028-changes/clans-and-provinces",
+              "rev-028-changes/index-and-credits"
+            ]
+          },
+          {
             "group": "REV-027 Exact Changes",
             "pages": [
               "rev-027-changes",
